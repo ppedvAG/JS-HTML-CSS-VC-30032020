@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <style>
+        #p_id {
+            font-size:x-large;
+        }
+        .p_class {
+            font-size:large;
+        }
+        p {
+            font-size:medium;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+    <pre>
+        style-Attr beim HTML-Element überschreibt die CSS-Regeln mit dem ID-Selektor
+    </pre>
+    <p class="p_class" id="p_id" style="font-size: x-small;">paragraph</p>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DATE</title>
+</head>
+<body>
+    <h1>JS DATE</h1>
+
+    <script>
+        let myDate = Date()
+        console.log('myDate :', myDate);        
+        console.log('typeof myDate :', typeof myDate); // string
+        
+        let myDateObject = new Date()
+        console.log('myDateObject :', myDateObject);
+        console.log('typeof myDateObject :', typeof myDateObject); // object
+
+        // getDay()
+        console.log('myDateObject.getDay() :', myDateObject.getDay()); // 2
+
+        // getTime()
+        console.log('myDateObject.getTime() :', myDateObject.getTime()); // 1585048695666
+        // Anzahl von Milisekunden seit 01.01.1970
+
+    </script>
+    
+</body>
+</html>

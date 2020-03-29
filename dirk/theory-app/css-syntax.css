@@ -1,0 +1,122 @@
+/* #region COMMENTS */
+/* ############################################################################## */
+/* CSS COMMENTS
+Das ist ein CSS-Kommentar 
+
+Dem Selektorenbereich in der CSS-Regel ist die Datei css-selectors.html gewidmet.
+Hier, in css-syntax.css, geht es um allgemeine Regeln 
+*/
+
+/* #endregion */
+/* #region AUFGABE */
+/* ############################################################################## */
+/* #a
+Schauen Sie sich die `html-syntax.html` Datei im Browser an.
+Ist sie gut lesbar?
+Würden Sie was ändern? 
+
+Vorschlag:
+Machen Sie die Schriftgröße (font-size) bei pre-Elementen größer.
+*/
+
+/* #endregion */
+/* #region KEBAB */
+
+/* ############################################################################## */
+/* KEBAB CASE 
+Wenn die CSS-Eigenschaft aus mehreren Wörtern besteht, 
+dann werden sie mit Bindestrich geschrieben (Kebab-Case).
+Z.B. font-size, background-color ... */
+
+/* #endregion */
+/* #region LINK-TAG */
+
+/* ############################################################################## */
+/* HTML-TAG <LINK> 
+#a
+Füge den unten stehenden Tag in der html-syntax.html als letztes Kind vom `head` ein.
+
+    <link rel="stylesheet" href="css-syntax.css">
+
+Wie denkst Du, wozu sollte das gemacht werden?
+*/
+
+/* #endregion */
+/* #region CASE */
+
+/* ############################################################################## */
+/* CASE SENSITIVE? */
+H3 {
+    BORDER: THIN SOLID
+}
+/* #a
+Prüfe, ob die CSS-Regel für H3 oben eine Wirkung hatte.
+ */
+
+/* #endregion */
+/* #region CSS SHORTHANDS */
+
+/* ############################################################################## */
+/* CSS SHORTHANDS 
+Schaue Dir die border-Deklaration oben genauer an! 
+Die Eigenschaft `border` hat nicht einen Wert, sondern gleichzeitig zwei Werte bekommen.
+Das liegt daran, dass die Eigenschaft `border` 
+eine Abkürzung oder eine Zusammenfassung für mehrere einfache CSS-Eigenschaften ist.
+Der Wert `thin` ist für die Eigenschaft `border-width` und
+der Wert `solid` für die Eigenschaft `border-style` gedacht. 
+Mehrere Werte bei einem CSS-Shorthand werden durch ein Leerzeichen getrennt. 
+
+#a
+Schreibe anstatt der Zusammenfassung `border` die zwei einzelnen Eigenschaften 
+`border-width` und `border-style`! 
+Welche weiteren Werte schlägt Dir die Intellisense von VSCode für diese Eigenschaften vor?
+Entscheide Dich für die passenden Werte für jede Eigenschaft!
+Bei einem dickeren Rahmen siehst Du auch besser die Unterschiede zwischen verschiedenen Rahmen-Stilen.
+*/
+
+/* #endregion */
+/* #region STYLE-TAG */
+
+/* ############################################################################## */
+/* HTML-TAG <STYLE>
+#a
+
+Füge den unten stehenden Tag in der html-syntax.html als letztes Kind vom `head` ein!
+Die Eigenschaften für h3 sollen die gleichen sein, wie bisher.
+Die Werte sollen aber anders sein.
+ 
+    <style>
+        h3 {
+            border-style: ...;
+            border-width: ...;
+        }
+    </style> 
+
+Welche Werte wurden im Endeffekt bei h3 angewendet (die aus der css-Datei oder die aus dem <style>-Tag)? 
+*/
+
+/* #endregion */
+/* #region STYLE ATTR */
+
+/* ############################################################################## */
+/* HTML-ATTRIBUTE STYLE="..."       
+#a
+
+Füge das unten stehende HTML-Attribut bei einem `h3` Deiner Wahl ein!
+
+    style="border-width: ...; border-style: ..."
+
+Die Eigenschaften für h3 sind wieder die gleichen, wie bisher.
+Die Werte sollen wieder andere vergeben werden.
+Was genau hat sich geändert?
+*/
+
+
+
+/* ############################################################################## */
+/* ZURÜCK ZUR ABLAUF.MD */
+
+/* #endregion */
+
+
+

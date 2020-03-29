@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html id=myHTML lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM DOCUMENT</title>
+</head>
+<body>
+    <h1>DOM DOCUMENT</h1>
+    <h2>DOC PROPS</h2>
+    <ol id="doc_props_ol">
+    </ol>
+
+    <script>
+                /* 
+        Sind die Props von document und Props von HTML gleich? 
+        nein. document hat mehr props als html
+        */
+        console.log(myHTML);
+                /* DOC PROPS */
+                for (let prop in document) {
+            doc_props_ol.innerHTML += `
+            <li>${prop}</li>`
+        }
+
+        /* Konstruktor Document() */
+        let myDocument = new Document()
+        console.log('myDocument :', myDocument);
+    </script>
+    
+</body>
+</html>

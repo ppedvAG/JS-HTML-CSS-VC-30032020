@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-strings</title>
+</head>
+
+<body>
+
+    <h1>JS strings & String object</h1>
+
+    <!-- #region -->
+    <section>
+        <h2>1. String Literale</h2>
+        <h3>1.1. folgendes wird vom Compiler als string interpretiert</h3>
+        <pre>
+            "das ist ein klassisches string"
+            'das ist ein klassisches string'
+            `das ist ein template string`
+        </pre>
+
+        <h3>1.2. Zeilenumbrüche und Tabulatoren in Strings</h3>
+        <pre>
+            für die Eigenschaft innerText in HTML und in der Konsole benutzen Sie Backtick-Strings oder Escapes
+            Bei innerHTML kann man das HTML-Tag br benutzen.  
+            siehe auch die CSS-Eigenschaft white-space 
+        </pre>
+
+        <h4>p.innerText & backtick-strings</h4>
+        <p id="o12_iT_BS"></p>
+        <h4>p.innerHTML & backtick-strings</h4>
+        <p id="o12_iH_BS"></p>
+        <h4>output.value & backtick-strings</h4>
+        <output id="o12_v_BS"></output>
+        <hr>
+        <h4>p.innerText & html-strings</h4>
+        <p id="o12_iT_HS"></p>
+        <h4>p.innerHTML & html-strings</h4>
+        <p id="o12_iH_HS"></p>
+        <h4>output.value & html-strings</h4>
+        <output id="o12_v_HS"></output>
+        <hr>
+        <h4>p.innerText & escapes</h4>
+        <p>innerText erkennt Escape-Zeichen (\t ...) </p>
+        <p id="o12_iT_es"></p>
+        <h4>p.innerHTML & escapes</h4>
+        <p id="o12_iH_es"></p>
+        <h4>output.value & escapes</h4>
+        <output id="o12_v_es"></output>
+        <hr>
+        
+    </section>
+    <!-- #endregion -->
+
+    <section>
+        <h2>2. Konstruktor String()</h2>
+        <h3>2.1. ohne Operator new</h3>
+        <pre>
+            let myString21 = String('blabla');        
+        </pre>
+        <p id="output21"></p>
+        <hr>
+
+        <h3>2.2. mit new</h3>
+        <pre>
+            let myString22 = new String('blabla');   
+        </pre>
+        <p id="output22"></p>
+        <hr>
+    </section>
+
+    <section>
+        <h2>3. Strings vergleichen</h2>
+        <h3>always false by compare of String-objects</h3>
+        <pre>primitiven strings kann man aber vergleichen</pre>
+        <p id="output"></p>
+        <hr>
+    </section>
+
+    <section>
+        <h2>4. String Objekt: Eigenschaften</h2>
+        <h3>length</h3>
+        <pre>beinhaltet Anzahl von Zeichen im String</pre>
+        <hr>
+    </section>
+
+    <section>
+        <h2>5. String Objekt: Prototyp Methoden</h2>
+
+        <!-- (h3{Methode$ :}+pre+p#output$+hr)*9 -->
+
+        <h3>valueOf()</h3>
+        <pre>gibt den Wert von value-Eigenschaft als string-Datentyp zurück</pre>
+
+        <h3>//charAt()</h3>
+        <pre>gibt den Buchstaben an einer bestimmten Stelle zurück</pre>
+        <p id="output1"></p>
+        <hr>
+
+        <h3>//indexOf()</h3>
+        <pre>gibt die erste Stelle zurück, an welche ein bestimmtes Zeichen vorkommt</pre>
+        <p id="output2"></p>
+        <hr>
+
+        <h3>//lastIndex()</h3>
+        <pre>gibt die letzte Stelle zurück, an welche ein bestimmtes Zeichen vorkommt</pre>
+        <p id="output3"></p>
+        <hr>
+
+        <h3>//slice()</h3>
+        <pre>
+            schneidet string in 2 Teile an der angegebenen Stelle (index)
+            gibt den 'abgeschnittenen' Teil zurück
+        </pre>
+        <p id="output4"></p>
+        <hr>
+
+        <h3>//split()</h3>
+        <pre>schneidet string in 2 Teile an der angegebenen Stelle (Zeichen)</pre>
+        <p id="output5"></p>
+        <hr>
+
+        <h3>//substr()</h3>
+        <p id="output6"></p>
+        <hr>
+
+        <h3>//toLowerCase()</h3>
+        <p id="output7"></p>
+        <hr>
+
+        <h3>//toUpperCase()</h3>
+        <p id="output8"></p>
+        <hr>
+
+        <h3>//concat()</h3>
+        <pre>addiert mehrere strings zusammen (konkatiniert)</pre>
+        <p id="output9"></p>
+        <hr>
+    </section>
+
+    <section>
+        <h2>6. String Objekt: Methoden</h2>
+    </section>
+
+    <script>
+
+        //#region 1. 
+        let str_12_BS = `zeile1
+        zeile2`
+        o12_iT_BS.innerText = str_12_BS
+        o12_iH_BS.innerHTML = str_12_BS
+        o12_v_BS.value = str_12_BS
+        console.log('str_12_BS :', str_12_BS)
+
+        let str_12_HS = 'zeile1<br>zeile2'
+        o12_iT_HS.innerText = str_12_HS
+        o12_iH_HS.innerHTML = str_12_HS
+        o12_v_HS.value = str_12_HS
+        console.log('str_12_HS :', str_12_HS)
+
+        let str_12_es = 'zeile1 \n zeile2' 
+        o12_iT_es.innerText = str_12_es
+        o12_iH_es.innerHTML = str_12_es
+        o12_v_es.value = str_12_es
+        console.log('str_12_es :', str_12_es)
+
+        //#endregion 1.
+
+
+        //#region 2.
+        let myString21 = String('blabla');
+        output21.innerText = typeof myString21;
+        let myString22 = new String('blabla');
+        output22.innerText = typeof myString22;
+        //#endregion 2.
+
+
+        // 3.
+        // 4.
+        // 5.
+        // 6.
+        //let zeichenkette = "Eine Zeichenkette zum Austesten von String-Methoden."
+        //let zeichenkette = 'zeichenkette';
+        //typeof - string
+        let myString = new String("Eine Zeichenkette zum Austesten von String-Methoden.");
+        //typeof - object
+        //Don't create strings as objects. It slows down execution speed.
+        //The new keyword complicates the code.
+
+        /* Vergleichen von Objekten ergibt immer false */
+        let myString2 = new String("Eine Zeichenkette zum Austesten von String-Methoden.");
+        output.innerText = myString == myString2; //false
+        output.innerText = myString === myString2; //false
+
+
+        console.log("'bla'=='bla' :", 'bla' == 'bla'); // true
+        console.log("'4'==4 :", '4' == 4); // true, weil nur Werte verglichen
+        console.log("'4'===4 :", '4' === 4); // false, weil auch die Datentypen verglichen wurden
+
+
+        /* "Eine Zeichenkette zum Austesten von String-Methoden." */
+
+        //charAt(number)
+        output1.innerText = myString.charAt(5); // Z
+
+        //indexOf()
+        output2.innerText = myString.indexOf('ß'); // -1
+
+        //lastIndex()
+        output3.innerText = myString.lastIndexOf('n')
+
+        //slice()
+        output4.innerText = myString.slice(10, 34) // enkette zum Austesten vo
+        // output4.innerText = myString.slice(34, 10) // fkt nicht
+
+        //split()
+        let rw = myString.split('Z');
+        output5.innerText = rw
+        console.log('rw :', rw); // Array(2) 
+        console.log('myString.split("Z") :', myString.split('Z')); // array mit 2 strings
+        console.log('myString nach split:', myString); // wert der variable hat sich nicht geändert
+
+        //substr()
+        /* arg1: von .index.; arg2: wie viel .number. */
+        output6.innerText = myString.substr(10, 34); // enkette zum Austesten von String-M
+
+        //toLowerCase()
+        output7.innerText = "";
+        
+        //toUpperCase()
+        output8.innerText = "";
+
+        //concat()
+        output9.innerText = "";
+
+    </script>
+
+</body>
+
+</html>

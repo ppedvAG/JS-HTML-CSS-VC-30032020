@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAYS</title>
+</head>
+
+<body>
+
+    <h1>ARRAYS</h1>
+
+    <script>
+        /* ARRAY DEFINIEREN */
+        /* durch Literal */
+        let städte = ['KA', 'BLN', 'MUC']
+        // let emptyArray = []         
+        // let arrayOf3undefined = [,,,] 
+        // console.log('persons.length :', persons.length); // 3
+
+        /* durch Konstruktor */
+        let metalle = new Array('Kupfer', 'Aluminium', 'Eisen')
+        // let emptyArrayC = new Array()        
+        // let arrayOf3undefinedC = new Array(3) 
+
+
+        /* ARRAY NUTZEN / AUFRUFEN */
+        console.log('städte :', städte);
+        console.log('städte[2] :', städte[2]); // MUC
+        console.log('metalle :', metalle);
+        console.log('metalle[3] :', metalle[3]); // undefined
+
+
+        let blumen = ['Rose', 'Tulpe', 'Narzisse', 'Nelke']
+
+        let rw;
+
+        //concat(array)
+        console.info('CONCAT');
+        rw = blumen.concat(['Gladiole', 'Gänseblümchen'])
+        console.log('rw : ', rw); // neues Array aus 6 Elementen
+        console.log('blumen :', blumen);
+        
+
+        //join()
+        console.info('JOIN');
+        rw = blumen.join(' | ')
+        console.log('rw : ', rw);
+        console.log('typeof rw : ', typeof rw);
+        console.log('blumen :', blumen);
+        /* baut aus einem Array eine ZK mit dem Argument von join nach jedem Element */
+
+
+        //sort() // was passiert mit IDs
+        console.info('SORT');
+        rw = blumen.sort() 
+        console.log('rw : ', rw); // alphabetisch sortiert
+        console.log('blumen :', blumen);
+        /* gibt ein sortiertes Array zurück und ändert das Ursprungsarray */
+
+
+
+        //reverse()
+        console.info('REVERSE');
+        rw = blumen.reverse() 
+        console.log('rw : ', rw); // 
+        console.log('blumen :', blumen);
+        /* gibt ein sortiertes Array zurück und ändert das Ursprungsarray */
+
+
+
+        //filter()
+        console.info('FILTER')
+        // rw = blumen.filter(el => {return el != 'Rose' && el != 'Narzisse'})
+        rw = blumen.filter(el => el != 'Rose' && el != 'Narzisse')
+        console.log('rw : ', rw); // Array ohne Rose
+        console.log('blumen :', blumen); // unverändert
+
+
+        //toString()
+        console.info('TO STRING')
+        rw = blumen.toString() // ohne Leerzeichen, mit Komma zwischen den Elementen
+        console.log('rw : ', rw);
+        console.log('blumen :', blumen); // unv.
+
+
+        //indexOf()
+        console.info('INDEX OF')
+        rw = blumen.indexOf('Katze')
+        console.log('rw : ', rw); // -1, weil Katze nicht im Array
+        console.log('blumen :', blumen); // unverändert
+
+
+        //shift()
+        console.info('SHIFT')
+        rw = blumen.shift() 
+        console.log('rw : ', rw); // Tulpe
+        console.log('blumen :', blumen); // geändert!!! ["Rose", "Nelke", "Narzisse"]
+
+
+        //unshift()
+        console.info('UNSHIFT')
+        rw = blumen.unshift('Sonnenblume')
+        console.log('rw : ', rw); // Länge vom neuen Array
+        console.log('blumen :', blumen); // geändert!!! ["Sonnenblume", "Rose", "Nelke", "Narzisse"]
+
+
+        //push()
+        console.info('PUSH')
+        rw = blumen.push('Frühlingsrose')
+        console.log('rw : ', rw); // 5 - neue Länge
+        console.log('blumen :', blumen); // geändert!!!
+
+
+
+        //pop()
+        console.info('POP')
+        rw = blumen.pop() // löscht von hinten
+        console.log('rw : ', rw); // das gelöschte Element
+        console.log('blumen :', blumen); // geändert!!!
+
+
+
+        //map()
+        console.info('MAP')
+        // rw = blumen.map(element => element.length)
+        // rw = blumen.map(({length}) => length)
+        rw = blumen.map(element => element.concat('-Blume'))
+        console.log('rw : ', rw); // [11, 4, 5, 8]
+        console.log('blumen :', blumen); // unverändert
+
+
+
+        // splice()
+        console.info('SPLICE')
+        rw = blumen.splice(2) //schneidet ab dem Index 2 ab
+        console.log('rw : ', rw); // ["Nelke", "Narzisse"]
+        console.log('blumen :', blumen); // ["Sonnenblume", "Rose"]
+
+
+
+        blumen = ['Rose', 'Tulpe', 'Narzisse', 'Nelke']
+        // slice()
+        console.info('SLICE')
+        rw = blumen.slice(1, 2) // ausschneiden von .index. bis .index. 
+        console.log('rw : ', rw); // 'Tulpe'
+        console.log('blumen :', blumen); //unverändert!!!
+
+
+
+        console.info('KOPIEN VOM ARRAY ERSTELLEN: SLICE')
+        // slice
+        blumen = ['Rose', 'Tulpe', 'Narzisse', 'Nelke']
+        rw = blumen.slice()
+        console.log('rw : ', rw);
+        console.log('blumen :', blumen);
+
+
+
+        console.info('KOPIEN VOM ARRAY ERSTELLEN: SPREAD')
+        // spread ... 
+        rw = [...blumen]
+        console.log('rw : ', rw);
+</script>
+
+</body>
+
+</html>

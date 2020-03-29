@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML ATTRIBUTES</title>
+</head>
+
+<body>
+    <h1>HTML ATTRIBUTE</h1>
+
+    <h2>SYNTAX</h2>
+
+    <pre>
+        es gibt globale Attribute (für alle HTML-Tags) und spezielle (für bestimmte Tags).
+    </pre>
+
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes -->
+
+    <!-- #region GLOBAL ATTR -->
+    <h2>GLOBALE ATTRIBUTE</h2>
+
+    <h3>die grundlegenden globalen HTML-Attribute</h3>
+    <p>bei allen Elementen erlaubt, bei einigen haben aber keine Wirkung:</p>
+
+    <pre>
+        accesskey
+        aria-*
+        autocapitalize
+        class           (#gk)                   
+        contenteditable
+        contextmenu     (obsolete)
+        data-*
+        dir
+        draggable
+        dropzone        (deprecated)
+        exportparts     (experimental)
+        hidden
+        id              (#gk)
+        inputmode
+        is
+        itemid
+        itemprop
+        itemref
+        itemscope
+        itemtype
+        lang
+        part
+        slot
+        spellcheck
+        style           (#gk)
+        tabindex
+        title           (#gk)
+        translate       (experimental)
+    </pre>
+
+    <!-- #endregion -->
+    <!-- #region GLOBAL EVENT ATTR -->
+
+    <h3>Die Ereignis-Attribute (en: event handler attributes)</h3>
+
+    <pre>
+        onabort
+        onautocomplete
+        onautocompleteerror 
+        onblur
+        oncancel
+        oncanplay
+        oncanplaythrough
+        onchange            (#gk)
+        onclick             (#gk)
+        onclose
+        oncontextmenu
+        oncuechange
+        ondblclick
+        ondrag
+        ondragend
+        ondragenter
+        ondragexit
+        ondragleave
+        ondragover
+        ondragstart
+        ondrop
+        ondurationchange
+        onemptied
+        onended
+        onerror
+        onfocus
+        oninput             (#gk)
+        oninvalid
+        onkeydown           (#gk)
+        onkeypress          (#gk)
+        onkeyup             (#gk)
+        onload              (#gk)
+        onloadeddata
+        onloadedmetadata
+        onloadstart
+        onmousedown
+        onmouseenter
+        onmouseleave
+        onmousemove
+        onmouseout
+        onmouseover         (#gk)
+        onmouseup
+        onmousewheel
+        onpause
+        oncanplay
+        onplaying
+        onprogress
+        onratechange
+        onreset
+        onresize
+        onscroll
+        onseeked
+        onseeking
+        onselect
+        onshow
+        onsort
+        onstalled
+        onsubmit            (#gk)
+        onsuspend
+        ontimeupdate
+        ontoggle
+        onvolumechange
+        onwaiting
+    </pre>
+
+    <!-- #endregion -->
+    <!-- #region GLOBAL ATTR & NON STANDARD TAGS -->
+
+    <h3>Bemerkungen</h3>
+
+    <pre>globale Attribute sind sogar bei den Elementen anwendbar, die keine Standard-Tags sind</pre>
+
+    <sometage>inhalt von sometag</sometage>
+    <sometage hidden>inhalt von sometag</sometage>
+
+
+
+    <!-- 
+        Quellen:        
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+        
+        *todo
+            https://www.w3schools.com/tags/ref_standardattributes.asp
+            https://www.w3schools.com/tags/ref_eventattributes.asp
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+
+        *todo
+        Gibt es für alle Props von HTML-Elementen die gleichnamigen Attribute?
+    -->
+    
+    <!-- #endregion -->
+</body>
+
+</html>

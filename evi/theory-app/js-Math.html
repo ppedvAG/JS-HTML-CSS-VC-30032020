@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS MATH</title>
+</head>
+<body>
+    <h1>JS MATH</h1>
+
+    <h2>Math.random()</h2>
+    <p id=Mrandom></p>
+
+    <h2>Math.ceil()</h2>
+    <p id=Mceil></p>
+
+    <h2>Math.round()</h2>
+    <p id=Mround></p>
+
+    <h2>Math.floor()</h2>
+    <p id=Mfloor></p>
+
+    <script>
+
+        // Math.random()
+        const mathRandom = Math.random()*6 // liefert eine Zahl zw 0 u 1
+        Mrandom.innerText = mathRandom
+
+        // Math.ceil()
+        // rundet nach oben ab
+        Mceil.innerText = Math.ceil(mathRandom)
+
+        // Math.round()
+        // rundet zur nächsten ganzen Zahl ab
+        Mround.innerText = Math.round(mathRandom)
+
+        // Math.floor()
+        // rundet nach unten ab
+        Mfloor.innerText = Math.floor(mathRandom)
+
+    </script>
+
+
+    
+</body>
+</html>

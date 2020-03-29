@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS WINDOW</title>
+</head>
+<body>
+    <h1>JS WINDOW</h1>
+    
+    <!-- #region 7 setTimeout() -->
+    <button onclick="setTimeout(countClicks, 500, this)">0</button>
+    <!-- #endregion -->
+    
+    <script>
+    //#######################################################
+    console.log(this)
+
+    //#######################################################
+    console.info('TEST 1: let, var & window') // info fkt nicht in chrome
+
+    let letVar = 'etwas'
+    var varVar = 'wasanderes'
+    console.log('window.varVar :', window.varVar)
+    console.log('window.letVar :', window.letVar)
+    
+
+
+    //#######################################################
+    console.info('TEST 2: event props von window')
+    window.onclick = handleWindowClick
+    /* in JS Funktionen dürfen aufgerufen werden bevor sie definiert wurden */
+
+    function handleWindowClick() {
+        console.log('window wurde geklickt');
+    }
+
+
+
+    //#######################################################
+    console.info('TEST 3: methoden von window')
+    // window.alert()
+    // this.alert()
+    // alert()
+
+
+    //#######################################################
+    console.info('TEST 4: return von alert()')
+    // const alertReturn = alert('info für den benutzer')
+    // console.log('alertReturn :', alertReturn); // undefined
+
+
+
+    //#######################################################
+    console.info('TEST 5: return von prompt()')
+    /* genutzt, Eingabe vom Benutzer abzufragen */
+    // const promptReturn = prompt('Geben Sie Ihr Alter ein:')
+    // console.log('promptReturn :', promptReturn); // 35 // null
+
+
+
+    //#######################################################
+    console.info('TEST 6: return von confirm()')
+    const confirmReturn = confirm('Corona ist Scheiße. Einverstanden?')
+    console.log('confirmReturn :', confirmReturn);
+
+
+    //#region 7 setTimeout()
+    //#######################################################
+    console.info('TEST 7: setTimeout()')
+    function countClicks(el) {        
+        +el.innerText ++
+    }
+    //#endregion
+    
+    /* 
+    *todo
+    Objekt window hat unter seinen Eigenschaften die Funktion HTMLAnchorElement() z.B. und die Funktion Number(). 
+    Warum kann ich Number() aufrufen, auch mit dem Schlüsselwort new, HTMLAnchorElement() aber nicht?
+    let myWindow = new Window() // Uncaught TypeError: Illegal constructor
+    console.log('myWindow :', myWindow); 
+    */
+
+    /* 
+    *todo
+    wie kann ich Inhalt von Abbrechen-Button ändern? 
+
+    *todo
+    Warum werden einige Objekte (document, console) klein geschrieben und die anderen groß (HTMLElement, Math)?
+
+    *todo
+    Was ist der Unterschied zwischen Window und window?
+    */
+
+</script>
+    
+</body>
+</html>

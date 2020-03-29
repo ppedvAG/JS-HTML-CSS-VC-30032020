@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVENT OBJ</title>
+</head>
+<body>
+    <h1>JS EVENT OBJ</h1>
+
+    <!-- #region 1 -->
+    <h2>Event-Objekt</h2>
+    <pre>
+        Klick auf den Button und schau in der Konsole nach,
+        wie das Event-Objekt aussieht!
+    </pre>
+    <button onclick="showEventObject(event)">show Event</button>
+    <hr>
+    <!-- #endregion 1 -->
+
+
+
+    <!-- #region 2 -->
+    <h2>Event-Objekt & Event-Attribut</h2>
+    <pre>
+        Möchtest Du auf das Event-Objekt im Event-Handler zugreifen
+        und den Event-Handler fügst Du über das Event-Attribut hinzu,
+        gebe dem Handler beim Aufrufen das Argument `event` mit!
+    </pre>
+    <button onclick="countClick(event)">0</button>
+    <hr>
+    <!-- #endregion 2 -->
+
+
+
+    <!-- #region 3 -->
+    <h2>Event-Objekt & addEventListener()</h2>
+    <pre>
+        Möchtest Du auf das Event-Objekt im Event-Handler zugreifen
+        und den Event-Handler fügst Du über addEventListener() hinzu,
+        definiere den Handler einfach mit einem Parameter, 
+        egal, wie Du ihn benennst!
+    </pre>
+    <button id=btn_prost1>Prost!</button>
+    <button id=btn_prost2>Chears!</button>
+    <button id=btn_prost3>На здоровье!</button>    
+    <hr>
+    <!-- #endregion -->
+
+
+    <script>
+        //#region 1
+        function showEventObject(event_object) {
+            console.log('event_object :', event_object);
+        }
+        //#endregion
+
+
+        //#region 2
+        function countClick(e) {
+            +e.target.innerText ++
+        }
+        //#endregion
+
+
+        //#region 3
+        btn_prost1.addEventListener('click', anstossen)
+        btn_prost2.addEventListener('click', anstossen)
+        btn_prost3.addEventListener('click', anstossen)
+        function anstossen(foo) {
+            // Parameter foo wird wie event behandelt
+            foo.target.innerHTML = '&#x1F37B;'            
+        }
+        //#endregion
+
+
+        /* 
+        *todo
+        Warum heißt die Methode `addEventListener` und nicht `addEventHandler`?
+        */
+    </script>
+</body>
+</html>

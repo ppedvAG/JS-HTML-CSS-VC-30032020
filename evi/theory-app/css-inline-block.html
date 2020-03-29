@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS INLINE BLOCK</title>
+    <style>
+        p,
+        span {
+            background-color: orangered;
+        }
+
+        /* 
+        span haben bei display den Wert inline 
+        p haben bei display den Wert block
+        */
+        
+        .bsp2 {
+            width: 100px;
+            height: 100px;
+        }
+
+        .bsp3 {
+            border: thick dotted;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        .bsp4 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        .bsp5 {
+            display: block;
+            margin: 0;
+            /* display: inline; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Unterschiede zwischen Inline- und Block-Elementen</h1>
+    <!-- (h2+p.bsp${paragraph}*2+span.bsp${span}*2+hr)*5 -->
+    <h2>1. Breite</h2>
+    <pre>
+        Block-Elemente - breit wie möglich.
+        Inline-Elemente - breit wie nötig.
+    </pre>
+    <p class="bsp1">paragraph</p>
+    <p class="bsp1">paragraph</p>
+    <span class="bsp1">span</span>
+    <span class="bsp1">span</span>
+    <hr>
+
+    <h2>2. Größenangaben</h2>
+    <pre>
+        Inline-Elemente ignorieren width & height.
+    </pre>
+    <p class="bsp2">paragraph</p>
+    <p class="bsp2">paragraph</p>
+    <span class="bsp2">span</span>
+    <span class="bsp2">span</span>
+    <hr>
+
+    <h2>3. CSS-Box</h2>
+    <pre>
+        Inline-Elemente ignorieren margin-top & margin-bottom
+    </pre>
+    <p class="bsp3">paragraph</p>
+    <p class="bsp3">paragraph</p>
+    <span class="bsp3">span</span>
+    <span class="bsp3">span</span>
+    <hr>
+
+    <h2>4. Vorteile von block und inline kombinieren</h2>
+    <p class="bsp4">paragraph</p>
+    <p class="bsp4">paragraph</p>
+    <span class="bsp4">span</span>
+    <span class="bsp4">span</span>
+    <hr>
+
+    <h2>5. Kann ich die display-Prop überall ändern?</h2>
+    <pre>
+        inline zu block - funktioniert
+        block zu inline - funktioniert
+    </pre>
+    <p class="bsp5">paragraph</p>
+    <p class="bsp5">paragraph</p>
+    <span class="bsp5">span</span>
+    <span class="bsp5">span</span>
+    <hr>
+
+    <!-- pre - predifined format -->
+    <pre>
+
+        fdgh
+
+
+        guio
+    </pre>
+
+</body>
+
+</html>

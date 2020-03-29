@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TAGS</title>
+    <style>
+        /*  * {
+            border: thick solid
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- #region IDEA OF THIS TAG LIST -->
+
+    <!-- 
+        ALPHABETISCH GEORDNET, UM SCHNELL DAS GESUCHTE TAG ZU FINDEN.
+
+        DIE VERALTETEN TAGS SIND ABER SEPARAT AUFGELISTET, UNTEN.
+
+        ATTRIBUTE SIND VON EMMET AUTOMATISCH ANGELEGT, SIE SIND NICHT IMMER OBLIGATORISCH.
+
+        WAS DIE ATTRIBUTE BEDEUTEN, IST IN DEN DATEIEN FÜR JEDES ELEMENT ERKLÄRT.
+     
+        Die HTML-Tags hier in dieser Referenz wurden extra leer gelassen, um zu veranschaulichen, 
+        welche Elemente wie viel CSS und evtl. auch JS schon im leeren Zustand mit sich bringen 
+    -->
+
+
+
+    <!--
+        #a
+        HTML-Tag ist ein Bundle von vordefinierten CSS-Stilen und JS-Funktionalitäten. 
+        HTML-Tags wurden extra für die Sammlungen an CSS- und JS-Eigenschaften entwickelt, 
+        die am meisten beim Web-Programmieren vorkommen.
+        Stimmt das?
+     -->
+
+    <!-- #endregion -->
+    <!-- #region NO BORDER -->
+
+    <!-- 
+        Können alle HTML-Tags gestylet werden??? 
+        siehe den Test mit border (Aber kein Border bedeutet nicht, dass andere CSS-Stile unmöglich sind!!!)
+
+    Keinen Rahmen haben bekommen:
+        audio
+        body (stimmt das?: ob Rahmen hinzugefügt wurde oder nicht, hängt von Elternelementen ab. Weil body hat ja normalerweise Rahmen)
+        br
+        caption
+        col
+        colgroup
+        datalist
+        dialog
+        head
+        html (das gleiche: normalerweise html hat einen Rahmen)
+        link
+        meta
+        meter (Das Element selbst ist aber da: ein Balken)
+        noscript
+        param
+        rp
+        script
+        style
+        tbody (das gleiche: normalerweise tbody hat einen Rahmen)
+        td (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        template
+        tfoot (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        th (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        thead (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        title (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        tr (das gleiche: normalerweise hat dieses Element einen Rahmen)
+        wbr
+        frame
+        frameset
+        noframes
+    
+    Was aber noch interessant ist: den Rahmen hat bekommen:
+        base
+    -->
+
+    <!-- #endregion -->
+    <!-- #region BLOCK WIDTH -->
+
+    <!-- 
+        Was man hier noch sieht: nicht alle Block-Elemente sind 100% breit. Manche haben margin:
+
+        margin left und right:
+            blockquote 
+            fieldset
+            figure
+    
+        margin left:
+            dd
+    -->
+
+    <!-- #endregion -->
+
+
+    &lt;a&gt;
+    <!-- #n anchor link #gk -->
+    <a href=""></a>
+
+
+    &lt;abbr&gt;
+    <!-- #n abbreviation -->
+    <abbr title=""></abbr>
+
+
+    &lt;address&gt;
+    <!-- #n -->
+    <address>text für address</address>
+
+
+    &lt;area&gt;
+    <!-- #n -->
+    <area shape="" coords="" href="" alt="">
+
+
+    &lt;article&gt;
+    <!-- #n #gk -->
+    <article></article>
+
+
+    &lt;aside&gt;
+    <!-- #n #gk -->
+    <aside></aside>
+
+
+    &lt;audio&gt;
+    <!-- #n -->
+    <audio src=""></audio>
+
+
+    &lt;b&gt;
+    <!-- #n bold text -->
+    <b></b>
+
+
+    &lt;base&gt;
+    <!-- #n -->
+    <base href="">
+
+
+    &lt;bdi&gt;
+    <!-- #n b? direction inline? -->
+    <bdi></bdi>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;bdo&gt;
+    <!-- #n b? direction o? -->
+    <bdo dir=""></bdo>
+
+
+    &lt;blockquote&gt;
+    <!-- #n -->
+    <blockquote></blockquote>
+
+
+    &lt;body&gt;
+    <!-- #n #gk -->
+
+    <body></body>
+    <!-- nur ein body in html ist erlaubt. Dieses hier wird ignoriert. -->
+
+
+    &lt;br&gt;
+    <!-- #n line BReak #gk -->
+    <br>
+
+
+    &lt;button&gt;
+    <!-- #n #gk -->
+    <button></button>
+
+
+    &lt;canvas&gt;
+    <!-- #n -->
+    <canvas></canvas>
+
+
+    &lt;caption&gt;
+    <!-- #n #gk -->
+    <caption></caption>
+
+
+    &lt;cite&gt;
+    <!-- #n -->
+    <cite></cite>
+
+
+    &lt;code&gt;
+    <!-- #n #gk -->
+    <code></code>
+
+
+    &lt;col&gt;
+    <!-- #n COLumn -->
+    <col>
+
+
+    &lt;colgroup&gt;
+    <!-- #n COLumn GROUP -->
+    <colgroup></colgroup>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;data&gt;
+    <!-- #n -->
+    <data></data>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;datalist&gt;
+    <!-- #n -->
+    <datalist></datalist>
+
+
+    &lt;datagrid&gt;
+    <!-- #n -->
+    <datagrid></datagrid>
+    <!-- für intellisense unbekannt -->
+
+
+    &lt;dd&gt;
+    <!-- #n Definition Description #gk -->
+    <dd></dd>
+
+
+    &lt;del&gt;
+    <!-- #n DELeted text -->
+    <del></del>
+
+
+    &lt;details&gt;
+    <!-- #n -->
+    <details></details>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;dfn&gt;
+    <!-- #n DiFiNing insctance of a term -->
+    <dfn></dfn>
+
+
+    &lt;dialog&gt;
+    <!-- #n -->
+    <dialog></dialog>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;div&gt;
+    <!-- #n DIVision #gk -->
+    <div></div>
+
+
+    &lt;dl&gt;
+    <!-- #n Description List #gk -->
+    <dl></dl>
+
+
+    &lt;dt&gt;
+    <!-- #n Defintion Term #gk -->
+    <dt></dt>
+
+
+    &lt;em&gt;
+    <!-- #n EMphasized text -->
+    <em></em>
+
+
+    &lt;embed&gt;
+    <!-- #n -->
+    <embed src="" type="">
+
+
+    &lt;fieldset&gt;
+    <!-- #n #gk -->
+    <fieldset></fieldset>
+
+
+    &lt;figcaption&gt;
+    <!-- #n FIGure CAPTION -->
+    <figcaption></figcaption>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;figure&gt;
+    <!-- #n -->
+    <figure></figure>
+
+
+    &lt;footer&gt;
+    <!-- #n #gk -->
+    <footer></footer>
+
+
+    &lt;form&gt;
+    <!-- #n #gk -->
+    <form action=""></form>
+
+
+    &lt;h1&gt;
+    <!-- #n Heading range / order 1 #gk -->
+    <h1></h1>
+
+
+    &lt;h2&gt;
+    <!-- #n Heading 2 #gk -->
+    <h2></h2>
+
+
+    &lt;h3&gt;
+    <!-- #n Heading 3 #gk -->
+    <h3></h3>
+
+
+    &lt;h4&gt;
+    <!-- #n Heading 4 #gk -->
+    <h4></h4>
+
+
+    &lt;h5&gt;
+    <!-- #n Heading 5 #gk -->
+    <h5></h5>
+
+
+    &lt;h6&gt;
+    <!-- #n Heading 6 #gk -->
+    <h6></h6>
+
+
+    &lt;head&gt;
+    <!-- #n #gk -->
+
+    <head></head>
+
+
+    &lt;header&gt;
+    <!-- #n #gk -->
+    <header></header>
+
+
+    &lt;hr&gt;
+    <!-- #n Horizontal Ruler #gk -->
+    <hr>
+
+
+    &lt;html&gt;
+    <!-- #n HyperText Markup Language #gk -->
+    <html>
+
+    </html>
+
+
+    &lt;i&gt;
+    <!-- #n Italic -->
+    <i></i>
+
+
+    &lt;iframe&gt;
+    <!-- #n Inline FRAME -->
+    <iframe src="" frameborder="0"></iframe>
+
+
+    &lt;img&gt;
+    <!-- #n IMaGe #gk -->
+    <img src="" alt="">
+
+
+    &lt;input&gt;
+    <!-- #n #gk -->
+    <input type="text">
+
+
+    &lt;ins&gt;
+    <!-- #n INSerted text -->
+    <ins></ins>
+
+
+    &lt;kbd&gt;
+    <!-- #n KeyBoarD input -->
+    <kbd></kbd>
+
+
+    &lt;label&gt;
+    <!-- #n #gk -->
+    <label for=""></label>
+
+
+    &lt;legend&gt;
+    <!-- #n -->
+    <legend></legend>
+
+
+    &lt;li&gt;
+    <!-- #n List Item #gk -->
+    <li></li>
+
+
+    &lt;link&gt;
+    <!-- #n #gk -->
+    <link rel="stylesheet" href="">
+
+
+    &lt;main&gt;
+    <!-- #n -->
+    <main></main>
+
+
+    &lt;map&gt;
+    <!-- #n -->
+    <map name=""></map>
+
+
+    &lt;mark&gt;
+    <!-- #n -->
+    <mark></mark>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;meta&gt;
+    <!-- #n -->
+    <meta>
+
+
+    &lt;meter&gt;
+    <!-- #n -->
+    <meter></meter>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;nav&gt;
+    <!-- #n NAVigation #gk -->
+    <nav></nav>
+
+
+    &lt;noscript&gt;
+    <!-- #n -->
+    <noscript></noscript>
+
+
+    &lt;object&gt;
+    <!-- #n -->
+    <object data="" type=""></object>
+
+
+    &lt;ol&gt;
+    <!-- #n Ordered List #gk -->
+    <ol></ol>
+
+
+    &lt;optgroup&gt;
+    <!-- #n OPTion GROUP -->
+    <optgroup></optgroup>
+
+
+    &lt;option&gt;
+    <!-- #n #gk -->
+    <option value=""></option>
+
+
+    &lt;output&gt;
+    <!-- #n #gk -->
+    <output></output>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;p&gt;
+    <!-- #n Paragraph #gk -->
+    <p></p>
+
+
+    &lt;param&gt;
+    <!-- #n PARAMeter -->
+    <param name="" value="">
+
+
+    &lt;picture&gt;
+    <!-- #n -->
+    <picture></picture>
+
+
+    &lt;pre&gt;
+    <!-- #n PREformatted text #gk -->
+    <pre></pre>
+
+
+    &lt;progress&gt;
+    <!-- #n -->
+    <progress></progress>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;q&gt;
+    <!-- #n Quotation -->
+    <q></q>
+
+
+    &lt;rp&gt;
+    <!-- #n Ruby P?-->
+    <rp></rp>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;rt&gt;
+    <!-- #n R? T? -->
+    <rt></rt>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;ruby&gt;
+    <!-- #n -->
+    <ruby></ruby>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;s&gt;
+    <!-- #n Strikethrough text -->
+    <s></s>
+
+
+    &lt;samp&gt;
+    <!-- #n SAMPle output -->
+    <samp></samp>
+
+
+    &lt;script&gt;
+    <!-- #n #gk -->
+    <script></script>
+
+
+    &lt;section&gt;
+    <!-- #n #gk -->
+    <section></section>
+
+
+    &lt;select&gt;
+    <!-- #n #gk -->
+    <select name="" id=""></select>
+
+
+    &lt;small&gt;
+    <!-- #n -->
+    <small></small>
+
+
+    &lt;source&gt;
+    <!-- #n -->
+    <source>
+
+
+    &lt;span&gt;
+    <!-- #n #gk Allgemeines Inline-Element, Gegensatz zu div -->
+    <span></span>
+
+
+    &lt;strong&gt;
+    <!-- #n -->
+    <strong></strong>
+
+
+    &lt;style&gt;
+    <!-- #n #gk -->
+    <style></style>
+
+
+    &lt;sub&gt;
+    <!-- #n SUBscribed text -->
+    <sub></sub>
+
+
+    &lt;summary&gt;
+    <!-- #n -->
+    <summary></summary>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;sup&gt;
+    <!-- #n SUPerscripted text -->
+    <sup></sup>
+
+
+    &lt;svg&gt;
+    <!-- #n sCALABLE vECTOR gRAPHIC -->
+    <svg></svg>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;table&gt;
+    <!-- #n #gk -->
+    <table></table>
+
+
+    &lt;tbody&gt;
+    <!-- #n tABLE body #gk -->
+    <tbody></tbody>
+
+
+    &lt;td&gt;
+    <!-- #n tABLE dATA #gk -->
+    <td></td>
+
+
+    &lt;template&gt;
+    <!-- #n -->
+    <template></template>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;textarea&gt;
+    <!-- #n #gk -->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+
+    &lt;tfoot&gt;
+    <!-- #n tABLE foot #gk -->
+    <tfoot></tfoot>
+
+
+    &lt;th&gt;
+    <!-- #n tABLE hEAD CELL #gk -->
+    <th></th>
+
+
+    &lt;thead&gt;
+    <!-- #n tABLE head #gk -->
+    <thead></thead>
+
+
+    &lt;time&gt;
+    <!-- #n -->
+    <time></time>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;title&gt;
+    <!-- #n #gk -->
+    <title></title>
+
+
+    &lt;tr&gt;
+    <!-- #n tABLE rOW -->
+    <tr></tr>
+
+
+    &lt;track&gt;
+    <!-- #n -->
+    <track>
+    <!-- für emmet nicht bekannt -->
+
+
+    &lt;u&gt;
+    <!-- #n uNDERLINED -->
+    <u></u>
+
+
+    &lt;ul&gt;
+    <!-- #n uNORDERED lIST #gk -->
+    <ul></ul>
+
+
+    &lt;var&gt;
+    <!-- #n varIABLE -->
+    <var></var>
+
+
+    &lt;video&gt;
+    <!-- #n -->
+    <video src=""></video>
+
+
+    &lt;wbr&gt;
+    <!-- #n wORD brEAK #gk -->
+    <wbr>
+    <!-- für emmet nicht bekannt -->
+
+
+
+
+    <!-- ######################################### -->
+    <!-- ######################################### -->
+    <!-- VERALTET -->
+
+
+    &lt;acronym&gt;
+    <!-- #n #nd -->
+    <acronym title=""></acronym>
+    <!-- stattdessen nimm abbr -->
+
+
+    &lt;applet&gt;
+    <!-- #n #nd -->
+    <applet></applet>
+    <!-- stattdessen nimm embed oder object -->
+
+
+    &lt;basefont&gt;
+    <!-- #n #nd -->
+    <basefont>
+    <!-- stattdessen nimm CSS -->
+
+
+    &lt;big&gt;
+    <!-- #n #nd -->
+    <big></big>
+    <!-- stattdessen nimm CSS -->
+
+
+    &lt;center&gt;
+    <!-- #n #nd -->
+    <center></center>
+    <!-- stattdessen nimm CSS -->
+
+
+    &lt;dir&gt;
+    <!-- #n #nd dirECTION -->
+    <dir></dir>
+    <!-- stattdessen nimm ul -->
+
+
+    &lt;font&gt;
+    <!-- #n #nd -->
+    <font></font>
+    <!-- stattdessen nimm CSS -->
+
+
+    &lt;frame&gt;
+    <!-- #n #nd -->
+    <frame></frame>
+
+
+    &lt;frameset&gt;
+    <!-- #n #nd -->
+    <frameset></frameset>
+
+
+    &lt;nobr&gt;
+    <!-- #n #nd obsolete https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr -->
+    <nobr></nobr>
+
+
+    &lt;noframes&gt;
+    <!-- #n #nd -->
+    <noframes></noframes>
+
+
+    &lt;strike&gt;
+    <!-- #n #nd -->
+    <strike></strike>
+    <!-- stattdessen nimm del oder s -->
+
+
+    &lt;tt&gt;
+    <!-- #n #nd tELEtYPE -->
+    <tt></tt>
+    <!-- stattdessen nimm CSS -->
+
+
+    <!-- 
+    Quellen:     
+    https://www.w3schools.com/tags/default.asp
+
+    *todo 
+    meine Liste von Tags mit diesen Referenzen vergleichen:
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+    *todo 
+    tags austesten, die von emmet vorgeschlagen werden und die nicht in meiner Liste drin sind
+     -->
+
+</body>
+
+</html>

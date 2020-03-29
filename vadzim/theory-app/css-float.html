@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLOATING</title>
+    <style>
+        * {
+            border: thin solid;
+            background-color: springgreen;
+        }
+
+        p {
+            float: left;
+            /* float: right; */
+            /* auch die Reihenfolge ist getauscht */
+            /* 2. lässt die Elemente wie Inhalt von einem nachfolgenden Element verhalten */
+        }
+
+        .noMargin {
+            margin: 0
+        }
+
+        /* 
+        Wenn sich das Nachfolgende Element von gefloateten Element komisch verhält, 
+        die float-Eigenschaft soll irgendwo unterbrochen werden (gecleart):
+        entweder am nächsten Element oder
+        am Elternelement */
+
+        /* clearen beim nächsten El */
+        .toClear {
+            clear: both;
+        }
+
+        /* clearen beim Elternelement */
+        #clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS FLOAT</h1>
+    <em>vorausgesetzte Kenntnisse: CSS-Box, inline/block, z-index</em>
+    <pre>
+    dt: Umfließen
+    float left oder right
+    Durch Float werden block-elemente so breit wie Inhalt.
+    Float zwingt ein Element den nächsten freien Raum links oder rechts zu nehmen.  
+    Durch Float wird das Verhalten von nachfolgenden nicht gefloateten Elementen beinflusst.
+    </pre>
+
+
+
+    <h2>1. Float & nachfolgende Block-Elemente</h2>
+    <pre>
+    nach links gefloatete Paragraphen mit nicht gefloateten Artikeln dazwischen.
+    Inhalt von den ersten drei Artikeln ist verschoben. 
+    Warum eben von drei und warum Paragraphen in dieser Höhe stehen,
+    ist im nächsten Test sichtbar.
+    #q das zum selber Austesten anbieten
+    </pre>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article>article</article>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article>article</article>
+    <article>article</article>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+
+
+
+
+    <h2>2. float-Elemente ohne Margin & nachfolgende Block-Element</h2>
+    <pre>
+    </pre>
+    <p class=noMargin>paragraph1</p>
+    <p class=noMargin>paragraph2</p>
+    <p class=noMargin>paragraph3</p>
+    <p class=noMargin>paragraph4</p>
+    <p class=noMargin>paragraph5</p>
+    <p class=noMargin>paragraph6</p>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <article>article</article>
+    <hr>
+
+
+
+
+    <h2>3. float-Paragraphen & clear-Artikel danach</h2>
+    <pre>
+    clear beendet das Floating.
+    </pre>
+    <p>paragraph1</p>
+    <p>paragraph2</p>
+    <p>paragraph3</p>
+    <p>paragraph4</p>
+    <p>paragraph5</p>
+    <p>paragraph6</p>
+    <article class=toClear>article</article>
+    <article class=toClear>article</article>
+    <hr>
+
+
+
+
+    <h2>T4. clearfix</h2>
+    <div id="clearfix">
+        <p>paragraph1</p>
+        <p>paragraph2</p>
+        <p>paragraph3</p>
+        <p>paragraph4</p>
+        <p>paragraph5</p>
+        <p>paragraph6</p>
+    </div>
+    <article>article</article>
+    <hr>
+
+
+
+    <h2>5. Anwendungsszenarios</h2>
+    <pre>
+    floating wird oft bei Navigationen eingesetzt
+    </pre>
+
+
+    <!-- 
+        *todo
+        https://www.mediaevent.de/css/position-clear.html
+
+        *todo
+        Warum wird nur der Inhalt von den nachfolgenden Elementen beeinflusst? 
+        Liegen Inhalt und Border bei einer CSS-Box in verschiedenen z-index-Ebenen 
+        und gefloatete Elemente sind in der gleichen Ebene mit dem Inhalt von den nicht gefloateten?
+        https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
+     -->
+
+</body>
+
+</html>

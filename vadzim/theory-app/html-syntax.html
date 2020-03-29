@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <!-- Tag für den Kopfteil des Dokumentes -->
+    <!-- zusätzliche/Meta-Daten für Browser -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html-syntax</title> <!-- Dokumententitel -->  
+    <link rel="stylesheet" href="css-syntax.css"> 
+</head>
+
+<body>
+    <!-- Tag für den Hauptteil des Dokumentes -->
+    <!-- Inhalt für den Benutzer kommt ins body -->
+
+    <!-- Kommentare sowie Tabulatoren und leere Zeilen werden nicht gerendert -->
+
+    <h1>html-syntax</h1>
+
+
+    <h2>SYNTAX VON TAGS</h2>
+
+    <!-- #region CASE -->
+
+    <h3>CASE-SENSITIVE?</h3>
+    <pre>
+        Tags können sowohl klein als auch groß geschrieben werden
+    </pre>
+    <p>p-paragraph</p>
+    <P>P-paragraph</P>
+
+    <!-- #endregion -->
+    <!-- #region NO CONTENT -->
+
+    <h3>TAGS OHNE INHALT</h3>
+    <pre>
+        Die meisten HTML-Tags rendern irgendwelchen Inhalt.
+        Aber es gibt auch welche, die zum anderen Zweck da sind.
+        Tag `hr` z.B. setzt einfach eine horizontale Linie.
+        Solche Tags haben kein (Start-/End-)Paar.
+        In HTML4 hatten sie den Schrägstrich in ihrer Syntax.
+        In HTML5 sehen sie so aus wie die Starttags.
+    </pre>
+    <hr /> <!-- HTML4 -->
+    <hr> <!-- HTML5 -->
+
+    <!-- #endregion -->
+    <!-- #region WITH CONTENT -->
+
+    <h3>TAGS MIT INHALT</h3>
+    <pre>
+        Die Tag-Paare bestehen deswegen aus zwei Teilen, 
+        um die Grenzen für ihren Inhalt zu definieren.
+        Dieser Inhalt wird (mit einpaar Ausnahmen) auch im Browser gerendert.
+        Analysiere diese Datei. Die meisten Tags rendern Text.
+    </pre>
+    <hr><!-- hr steht hier, um die Grenze zwischen den Themenabschnitten zu markieren -->
+
+    <!-- #endregion -->
+    <!-- #region NESTING -->
+
+
+    <h3>VERSCHACHTELUNG</h3>
+    <pre>
+        Tags können weitere Tags als Inhalt in sich haben. 
+        Analysiere dafür diese HTML-Datei.
+        Wenn HTML-Elemente verschachtelt sind, 
+        spricht man von Eltern-Elementen und Kind-Elementen
+        (denke an binäre Bäume, um sich diese Relationen vorzustellen).
+        Aber auch ohne Verschachtelung, Inhalt von einem HTML-Tag ist immer ein Kind 
+        von dem entsprechenden HTML-Element.
+        Auch wenn es nur ein Text/String ist.
+    </pre>
+    <p>
+        <span>span - Eltern-Element von diesem Text und Kind von p.</span>
+        p - Eltern-Element von diesem Text, von span und Kind von ? (#q Wie denkst du)
+    </p>
+    <hr>
+
+    <!-- #endregion -->
+    <!-- #region NO END TAGS -->
+
+    <h3>FEHLENDE TAGS</h3>
+    <pre>
+        Seit HTML5 sind die schließenden Tags (End-Tags) bei einigen! der Tags optional. 
+    </pre>
+    <p>
+        <!-- #a -->
+        Schaue Dir die Tabelle unten an.
+        Erstelle eine Kopie davon drüber oder drunter.
+        In der Kopie versuche, die End-Tags von
+        `thead`, `tr`, `th`, `tbody` und `td` zu löschen.
+        Welche der beiden Tabellen ist für Dich lesbarer?
+    </p>   
+
+    <table>
+        <thead>
+            <tr>
+                <th>spalte 1</th>
+                <th>spalte 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>zelle 1 1</td>
+                <td>zelle 1 2</td>
+            </tr>
+            <tr>
+                <td>zelle 2 1</td>
+                <td>zelle 2 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <!-- #endregion -->
+    <!-- #region OPTIONAL TAGS -->
+
+    <pre>
+        Es geht noch weiter. Bei manchen HTML-Tags dürfen beide Teile fehlen. 
+        Der HTML-Parser weiß bescheid, 
+        wo diese Tags normalerweise stehen und fügt sie für den Browser ein.         
+    </pre>
+    <p>
+        <!-- #a -->
+        Versuche, die Start- und End-Tags von `html`, `head` und `body`
+        in dieser Datei zu löschen.
+    </p>
+
+    <h4>Bei folgenden Elementen sind die End-Tags optional:</h4>
+    <p>
+        dt,
+        optgroup,
+        option,
+        p,
+        td,
+        tfoot,
+        th,
+        thead,
+        tr
+    </p>
+    <h4>Bei folgenden Elementen sind beide Teile optional:</h4>
+    <p>
+        body,
+        colgroup,
+        head,
+        html,
+        tbody
+    </p>
+    <hr>
+
+    <!-- 
+        *todo 
+        https://meiert.com/en/blog/optional-html/ 
+    -->
+    <!-- #endregion -->
+    <!-- #region NO STANDARD TAGS -->
+
+
+    <h3>UNGÜLTIGE TAGS</h3>
+    <pre>
+        Die Browser rendern auch das, was sie nicht kennen.
+        <!-- Unbekannte Elemente sind inline 
+        (siehe border und my-tag in devtools vom browser). -->
+    </pre>
+    <my-tag>text to render in browser</my-tag>
+
+    <!-- GEH ZURÜCK ZU HTML.MD -->
+    <a href="../ABLAUF.md#m04--HTML-SYNTAX">ZURÜCK ZU ABLAUF.MD</a>
+    <!-- #endregion -->
+
+
+    <h2>SYNTAX VON ATTRIBUTEN</h2>
+
+    <!-- #region ATTRIBUTES -->
+
+
+<!--     ### HTML > SYNTAX > ATTRIBUTES & IDENTIFIERS
+ -->
+    <pre>
+        Durch Hinzufügen eines HTML-Tags in einer HTML-Datei wird vom Browser in seinem Speicher 
+        ein HTML-Element angelegt. 
+        Das ist ein komplexes Objekt mit viiiiiiielen Eigenschaften,
+        wie z.B. Id-Bezeichner, Höhe, Breite, ob es draggable ist, Relation zu anderen Tags u.v.m.
+        Viele von diesen Eigenschaften bleiben einfach leer. 
+        Sie sind dafür da, dem Web-Entwickler die Möglichkeit zu geben, 
+        diese Eigenschaften mit eigenen Werten zu befüllen.
+        Einige von diesen Eigenschaften bekommen sofort die Werte, 
+        die einem HTML-Element von Anfang an eigen sind. 
+        Wie z.B. die Schriftgröße bei den Überschriften erster Ordnung (h1) - 
+        sie ist zweimal größer als die bei normalen Text-Absätzen (Paragraphen).
+        Die Eigenschaften von HTML-Elementen können ihre Werte z.B. über HTML-Attribute bekommen.
+    </pre>
+    <hr>
+    <!-- #endregion -->
+    <!-- #region ATTR IN GENERAL -->
+
+    <h3>ALLGEMEINE SYNTAX</h3>
+
+    <pre>
+        HTML-Attribute stehen nie bei einem End-Tag.
+        Direkt nach dem Tag-Bezeichner, durch ein Leerzeichen getrennt.              
+    </pre>
+    <my-tag attribut-name="attribut-wert">inhalt von meinem Tag</my-tag>
+
+    <pre>
+        Wenn der Wert vom Attribut nur aus einem einzelnen Wort besteht, 
+        dann sind die Anführungzeichen optional.
+    </pre>
+    <my-tag attribut-name=attribut-wert>inhalt von meinem Tag</my-tag>
+
+    <pre>
+        Mehrere Attribute sind durch ein Leehrzeichen getrennt.
+    </pre>
+    <my-tag attribut-name=attribut-wert attribut-name2=attribut-wert2>inhalt von meinem Tag</my-tag>
+
+    <hr>
+    <!-- #endregion -->
+    <!-- #region ATTR VALUES -->
+
+    
+    <h3>SYNTAX UND FORMAT VON ATTRIBUTWERTEN</h3>
+    <!--  -->
+    <pre>
+        Die meisten Attribute akzeptieren nur eine Auswahl an vordefinierten Werten
+        oder nur bestimmtes Format von Daten.
+        Z.B. `disabled` akzeptiert entweder `true` oder `false`, nichts Weiteres.
+        Attribute `href` und `src` erwarten eine URL. 
+        Viele anderen Attribute wie z.B. Attribute `alt`, akzeptieren beliebige Strings.
+    </pre>
+    <a href="https://google.com">Anchor link</a>
+    <!-- href (hyper reference) erwartet URL als Wert -->
+    <br>
+    <img src="https://picsum.photos/id/10/200" alt="ein unwichtiges Bild">
+    <!-- src (source) erwartet URL, alt (alternate text) erwartet String ohne weiteres bestimmtes Format -->
+
+    <button disabled="true">OK</button>
+
+
+
+    <pre>
+        Bei true/false-Attributen ist die Angabe vom Wert seit HTML5 optional.
+        Wenn das Attribut überhaupt angegeben ist, dann ist es automatisch auf `true` gesetzt.
+    </pre>
+    <input type="text" disabled>
+    <!-- #endregion -->
+    <!-- #region IDENTIFIER -->
+
+
+    <h3>IDENTIFIER: ID, CLASS & NAME</h3>
+    <pre>
+        HTML ist keine Programmiersprache, es ist unmöglich, eine HTML-Variable anzulegen.
+        Aber mit Hilfe vom globalen Attribut `id` kann man ein bestimmtes HTML-Element unter vielen anderen identifizieren.
+        Mit dem Attribut `class` wird eine Gruppe von Elementen identifiziert, 
+        für die der Web-Entwickler gemeinsame CSS-Stile oder JS-Funktionalität vorgesehen hat.
+        Mit dem Attribut `name` ist beides möglich. 
+        Zusätzlich zu `id` und `class` wird `name` bei Formular-Elementen eingesetzt.
+        Generell akzeptieren diese drei Attribute beliebige Zeichenkombinationen, außer Leerzeichen 
+    </pre>
+    <p id="myID">p mit ID</p>
+    <p class="myClass">p mit Klasse myClass</p>
+    <div class="myClass">div mit Klasse myClass</div>
+    <input type="text" name="myName">
+
+
+
+    <pre>
+        In HTML4 gab es strengere Regeln für die ID-Identifier. 
+        Wenn Du an einem Projekt arbeitest, 
+        wo die Kompatibilität mit HTML4 beibehalten werden soll, 
+        dann benutze nur ASCII Buchstaben, Zahlen, `_`, `-` und `.`
+        Die Zahlen dürfen nicht als erstes Zeichen benutzt werden.
+    </pre>
+
+
+
+    <!-- GEH ZURÜCK ZU README.MD -->
+    <a href="../ABLAUF.md#m04--html-syntax">ZURÜCK ZU ABLAUF.MD</a>
+
+    <!-- #endregion -->
+    <!-- #region JS SYNTAX -->
+    
+    <h3>p.innerText</h3>
+    <p id="par_iT"></p>
+
+    <h3>p.innerHTML</h3>
+    <p id="par_iH"></p>
+
+    <h3>output.value</h3>
+    <output id="out_v"></output>
+
+    <script>
+        console.log('myID :', myID);  /* nimm Firefox! */ 
+        console.log(myID);    
+    </script>
+    <script src="js-syntax.js"></script>
+
+    <!-- #endregion -->
+</body>
+
+</html>

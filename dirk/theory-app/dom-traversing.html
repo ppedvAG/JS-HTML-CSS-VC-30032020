@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html id=myHTML lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM TRAVERSING</title>
+    <style>
+        #p_id {
+            border: thin solid;
+            font-size: 1em;
+            /* height: 3em; */
+            border-radius: 10px;
+            padding-left: 2em;
+        }
+        a {
+            display: block;
+            font-size: 3em;
+            height: 2em;
+            width: 50vw;
+            border: thick dotted;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM TRAVERSING</h1>
+
+    <h2>DOC METHODS</h2>
+    <h3>getElementById('')</h3>
+    <pre>
+        Wenn mehrere Elemente die gleiche ID haben,
+        wird das erste Element selektiert.
+        Bem.: CSS selektiert aber beide.
+    </pre>
+
+    <p id="p_id">p1</p>
+    <p id="p_id">p2</p>
+
+
+    <h3>getElementsByClassName('')</h3>
+    <p class="p_class">p1</p>
+    <p class="p_class">p2</p>
+    <p class="p_class">p3</p>
+
+
+    <h3>getElementsByName()</h3>
+    <input type="text" name="inp_name">
+
+
+    <h3>getElementsByTagName()</h3>
+    <pre>
+        siehe die h3-Dekoration
+    </pre>
+
+    
+    <h3>appendChild()</h3>
+    <p id="p_mit_a"></p>
+
+
+    <h3>replaceChild</h3>
+    <p id="p_mit_span">
+        <span id="span_in_p">text von span</span>
+    </p>
+
+
+    <h3>removeChild</h3>
+    <table>
+        <tbody id="t_body">
+            <tr>
+                <td>td01</td>
+                <td>td02</td>
+                <td>td03</td>
+            </tr>
+            <tr>
+                <td>td01</td>
+                <td>td02</td>
+                <td>td03</td>
+            </tr>
+            <tr>
+                <td>td01</td>
+                <td>td02</td>
+                <td>td03</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        /* DOC METHODS */
+        // document.getElementById('')
+        document.getElementById('p_id').innerText += 'test'
+
+
+        // document.getElementsByClassName('')
+        for (let el of document.getElementsByClassName('p_class')) {
+            el.style.fontSize = '40px'
+            console.log('test'); // wurde ausgeführt! 
+        }
+
+
+        // document.getElementsByName()
+        for (let el of document.getElementsByName('inp_name')) {
+            el.style.width = '50vw'
+            // el.value = 'anfangstext' // anfangswert kann vom benutzer überschrieben werden
+            el.placeholder = 'hinweis'
+            el.title = 'tooltip-hinweis'
+        }
+
+
+        // document.getElementsByTagName()
+        for (let el of document.getElementsByTagName('h3')) {
+            el.style.textDecoration = 'underline'
+            // text-decoration // kebab-case
+        }
+
+        // append.Child
+        /* als Alernative zu 
+           // insertRow
+           // insertCell
+        */
+        function createAnchor() {
+            let anchorLink = document.createElement('a')
+            let pMitA = document.getElementById('p_mit_a')
+            pMitA.appendChild(anchorLink)
+        }
+        setTimeout(createAnchor, 1000)
+
+
+
+        // replaceChild
+        function replaceSpan() {
+            let newSpan = document.createElement('span')
+            newSpan.innerText = 'neues El span'
+            document.getElementById('p_mit_span').replaceChild(newSpan, document.getElementById('span_in_p'))
+        }
+        setTimeout(replaceSpan, 2000)
+
+
+        // removeChild
+        let tBody = document.getElementById('t_body')
+        tBody.removeChild(tBody.children[2])
+    </script>
+</body>
+
+</html>

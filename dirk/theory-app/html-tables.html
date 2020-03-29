@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML TABLES</title>
+    <style>
+        td {
+            border: thin solid;
+
+        }
+        table {
+            /* display: table; */ /* default wert bei Tabellen */
+            /* background-color: rgb(194, 0, 0); */
+            border: thick solid;
+            border-collapse: collapse;
+            /* entfernt Abstände (margins) zwischen den Zellen */
+            caption-side: bottom;
+        }
+        /* even | an+b */
+        tbody tr:nth-child(odd) {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabellen, angelegt mit HTML</h1>
+    
+    <!-- table>caption{table caption}+(thead>tr>th{thead cell $}*4)+(tbody>(tr>td{tbody cell $}*4)*4)+(tfoot>tr>td{tfoot cell $}*4) -->
+
+    <table>
+        <caption>table caption</caption>
+        <thead>
+            <tr>
+                <th>thead cell 1</th>
+                <th>thead cell 2</th>
+                <th>thead cell 3</th>
+                <th>thead cell 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>tbody cell 1</td>
+                <td>tbody cell 2</td>
+                <td>tbody cell 3</td>
+                <td>tbody cell 4</td>
+            </tr>
+            <tr>
+                <td>tbody cell 1</td>
+                <td>tbody cell 2</td>
+                <td>tbody cell 3</td>
+                <td>tbody cell 4</td>
+            </tr>
+            <tr>
+                <td>tbody cell 1</td>
+                <td>tbody cell 2</td>
+                <td>tbody cell 3</td>
+                <td>tbody cell 4</td>
+            </tr>
+            <tr>
+                <td>tbody cell 1</td>
+                <td>tbody cell 2</td>
+                <td>tbody cell 3</td>
+                <td>tbody cell 4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>tfoot cell 1</th>
+                <th>tfoot cell 2</th>
+                <th>tfoot cell 3</th>
+                <th>tfoot cell 4</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>*todo #1</h2>
+    <pre>
+        interessant, dass der Text, welcher außerhalb von Zellen steht,
+        auch außerhalb von der Tabelle gerendert wird
+    </pre>
+    <!-- table>caption{table caption}+(thead{table head}>tr>(th{thead cell $})*5)(tbody{table body}>(tr>(td{tbody cell $})*5)*4)(tfoot{table foot}>tr>(th{tfoot cell $})*5) -->
+    <table>
+        <caption>
+            table caption
+        </caption>
+            <thead>
+                table head
+                <tr>
+                    <th>thead cell 1</th>
+                    <th>thead cell 2</th>
+                    <th>thead cell 3</th>
+                    <th>thead cell 4</th>
+                    <th>thead cell 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                table body
+                <tr>
+                    <td>tbody cell 1</td>
+                    <td>tbody cell 2</td>
+                    <td>tbody cell 3</td>
+                    <td>tbody cell 4</td>
+                    <td>tbody cell 5</td>
+                </tr>
+                <tr>
+                    <td>tbody cell 1</td>
+                    <td>tbody cell 2</td>
+                    <td>tbody cell 3</td>
+                    <td>tbody cell 4</td>
+                    <td>tbody cell 5</td>
+                </tr>
+                <tr>
+                    <td>tbody cell 1</td>
+                    <td>tbody cell 2</td>
+                    <td>tbody cell 3</td>
+                    <td>tbody cell 4</td>
+                    <td>tbody cell 5</td>
+                </tr>
+                <tr>
+                    <td>tbody cell 1</td>
+                    <td>tbody cell 2</td>
+                    <td>tbody cell 3</td>
+                    <td>tbody cell 4</td>
+                    <td>tbody cell 5</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                table foot
+                <tr>
+                    <th>tfoot cell 1</th>
+                    <th>tfoot cell 2</th>
+                    <th>tfoot cell 3</th>
+                    <th>tfoot cell 4</th>
+                    <th>tfoot cell 5</th>
+                </tr>
+            </tfoot>
+        
+    </table>
+</body>
+</html>

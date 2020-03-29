@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PSEUDO SEL</title>
+    <style>
+        /* ############################################################################## */
+        /* PSEUDO SELEKTOREN - PSEUDO ELEMENTE */
+        /* ############################################################################## */
+
+        /* `Pseudo` bedeutet - es wird ein imaginäres Objekt selektiert
+        Pseudo-Element-Selektor wählt einen bestimmten Teil eines Elements aus, z.B. den ersten Buchstaben.
+        
+        Pseudo-Klasse wählt einen bestimmten Zustand eines Elements aus. Z.B. besuchte Anker-Links, Elemente mit dem Mouse-Zeiger drüber.  */
+
+
+        /* ::after 
+        #gk
+         */
+
+        /* ::backdrop */
+
+        /* ::before 
+        #gk
+        erzeugt ein Pseudoelement, dass das erste Kind des gematchten Elements ist. 
+        Es wird oft verwendet, um kosmetische Inhalte unter Verwendung der content Eigenschaft 
+        zu einem Element hinzuzufügen. Dieses Element ist standardmäßig inline.
+        https://developer.mozilla.org/de/docs/Web/CSS/content
+
+*/
+
+        /* ::content deprecated */
+
+        /* ::cue */
+
+        /* ::cue() */
+
+        /* ::cue-region */
+
+        /* ::cue-region() */
+
+        /* ::first-letter 
+        Das erste Zeichen einer Zeile
+        */
+
+        /* ::first-line 
+        Die erste Zeile in einem Absatz
+        */
+
+        /* ::selection 
+        erfasst die Markierung des Benutzers. Z.B. im Text
+        */
+
+        /* ::shadow */
+
+        /* ::grammar-error */
+
+        /* ::marker 
+        selects the marker box of a list item
+        */
+
+        /* ::part */
+
+        /* ::placeholder
+        z.B. `input::placeholder` erfasst Formular-Elemente, die das gleichnamige Attribut haben 
+        */
+
+        /* ::slotted */
+
+        /* ::spelling-error */
+
+
+        /* ############################################################################## */
+        /* PSEUDO SELEKTOREN - PSEUDO KLASSEN */
+        /* ############################################################################## */
+
+        /* Eine Pseudoklasse wählt einen bestimmten Zustand aus (z.B. mouseover).*/
+
+        /* :active 
+        z.B. `a:active` erfasst das aktive Link
+        */
+
+        /* :any-link */
+
+        /* :checked 
+        z.B. input:checked
+        */
+
+        /* :corner-present */
+
+        /* :decrement */
+
+        /* :default 
+        z.B. `input:default` erfasst das default input-Element
+        */
+
+        /* :disabled 
+        z.B. `input:disabled` erfasst alle deaktivierten inputs
+        */
+
+        /* :double-button */
+
+        /* :empty 
+        Erfasst leere Elemente E
+        */
+
+        /* :enabled 
+        Erfasst alle aktivierten Elemente
+        */
+
+        /* :end */
+
+        /* :first */
+
+        /* :first-child 
+        Erfasst alle Elemente E, die in ihrem Elternelement das erste Kindelement darstellen
+        */
+
+        /* :first-of-type 
+        erfasst alle Elemente E, die in ihrem Elternelement das erste Kindelement von ihrem Typ darstellen
+        */
+
+        /* :focus */
+
+        /* :fullscreen */
+
+        /* :future */
+
+        /* :horizontal */
+
+        /* :host */
+
+        /* :host() */
+
+        /* :host-context() */
+
+        /* :hover 
+        #gk
+        erfasst das Element, über dem es mit der Maus rübergefahren wird
+        */
+
+        /* :increment */
+
+        /* :indeterminate 
+        z.B. `input:indeterminate` erfasst das input in dem undefinierten Zustand */
+
+        /* :in-range 
+        z.B. `input:in-range` erfasst das input mit dem Wert innerhalb des angegebenen Ranges
+        */
+
+        /* :invalid */
+
+        /* :lang() 
+        :lang(wert)
+        erfasst Elemente mit dem lang-Attribut und dem angegebenen Wert
+        */
+
+        /* :last-child 
+        Erfasst alle Elemente E, die in ihrem Elternelement das letzte Kindelement darstellen
+        */
+
+        /* :last-of-type 
+        erfasst das letzte Element von seinem Typ innerhalb eines Elternelements
+        */
+
+        /* :left */
+
+        /* :link 
+        z.B. `a:link` erfasst nicht besuchte Links */
+
+        /* :matches() */
+
+        /* :no-button */
+
+        /* :not() 
+        :not(_selector_)
+        Erfasst alle Elemente, die mit _selector_ nicht ausgeschlossen werden
+        z.B. :not(p)
+        */
+
+        /* :nth-child() 
+        E:nth-child(n)
+        Erfasst die Elemente vom Typ E, die das x-te Kindelement sind
+        */
+
+        /* :nth-last-child() 
+        E:nth-last-child(n)
+        Erfasst die Elemente vom Typ E, die das x-te Kindelement sind, Zählung in umgekehrter Reihenfolge
+        */
+
+        /* Nth-Child-Pseudoklassen können neben Zahlen und den Schlüsselwörtern odd und even auch an+b-Ausdrücke verwenden.
+
+        Zitat: „Die :nth-child(an+b) CSS Pseudo Klasse passt auf ein Element, das im Dokumentbaum an+b-1 Geschwisterknoten vor sich hat, wobei n einen gegebenen positiven Wert oder den Wert 0 hat. Zudem muss das Element einen Elternknoten haben. Einfacher ausgedrückt: Beginnend bei einem Startindex b trifft der Selector auf jedes n-te folgende Element zu.
+        Einige Beispiele:
+        1n+0, oder einfach n, trifft auf jedes Kindelement zu.
+        2n+0, oder einfach 2n, würde auf die Kindelemente 2, 4, 6, 8, etc. zutreffen. Hier kann auch einfach das Schlüsselwort even verwendet werden.
+        2n+1 würde auf die Elemente 1, 3, 5, 7, etc. zutreffen. Hier gibt es auch eine Kurzform: Das Schlüsselwort odd.
+        3n+4 würde auf die folgenden Elemente zutreffen: 4, 7, 10, 13, etc.
+        Die Werte a und b müssen beide Integer sein, und der Index des ersten Kindelements eines Knotens ist 1. In anderen Worten, diese Klasse trifft auf alle Kindelemente zu, deren Index Teil der Menge { an + b; n = 0, 1, 2, ... } ist.“
+
+        Quelle: https://developer.mozilla.org/de/docs/Web/CSS/%3Anth-child
+        */
+
+        /* :nth-last-of-type() 
+        E:nth-last-of-type(n)
+        Erfasst die Elemente vom Typ E, die das x-te Kindelement des gleichen Typs sind, 
+        Zählung in umgekehrter Reihenfolge
+        */
+
+        /* :nth-of-type() 
+        E:nth-of-type(n)
+        Erfasst die Elemente vom Typ E, die das x-te Kindelement des gleichen Typs sind
+        */
+
+        /* :only-child 
+        Erfasst alle Elemente, die ein Einzelkindelement darstellen
+        */
+
+        /* :only-of-type 
+        erfasst Elemente, die die Einzigen von ihrem Typ innerhalb es Elternelements sind
+        */
+
+        /* :optional 
+        z.B. `input:optional` erfasst inputs ohne required-Attribut */
+
+        /* :out-of-range 
+        z.B. `input:out-of-range` erfasst inputs mit dem Wert außerhalb des angegebenen Ranges */
+
+        /* :past */
+
+        /* :read-only 
+        z.B. `input:read-only` erfasst inputs mit dem readonly-Attribut 
+        */
+
+        /* :read-write 
+        z.B. `input:read-write` erfasst inputs ohne readonly-Attribut
+        */
+
+        /* :required */
+
+        /* :right */
+
+        /* :root 
+        erfasst das root-Element vom Dokument
+        */
+
+        /* :scope */
+
+        /* :single-button */
+
+        /* :start */
+
+        /* :target 
+        erfasst das Ziel eines Links, nachdem das Link angeclickt wurde
+        */
+
+        /* :valid */
+
+        /* :vertical */
+
+        /* :visited 
+        z.B. `a:visited` erfasst besuchte Links */
+
+        /* :window-inactive */
+
+        /* ############################################################################## */
+        /* experimentelle Pseudo-Klassen */
+
+        /* :blank */
+
+        /* :defined */
+
+        /* :dir */
+
+        /* :focus-visible */
+
+        /* :focus-within */
+
+        /* :has */
+
+        /* :is */
+
+        /* :placeholder-shown */
+
+        /* :where */
+
+        /* nicht aufgelistet sind Pseudo-Elemente und Pseudo-Klassen mit Vendor-Präfixen */
+
+        /* ############################################################################## */
+    </style>
+</head>
+<body>
+    <h1>CSS PSEUDO SEL</h1>
+    
+</body>
+</html>
+<!-- 
+    *todo
+    sind Pseudo-Klassen mit runden Klammern Funktionen? Z.B. :not()
+ -->

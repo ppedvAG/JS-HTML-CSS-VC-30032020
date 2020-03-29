@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js-data-types</title>
+</head>
+<body>
+
+    <script>
+
+        // Primitives & Literals
+        
+        let nr = 4;
+        let stringTest1 = '4';        
+
+        console.info('typeof stringTest1');
+        console.log(typeof stringTest1); // string
+
+        let stringTest2 = new String(stringTest1);
+        // welchen Datentyp hat ein String, angelegt mit nem Konstruktor ?
+        console.info('typeof stringTest2');
+        console.log(typeof stringTest2); // object
+
+        // Primites & Global Functions 
+        let mySymbol0 = 'd'; // string
+        let mySymbol1 = Symbol('a');        
+        
+        console.info('typeof mySymbol1');
+        console.log(typeof mySymbol1); // symbol
+
+        console.info('mySymbol1 instanceof Object');
+        console.log(mySymbol1 instanceof Object); // false
+
+        let myNull = null;
+        console.info('typeof myNull');
+        console.log(typeof myNull); // object (irritierend)
+
+        console.info('myNull instanceof Object');
+        console.log(myNull instanceof Object); // false
+
+
+        // sind alle Variablen, angelegt mit Konstruktoren, Objekte // ja!
+
+
+          /* ### INTRO ### */
+        console.log(typeof 'text'); // string
+        console.log(typeof "text"); // string
+        console.log(typeof `text`); // string
+        let stringTest = 'sfghsg' + stringTest1; // concat, konkatinieren
+        console.log('stringTest :', stringTest);
+        stringTest = `sfghsg ${stringTest}`;
+        console.log('stringTest :', stringTest);
+        /* Mit Hilfe von Interpolation-Strings kann man innherhalb von String auf JS-Ausdrücke zugreifen. */
+        // stringTest = `sfghsg ${let smth = 'smth';}`; 
+        //keine Anweisungen / Statements in den Klammern {} bei Interpol-Strings
+
+        let interpolationString = `asdfadf
+        asf
+        asdf          sdfgsdfgdfg`;
+        console.log('interpolationString :', interpolationString);
+        // Formatierung wird beibehalten
+                
+        console.log(typeof 1); // number
+        console.log(typeof 1.1); // number
+
+        let numberOrBigInt = 19007199254740992   
+        console.log('numberOrBigInt :', numberOrBigInt); // 19007199254740990
+        console.log('typeof numberOrBigInt :', typeof numberOrBigInt); // 19007199254740990
+        console.log('numberOrBigInt instanceof BigInt :', numberOrBigInt instanceof BigInt); // false
+        console.log('numberOrBigInt instanceof Number :', numberOrBigInt instanceof Number); // false
+
+        console.log('BigInt.MAX_VALUE :', BigInt.MAX_VALUE); // undefined
+        let test = BigInt(19007199254740990)
+        console.log('typeof test :', typeof test); // bigint
+        console.log('BigInt :', BigInt);
+
+        for (let prop in BigInt) {
+          console.log('prop :', prop);
+        }
+        /* 
+        *todo
+        props von BigInt ? */
+
+        
+        console.log(typeof true); // boolean
+        console.log(typeof false); // boolean
+        
+        console.log(typeof undefined); // undefined
+        
+        /* Aufgabe1: tragen sie hinter jeder Anweisung das ein, was sie in der Browserkonsole ausgibt */
+        
+        /* ### ADVANCED ### */
+        console.log(undefined instanceof Object); // false
+        console.log(typeof Symbol('d')); // symbol
+        console.log(Symbol('d') instanceof Object); // false
+        console.log(typeof any); // undefined 
+        console.log(typeof anyVadzim); // undefined 
+        console.log(typeof void 4); // undefined
+        console.log(typeof function () {}); // function
+        console.log(function () {} instanceof Object); // true
+        console.log(typeof {id: 0, name: 'Max'}); // object
+        console.log({id: 0, name: 'Max'} instanceof Object); // true
+        console.log(typeof ['element1', 'element2']); // object
+        console.log(['element1', 'element2'] instanceof Object); // true
+        // console.log(typeof `objekt 'navigator' hat folgenden Namen: ${navigator.appName}`); // string  
+        // console.log(navigator.appName); // Netscape  
+        console.log(typeof 123e5); // number
+        console.log(typeof Infinity); // number
+
+        // Max Wert von Number
+        // let myNr = new Number(4);
+        console.log(Number.MAX_VALUE); // in Exponential: 1.7976931348623157e+308
+        // normal: 9 007 199 254 740 991
+        console.log(typeof null); // object
+        console.log(null instanceof Object); // false
+        console.log(typeof String('text')); // string
+        console.log(typeof new String('text')); // object
+        console.log(typeof Number(3)); // number
+        console.log(typeof Boolean(false)); // boolean
+        console.log(typeof Object(5)); // object
+        console.log(typeof Function('console.log()')); // function
+        console.log(typeof Array(3)); // object
+        console.log(typeof 0xf00d); // number
+        console.log(typeof 0b1010); // number
+        console.log(typeof 0o744); // number
+        
+
+        /* Aufgabe1: tragen sie hinter jeder Anweisung das ein, was sie in der Browserkonsole ausgibt */
+        /* Aufgabe2: gruppieren Sie die Datentypen in diese zwei Gruppen: */
+        /* PRIMITIVE DATENTYPEN */
+        /* OBJEKT DATENTYPEN */
+
+
+        /* Strings mit anderen Datentypen */
+        console.info('STRINGS MIT ANDEREN DATENTYPEN');
+        //toString() gibt es bei allen Datentypen und Objekten
+        console.info('strings & numbers');
+        console.log('"5" + 5 = ');
+        console.log("5" + 5); // 55
+        // toString();
+        console.log('typeof ("5" + 5) -> ');
+        console.log(typeof ("5" + 5)); // string
+
+        console.info('strings & booleans');
+        console.log('"text" + true = ');
+        console.log("text" + true); // texttrue
+        console.log('typeof ("text" + true) ->');
+        console.log(typeof ("text" + true)); // string
+
+        console.info('strings & objects');
+        console.log('"text" + {id: 0, name: "Max"} = ');
+        console.log("text" + {id: 0, name: "Max"}); // text[object Object]
+        console.log('typeof ("text" + {id: 0, name: "Max"}) ->');
+        console.log(typeof ("text" + {id: 0, name: "Max"})); // string
+
+        console.info('strings & symbols');
+        console.log('"text" + Symbol("d") = ');
+        // console.log("text" + Symbol("d")); // TypeError: can't convert symbol to string
+        console.log('typeof ("text" + Symbol("d")) ->');
+        // console.log(typeof ("text" + Symbol("d")));
+
+
+        // CASTING
+
+        // number to string
+        let cNr = 4;
+        console.info("typeof String(cNr)");
+        console.log(typeof String(cNr)); // string
+
+        console.info("typeof cNr.toString()");
+        console.log(typeof cNr.toString()); // string
+
+        // string to number
+        let cStr = "6";
+
+        console.info("typeof Number(cStr)");
+        console.log(typeof Number(cStr)); // number
+
+        // mit arithmetischen Operatoren 
+        console.info("typeof +cStr");
+        console.log(typeof +cStr); // number
+        console.log(-cStr); // -6
+        console.log(typeof (cStr*1)); // number
+        
+        </script>
+    
+</body>
+</html>

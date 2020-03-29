@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS UNITS</title>
+    <style>
+        div {
+            border: medium solid lightblue;
+        }
+
+        #pixel {
+            /* div hat keinen Text als Inhalt, 
+            die Schriftgröße wird an p angewendet */
+            font-size: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        #prozent {
+            /* 10% von der gleichen Eigenschaft beim Eltern-Element */
+            font-size: 10%;
+            /* 10% von der Breite vom Eltern-Element */
+            padding: 10%;
+            /* hier wird die Seitenlänge berücksichtigt */
+            border-radius: 10%;
+        }
+        body {
+            font-size: 20px;
+            /* dadurch ist 1em 20px groß */
+            /* sonst wird default wert (16px) genommen */
+        }
+        #em {
+            font-size: 1.5em;
+            padding: 1.5em;
+            border-radius: 1.5em;
+        }
+        html {
+            font-size: 30px;
+        }
+        /* root (html) em */
+        #rem {
+            font-size: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+        }
+        /* 1vw = 1% von viewport width */
+        #vw {
+            font-size: 1vw;
+            padding: 1vw;
+            border-radius: 1vw;
+        }
+        /* 1vh = 1% von viewport height */
+        #vh {
+            font-size: 1vh;
+            padding: 1vh;
+            border-radius: 1vh;
+        }
+        /* 1vmin = 1% von viewport breite oder höhe,
+        je nachdem, was von beiden kleiner ist */
+        #vmin {
+            font-size: 1vmin;
+            padding: 1vmin;
+            border-radius: 1vmin;
+        }
+        #vmax {
+            font-size: 1vmax;
+            padding: 1vmax;
+            border-radius: 1vmax;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS GRÖßENEINHEITEN</h1>
+
+    <!-- ((div[id=""]>h2+p>lorem10)+(hr))*8 -->
+    <div id="pixel">
+        <h2>pixel</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quas.</p>
+    </div>
+    <hr>
+    <div id="prozent">
+        <h2>prozent</h2>
+        <p>Adipisci atque exercitationem maiores quia vero quibusdam cum ex tempore?</p>
+    </div>
+    <hr>
+    <div id="em">
+        <h2>em</h2>
+        <pre>
+            Der Begriff kommt aus der Typografie und bedeutet dort ungefähr die Breite der Letter für großes M oder W oder die Breite von zwei Nullen.
+            Im Gegensatz zu em für 'breite' Buchstaben gibt es in Typografie noch die Größeneinheit en. 
+            In Web ist 1em gleich der Schriftgröße von body. Default-Wert bei bodys Schriftgröße ist 16px.
+        </pre>
+        <p>Dolorem natus voluptatibus possimus tempora iusto ex consectetur odio fugit.</p>
+    </div>
+    <hr>
+    <div id="rem">
+        <h2>rem</h2>
+        <p>Illum dicta similique quis sequi error enim amet doloribus odit?</p>
+    </div>
+    <hr>
+    <div id="vw">
+        <h2>vw / viewport width</h2>
+        <p>Vitae laboriosam impedit dolores aut quaerat quas soluta minima fugit?</p>
+    </div>
+    <hr>
+    <div id="vh">
+        <h2>vh / viewport height</h2>
+        <p>Provident harum quis repudiandae soluta illum fugiat dolorum rem inventore.</p>
+    </div>
+    <hr>
+    <div id="vmin">
+        <h2>vmin / viewport.min(vh, vw)</h2>
+        <p>Quos quis molestiae aut, totam ut voluptatibus alias unde repudiandae?</p>
+    </div>
+    <hr>
+    <div id="vmax">
+        <h2>vmax / viewport.max(vh, vw)</h2>
+        <p>Illo nemo rerum corrupti. Natus libero optio praesentium inventore obcaecati!</p>
+    </div>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jq-filter</title>
+</head>
+<body>
+        <input type="text" id="inputSearch" />
+        <ul id="list">
+          <li>abcdef</li>
+          <li>ijklmn</li>
+          <li>qrst</li>
+        </ul>
+        <script>
+          $(function() {
+            $("#inputSearch").keyup(() => {
+              var inpVal = $("#inputSearch").val().toLowerCase();
+                console.log('inpVal :', inpVal);
+              $("li").filter(() => {
+                $(this).toggle(
+                  $(this).text().toLowerCase().indexOf(inpVal) > -1
+                );
+                // filter(arg: fct, die an jedem el ausgeführt soll)
+                //toggle - display or hide the matched elements
+                /** toggle(showOrHide: boolean):
+                 *-1 A Boolean indicating whether to show or hide the elements. */
+                /* Falls gesuchte Zeichenkette gefunden wurde, gibt indexOf eine positive Zahl zurück */
+              });
+            });
+          });
+        </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ATTR SEL</title>
+    <style>
+         /* ############################################################################## */
+        /* SELEKTOREN FÜR BESTIMMTE ATTRIBUTE ODER FÜR ELEMENTE MIT BESTIMMTEN ATTRIBUTEN  */
+        /* ############################################################################## */
+        /*       
+        `E` muss durch den Selektor für ein konkretes HTML-Element ersetzt werden.
+        `attributename` muss durch einen konkreten Attributnamen ersetzt werden.  
+        */
+
+        /* Erfasst Elemente, in denen das angegebene Attribut vorkommt. Egal mit welchem Wert. */
+        E[attributename] {
+            color: green
+        }
+
+        /* reales Beispiel: Die Schriftfarbe aller Links, die ein target-Attribut haben, wird grün. */
+        a[target] {
+            color: green
+        }
+
+        /* Die Schriftfarbe aller Elemente, die ein target-Attribut haben, wird grün. */
+        [target] {
+            color: green
+        }
+
+        /* Erfasst Elemente vom Typ E, deren Attribut mit der Zeichenkette "abc" übereinstimmt */
+        E[attribute="abc"] {
+            color: green
+        }
+        E[attribute=abc] {
+            color: green
+        }
+
+
+        /* Hilfreich für Styling von Elementen ohne Klasse oder ID. */
+        input[type="text"] {
+            color: green
+        }
+
+        /* Erfasst Elemente vom Typ E, deren Attribut mit der Zeichenkette "abc" NICHT übereinstimmt */
+        E:not([attribute="abc"]) {
+            color: green
+        }
+
+        /* Erfasst Elemente vom Typ E, deren Attribut mit der Zeichenkette mit "abc" beginnt */
+        E[attribute^="abc"] {
+            color: green
+        }
+
+        /* Erfasst Elemente vom Typ E, deren Attribut mit der Zeichenkette mit "abc" endet */
+        E[attribute$="abc"] {
+            color: green
+        }
+
+        /* Erfasst Elemente vom Typ E, deren Attribut die Zeichenkette "abc" enthält */
+        E[attribute*="abc"] {
+            color: green
+        }
+
+        /* Selektiert Elemente, wo im Wert vom angegebenen Attribut der angegebene Text vorkommt. 
+        Damit wird nach einem bestimmten (ganzen) Wort gesucht. */
+        [attribute~="value"] {
+            color: green
+        }
+        [attribute~=value] {
+            color: green
+        }
+
+        /* Mit [attribute|="value"] wird ein Wort am Beginn ausgewählt. 
+        Selektiert alle Elemente, deren  Klassenattribut im Wert den String „top“ am Anfang haben; 
+        sowohl „top header“ als auch „top-header“ würden davon ausgewählt. */
+        [class|="top"] {
+            color: green
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS ATTR SEL</h1>
+    
+</body>
+</html>

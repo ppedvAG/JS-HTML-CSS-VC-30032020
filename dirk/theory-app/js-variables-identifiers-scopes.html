@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS VARIABLES</title>
+</head>
+
+<body>
+    <h1>JS VARIABLEN</h1>
+
+    <p>siehe Konsole</p>
+
+    <script>
+        // VARIABLEN DEFINIEREN
+        // im Fall mit Variablen heißt es Deklarieren
+        // es gibt mehrere Arten von Variablen in JS:
+        var y; // 
+        let x;
+        // t; // Fehler
+
+
+        // IDENTIFIER / BEZEICHNER
+        // dürfen nicht mit einer Zahl anfangen
+        // let 1let;
+        // let 2;
+        // weil der Compiler die Zahlen nach einem Leerzeichen versucht als number zu interpretieren
+        
+
+        // Deklarieren + Initialisieren
+        var y = 4;
+        // let x = 3; // ruft Fehler auf
+        // Uncaught SyntaxError: Identifier 'x' has already been declared
+        // let Variablen darf man nicht zweimal deklarieren
+        let z = 7;
+
+        // es geht auch ohne Stichwort        
+        t = 5;
+
+        // debugger
+        // Schauen Sie nach: Variablen mit Schlüsselwort var und ohne Schlüsselwort sind Props von window
+        // Variablen mit Schlüsselwort let sind im scope script aufgelistet
+        
+        // ####################################################
+        // VARIABLEN NUTZEN        
+
+        x = 3; // deklarierte Variable initialisieren
+        console.log('x :', x); // Variable an eine Funktion als Argument übergeben
+        let sum = y + z; // Variablen in Berechnungen verwenden 
+
+        // ####################################################
+        // SCOPES
+        // Gültigkeitsbereich von var
+        console.info('TEST 1')
+        {
+            
+        }
+        var a = 2;
+        console.log("a vor {}: ", a);
+        {
+            console.log("a in {} vor a=4: ", a);
+            var a = 4;
+            console.log("a in {} nach a=4: ", a);
+        }
+        console.log("a nach {}: ", a);
+        
+        console.info('TEST 2, sind var-Variablen global?')
+        function test2Fct1() {
+            var2 = 5 /* ohne Schlüsselwort ist die Variable global */
+            var var3 = 5
+            /* obwohl Variablen mit dem Schlüsselwort var global sein sollen,
+            ist diese Variable in einer anderen Fkt undefined */
+        }
+        
+        test2Fct1()
+        function test2Fct2() {
+                console.log('var2 : ', var2) // wenn man test2Fct1 nicht aufruft, dann ist auch diese Variable not defined (manche Quellen behaupten: Variablen ohne Keyword, sind global sichtbar sogar wenn sie innerhalb von Funktionen deklariert sind)
+                // console.log('var3 : ', var3) // var3 is not defined
+        }
+        // debugger 
+        
+        test2Fct2() 
+        // js-variables.html:56 Uncaught ReferenceError: var2 is not defined
+        // at test2Fct2 (js-variables.html:56)
+        // at js-variables.html:62
+
+
+        console.info('TEST 3, scope von let-Variablen')
+        // Gültigkeitsbereich von let
+        let b = 2;
+        console.log("b vor {}: ", b);
+        {
+            // console.log("b in {} vor b=4: ", b); /* mit b=4 kein Fehler, mit let b=4 aber schon*/
+            
+            let b = 4;
+            console.log("b in {} nach b=4: ", b);
+        }
+        console.log("b nach {}: ", b);
+
+
+        console.info('TEST 3, scope von no-keyword-Variablen')
+        // Gültigkeitsbereich von der Variable, initialisiert ohne Schlüsselwort
+        console.log('t vor {} : ', t);
+        {
+            t = 6;
+        }
+        console.log('t nach {} : ', t);
+        // dann ist es äquivalent zu 'var t = 5;'
+
+        const mehrwertSteuer = 0.19;
+        /* Konstanten brauchen gleich einen Wert */
+        // mehrwertSteuer = 2.34;
+        /* dürfen keine weiteren Werte bekommen */
+        /* Scope gleich wie bei let */
+    </script>
+
+</body>
+
+</html>
