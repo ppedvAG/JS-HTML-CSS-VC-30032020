@@ -1,10 +1,22 @@
 # ABLAUF VOM KURS
 
-[git commands](./COMMANDS-GIT.md)
+[git commands](COMMANDS-GIT.md)
 
 [text editor shortcuts](SHORTCUTS-EDITOR.md)
 
 [vscode shortcuts](SHORTCUTS-VSCODE.md)
+
+[css snippets](SNIPPETS-CSS.md)
+
+[html snippets](SNIPPETS-HTML.md)
+
+[js snippets](SNIPPETS-JS.md)
+
+[css syntax](SYNTAX-CSS.md)
+
+[html syntax](SYNTAX-HTML.md)
+
+[js syntax](SYNTAX-JS.md)
 
 ## M00 | WARMING UP
 
