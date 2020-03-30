@@ -51,6 +51,7 @@ commit
 - [ ] [html-tags.html](./theory-app/html-tags.html)
 - [ ] [html-syntax.html](./theory-app/html-syntax.html)
 - [ ] browser developer tools > elements > properties
+- [ ] [html.md - HTML Attributes](slides/html.md)
 - [ ] [html-attributes-global.html](./theory-app/html-attributes-global.html)
 
 ## Übung: Homepage mit verlinkten Unterseiten

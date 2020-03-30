@@ -46,12 +46,12 @@ commit
 
 ## M04 | HTML SYNTAX
 
-- [ ] [HTML.md - HTML Syntax](slides/HTML.md#html--syntax)
-- [ ] [html-entities.html](./theory-app/html-entities.html)
-- [ ] [html-tags.html](./theory-app/html-tags.html)
-- [ ] [html-syntax.html](./theory-app/html-syntax.html)
-- [ ] browser developer tools > elements > properties
-- [ ] [html-attributes-global.html](./theory-app/html-attributes-global.html)
+- [x] [HTML.md - HTML Syntax](slides/HTML.md#html--syntax)
+- [x] [html-entities.html](./theory-app/html-entities.html)
+- [x] [html-tags.html](./theory-app/html-tags.html)
+- [x] [html-syntax.html](./theory-app/html-syntax.html)
+- [x] browser developer tools > elements > properties
+- [x] [html-attributes-global.html](./theory-app/html-attributes-global.html)
 
 ## Übung: Homepage mit verlinkten Unterseiten
 
@@ -70,16 +70,16 @@ commit
 
 ## M05 | CSS SYNTAX
 
-- [ ] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
-- [ ] [css-syntax.css](./theory-app/css-syntax.css)
-- [ ] [css-properties.html](./theory-app/css-properties.html)
-- [ ] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
-- [ ] inherited
-- [ ] [css-units.html](./theory-app/css-units.html)
+- [x] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
+- [x] [css-syntax.css](./theory-app/css-syntax.css)
+- [x] [css-properties.html](./theory-app/css-properties.html)
+- [x] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
+- [x] inherited
+- [x] [css-units.html](./theory-app/css-units.html)
 
 ## Übung2
 
-das erste Kind von body soll ein container sein.
+das erste Kind von body soll ein container sein. Div mit ID
 Durch diesen Container wird der Abstand zum Browser-Rand beeinflusst.
 
 commit
