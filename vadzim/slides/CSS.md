@@ -40,11 +40,12 @@ WOZU IST CSS
 - OFFIZIELLER CODE: kein open source
 
 <!--
-http://caniuse.com
-Caniuse: zeigt Up-to-date Browser-Support-Tabellen für die Unterstützung von Front-End-Web-Technologien auf Desktop- und mobile Web-Browser
+http://caniuse.com : Browser-Support-Tabellen
 https://hacks.mozilla.org/category/css/
+https://css-tricks.com/
 Referenzen
-Default Values  https://www.w3schools.com/cssref/css_default_values.asp
+Default Values  
+
 Browsersupport
 https://www.w3schools.com/cssref/css3_browsersupport.asp
 BLOGS:

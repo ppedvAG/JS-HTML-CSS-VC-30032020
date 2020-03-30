@@ -106,6 +106,7 @@ commit
 
 - [ ] [css-box.html](./theory-app/css-box.html)
 - [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
+- [ ] [z-index & stacking context](./theory-app/css-z-index.html)
 - [ ] [css-float.html](./theory-app/css-float.html)
 
 ## Übung: Navigation einer Webseite
@@ -205,7 +206,6 @@ commited
 - [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
-- [ ] [z-index & stacking context](./theory-app/css-z-index.html)
 
 select - options löschen, zwischenspeichern, filtern
 

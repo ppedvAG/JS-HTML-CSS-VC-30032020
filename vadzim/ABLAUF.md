@@ -27,22 +27,22 @@
 ## M01 | HTML GETTING STARTED
 
 - [x] [HTML.md getting started](slides/HTML.md#html--getting-started)
-- [x] [html-helloworld.html](theory-app/html-helloworld.html) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [x] [html-helloworld.html](theory-app/html-helloworld.html) <!-- klick auf den Link, und dann auf 'Create File', um die Datei anzulegen -->
 - [x] browser developer tools > elements
 
 ## M02 | CSS GETTING STARTED
 
 - [x] [CSS.md getting started](slides/CSS.md#css--getting-started)
-- [x] [css-helloworld.css](theory-app/css-helloworld.css) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [x] [css-helloworld.css](theory-app/css-helloworld.css) <!-- klick auf den Link, und dann auf 'Create File', um die Datei anzulegen -->
 - [x] browser developer tools > style
 
 ## M03 | JS GETTING STARTED
 
 - [x] [JS.md getting started](slides/JS.md#js--getting-started)
-- [x] [js-helloworld.js](theory-app/js-helloworld.js) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [x] [js-helloworld.js](theory-app/js-helloworld.js) <!-- klick auf den Link, und dann auf 'Create File', um die Datei anzulegen -->
 - [x] browser developer tools > console
 
-commit
+- [x] commit
 
 ## M04 | HTML SYNTAX
 
@@ -71,7 +71,7 @@ syntax von pfaden bei Datei-Verlinkungen
 
 <!-- <a href=""></a> -->
 
-commit
+- [x] commit
 
 ## M05 | CSS SYNTAX
 
@@ -79,15 +79,15 @@ commit
 - [x] [css-syntax.css](./theory-app/css-syntax.css)
 - [x] [css-properties.html](./theory-app/css-properties.html)
 - [x] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
-- [ ] inherited
+- [ ] inherited & defaults <https://www.w3schools.com/cssref/css_default_values.asp>
 - [x] [css-units.html](./theory-app/css-units.html)
 
 ## Übung2
 
-das erste Kind von body soll ein container sein.
-Durch diesen Container wird der Abstand zum Browser-Rand beeinflusst.
+- das erste Kind von body soll ein container sein.
+- Durch diesen Container wird der Abstand zum Browser-Rand beeinflusst.
 
-commit
+- [x] commit
 
 ## M0 | JS SYNTAX
 
@@ -96,7 +96,7 @@ commit
 
 ## M0 | CODE SNIPPETS
 
-- [ ] [html-emmet.html](./theory-app/html-emmet.html)
+- [ ] [html-emmet.html](./theory-app/html-emmet.html)<!-- ist noch nicht da -->
 - [ ] CSS Emmet
 - [ ] ES Snippets
 
@@ -109,7 +109,9 @@ commit
 ## M0 | CSS CONTINUED
 
 - [ ] [css-box.html](./theory-app/css-box.html)
+- [ ] display & visibility
 - [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
+- [ ] [z-index & stacking context](./theory-app/css-z-index.html)
 - [ ] [css-float.html](./theory-app/css-float.html)
 
 ## Übung: Navigation einer Webseite
@@ -205,11 +207,11 @@ commited
 - [ ] Animationen & Transitions
 - [ ] Variable Fonts
 - [ ] Position (static, fixed...)
-- [ ] Display: flex
+- [ ] Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
 - [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
-- [ ] [z-index & stacking context](./theory-app/css-z-index.html)
+
 
 select - options löschen, zwischenspeichern, filtern
 
@@ -230,3 +232,8 @@ select - options löschen, zwischenspeichern, filtern
 - [ ] text props
 - [ ] breaks & spaces
 - [ ] counter props? <!-- https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a -->
+
+<!-- 
+Weitere CSS-Spiele
+https://enjoycss.com/ 
+https://codepip.com/-->
