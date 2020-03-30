@@ -19,6 +19,17 @@ Vorschlag:
 Machen Sie die Schriftgröße (font-size) bei pre-Elementen größer.
 */
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+
+}
+pre {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* #endregion */
 /* #region KEBAB */
 
@@ -47,7 +58,9 @@ Wie denkst Du, wozu sollte das gemacht werden?
 /* ############################################################################## */
 /* CASE SENSITIVE? */
 H3 {
-    BORDER: THIN SOLID
+    border: dotted;
+    font-style: normal;
+    font: small-caps;
 }
 /* #a
 Prüfe, ob die CSS-Regel für H3 oben eine Wirkung hatte.
