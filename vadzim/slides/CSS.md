@@ -52,6 +52,8 @@ https://hacks.mozilla.org/category/css/
 https://www.smashingmagazine.com/category/css
 VLOGS:
 https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w
+http://csszengarden.com/
+Für CSS Beispiele
 -->
 
 <!-- #endregion -->

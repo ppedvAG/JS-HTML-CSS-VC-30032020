@@ -75,10 +75,10 @@ PRIMARY
 
 SECONDARY (VSCode Plugins)
 
-- ESLint (Intellisense)
-- Debugger for Chrome (Install, Debug in Menu, Environment auswählen)
 - Prettier (Formatter)
 - JavaScript (ES6) code snippets
+- ESLint (Intellisense)
+- Debugger for Chrome (Install, Debug in Menu, Environment auswählen)
 
 <!--
 Online Editors:

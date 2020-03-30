@@ -11,6 +11,7 @@
 
 <!--
 git config --global user.name "yourGit(Hub)Name"
+
 git config --global user.email "yourGit(Hub)Email"
  -->
 
