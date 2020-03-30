@@ -44,16 +44,15 @@
 
 commit
 
-syntax von pfaden bei Datei-Verlinkungen
-
 ## M04 | HTML SYNTAX
 
-- [ ] [HTML.md - HTML Syntax](slides/HTML.md#html--syntax)
-- [ ] [html-entities.html](./theory-app/html-entities.html)
-- [ ] [html-tags.html](./theory-app/html-tags.html)
-- [ ] [html-syntax.html](./theory-app/html-syntax.html)
-- [ ] browser developer tools > elements > properties
-- [ ] [html-attributes-global.html](./theory-app/html-attributes-global.html)
+- [x] [HTML.md - HTML Syntax](slides/HTML.md#html--syntax)
+- [x] [html-entities.html](./theory-app/html-entities.html)
+- [x] [html-tags.html](./theory-app/html-tags.html)
+- [x] [html-syntax.html](./theory-app/html-syntax.html)
+- [x] browser developer tools > elements > properties
+<!-- - [ ] [HTML.md - HTML Attributes](slides/HTML.md#html--syntax) -->
+- [x] [html-attributes-global.html](./theory-app/html-attributes-global.html)
 
 ## Übung: Homepage mit verlinkten Unterseiten
 
@@ -65,6 +64,10 @@ syntax von pfaden bei Datei-Verlinkungen
 - js-start.html
 
 Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigieren.
+
+- [x] übung
+
+syntax von pfaden bei Datei-Verlinkungen
 
 <!-- <a href=""></a> -->
 
