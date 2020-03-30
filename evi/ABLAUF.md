@@ -70,16 +70,16 @@ commit
 
 ## M05 | CSS SYNTAX
 
-- [ ] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
-- [ ] [css-syntax.css](./theory-app/css-syntax.css)
-- [ ] [css-properties.html](./theory-app/css-properties.html)
-- [ ] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
-- [ ] inherited
-- [ ] [css-units.html](./theory-app/css-units.html)
+- [x] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
+- [x] [css-syntax.css](./theory-app/css-syntax.css)
+- [x] [css-properties.html](./theory-app/css-properties.html)
+- [x] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
+- [x] inherited
+- [x] [css-units.html](./theory-app/css-units.html)
 
 ## Übung2
 
-das erste Kind von body soll ein container sein.
+das erste Kind von body soll ein container sein. Div mit ID
 Durch diesen Container wird der Abstand zum Browser-Rand beeinflusst.
 
 commit
