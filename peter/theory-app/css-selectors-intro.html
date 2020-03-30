@@ -1,156 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS SELECTORS</title>
     <style>
-        /* Man kann HTML-Elemente durch ihre Merkmale selektieren */
+      /* Man kann HTML-Elemente durch ihre Merkmale selektieren */
 
-        /* ############################################################################## */
-        /* ALLEIN STEHENDE SELEKTOREN */
-        /* ############################################################################## */
+      /* ############################################################################## */
+      /* ALLEIN STEHENDE SELEKTOREN */
+      /* ############################################################################## */
 
-        /* ############################################################################## */
-        /* UNIVERSALER SELEKTOR / STERN SELEKTOR
+      /* ############################################################################## */
+      /* UNIVERSALER SELEKTOR / STERN SELEKTOR
         #gk
         */
-        * {
-            border: thin solid;
-        }
+      * {
+        border: thin solid;
+      }
 
-
-
-        /* ############################################################################## */
-        /* TYP SELEKTOR / TAG-NAME SELEKTOR
+      /* ############################################################################## */
+      /* TYP SELEKTOR / TAG-NAME SELEKTOR
         #gk
         alle Elemente vom Typ div wurden selektiert
         */
-        div {
-            text-decoration: underline;
-        }
+      div {
+        text-decoration: underline;
+      }
 
-
-
-        /* ############################################################################## */
-        /* ID SELEKTOR 
+      /* ############################################################################## */
+      /* ID SELEKTOR 
         #gk
         `id` ist ein sehr oft vorkommendes HTML-Attribut. 
         Deshalb hat es auch einen extra Selektor in CSS.
         */
-        #myH2 {
-            font-style: italic;
-        }
+      #myH2 {
+        font-style: italic;
+      }
 
-
-
-        /* ############################################################################## */
-        /* CLASS SELEKTOR        
+      /* ############################################################################## */
+      /* CLASS SELEKTOR        
         #gk
         Attribut `class` ist genauso verbreitet wie `id`.
         */
-        .borderClass {
-            background-color: coral;
-        }
+      .borderClass {
+        background-color: coral;
+      }
 
-        /* MANY CLASSES 
+      /* MANY CLASSES 
         Selektiert Elemente, die gleich alle erwähnten Klassen haben
         */
-        .class1.class2 {
-            background-color: #fff;
-        }
+      .class1.class2 {
+        background-color: rgb(9, 29, 114);
+      }
 
-        /* ELEMENT WITH CLASS 
+      /* ELEMENT WITH CLASS 
         Selektiert nur die Elemente vom angegebenen Typ mit der angegebenen Klasse
         */
-        nav.class1 {
-            background-color: #fff;
-        }
+      nav.class1 {
+        background-color: #fff;
+      }
 
+      /* ############################################################################## */
+      /* KOMBINATOREN: MEHRERE ELEMENTGRUPPEN AUF EINMAL */
+      /* ############################################################################## */
 
+      /* Alle einzeln stehenden Selektoren dürfen kombiniert werden */
 
-
-
-        /* ############################################################################## */
-        /* KOMBINATOREN: MEHRERE ELEMENTGRUPPEN AUF EINMAL */
-        /* ############################################################################## */
-
-        /* Alle einzeln stehenden Selektoren dürfen kombiniert werden */
-
-
-        /* ############################################################################## */
-        /* AUFLISTUNG 
+      /* ############################################################################## */
+      /* AUFLISTUNG 
         #gk
         */
-        pre,
-        .borderClass {
-            border: thick dotted pink;
-        }
+      pre,
+      .borderClass {
+        border: thick dotted pink;
+      }
 
+      /* ############################################################################## */
+      /* KOMBINATOREN: ELEMENTGRUPPEN RELATIV ZU ANDEREN ELEMENTGRUPPEN  */
+      /* ############################################################################## */
 
-
-        /* ############################################################################## */
-        /* KOMBINATOREN: ELEMENTGRUPPEN RELATIV ZU ANDEREN ELEMENTGRUPPEN  */
-        /* ############################################################################## */
-
-
-        /* ############################################################################## */
-        /* UNMITTELBARE GESCHWISTER
+      /* ############################################################################## */
+      /* UNMITTELBARE GESCHWISTER
         #gk
         alle p, die unmittelbar nach h2 vorkommen
         */
-        h2+p {
-            font-weight: 900;
-        }
+      h2 + p {
+        font-weight: 900;
+      }
 
-
-
-        /* ############################################################################## */
-        /* ALLE GESCHWISTER        
+      /* ############################################################################## */
+      /* ALLE GESCHWISTER        
         */
-        h2~p {
-            font-weight: 900;
-        }
+      h2 ~ p {
+        font-weight: 900;
+      }
 
-
-
-        /* ############################################################################## */
-        /* VORFAHR-NACHFAHR-SELEKTOR 
+      /* ############################################################################## */
+      /* VORFAHR-NACHFAHR-SELEKTOR 
         #gk
         */
-        .borderClass div {
-            color: yellowgreen;
-        }
+      .borderClass div {
+        color: yellowgreen;
+      }
 
-
-
-        /* ############################################################################## */
-        /* ELTERN-KIND-SELEKTOR 
+      /* ############################################################################## */
+      /* ELTERN-KIND-SELEKTOR 
         #gk
         */
-        .borderClass>div {
-            text-decoration: line-through;
-        }
+      .borderClass > div {
+        text-decoration: line-through;
+      }
 
-
-
-
-       
-
-
-
-        
-        /* ############################################################################## */
-        /* ############################################################################## */
-        /* ############################################################################## */
+      /* ############################################################################## */
+      /* ############################################################################## */
+      /* ############################################################################## */
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>CSS SELECTORS</h1>
     <pre>Benutze die Find-Funktion für Hashtag gk in dieser Datei!</pre>
-
 
     <h2>heading 2</h2>
     <h2>heading 2</h2>
@@ -161,20 +131,29 @@
     <p>paragraph</p>
 
     <div class="borderClass">
-        div ebene 1
-        <div>
-            div ebene 2
-            <div>div ebene 3</div>
-        </div>
+      div ebene 1
+      <div>
+        div ebene 2
+        <div>div ebene 3</div>
+      </div>
     </div>
 
     <div class="borderClass">
-        div ebene 1
-        <div>
-            div ebene 2
-            <div>div ebene 3</div>
-        </div>
+      div ebene 1
+      <div>
+        div ebene 2
+        <div>div ebene 3</div>
+      </div>
     </div>
+
+    <hr />
+    <h3>Class1 / Class2</h3>
+    <div class="class1">division</div>
+    
+    <div class="class2">division</div>
+    
+    <div class="class1 class2">division</div>
+    
 
     <!-- 
         Quellen:
@@ -184,7 +163,5 @@
         zum Nachlesen: Pseudoklassen, strukturelle Pseudoklassen, Pseudoelemente
         https://de.wikipedia.org/wiki/Cascading_Style_Sheets#CSS3
      -->
-
-</body>
-
+  </body>
 </html>
