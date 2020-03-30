@@ -38,18 +38,20 @@ OFFIZIELLE QUELLEN
 - BLOG <https://blog.whatwg.org/>
 - CODE <https://github.com/whatwg/html>
 
+<!-- 
+*todo
+ist code auf github nicht die Webseite? -->
 <!--
+https://developer.mozilla.org/de/docs/Web/HTML
+MDN DOCS zu HTML
+https://www.w3schools.com/
+HTML TUTORIALS
 http://html5test.com
 Html5test: zeigt wie gut mein Browser HTML5 unterstützt.
 http://validator.w3.org/
 Validator: Überprüft das Markup (HTML, XHTML, ...) von Webdokumenten.
-https://html.spec.whatwg.org/multipage/ (HTML Living Standard)
 https://www.w3.org/html/
 Grammatikkenner
-http://html5test.com/
-Was kann welcher Browser
-http://csszengarden.com/
-Für CSS Beispiele
  -->
 
 <!-- #endregion -->
@@ -61,7 +63,6 @@ Für CSS Beispiele
 - VSCode Erweiterungen
   - open in browser
   - auto rename tag
-  - evtl. Prettier
 
 <!-- #endregion -->
 <!-- #region LAB -->
