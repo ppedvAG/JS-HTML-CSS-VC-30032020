@@ -20,8 +20,8 @@
 
 ## M00 | WARMING UP
 
-- [ ] Greeter
-- [ ] VS Code kennenlernen
+- [x] Greeter
+- [x] VS Code kennenlernen
 - [ ] Git, GitHub, Repository
 
 ## M01 | HTML GETTING STARTED
