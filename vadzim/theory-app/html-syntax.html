@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang=en>
-
-<head>
     <!-- Tag für den Kopfteil des Dokumentes -->
     <!-- zusätzliche/Meta-Daten für Browser -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html-syntax</title> <!-- Dokumententitel -->  
     <link rel="stylesheet" href="css-syntax.css"> 
-</head>
 
-<body>
+    <pre>
+        Muss man für ältere Browser war vorbereiten, dann nutzt man polyfills
+    </pre>
+
     <!-- Tag für den Hauptteil des Dokumentes -->
     <!-- Inhalt für den Benutzer kommt ins body -->
 
@@ -74,8 +73,9 @@
     </pre>
     <p>
         <span>span - Eltern-Element von diesem Text und Kind von p.</span>
-        p - Eltern-Element von diesem Text, von span und Kind von ? (#q Wie denkst du)
+        p - Eltern-Element von diesem Text, von span und Kind von ? (#a Wie denkst du)
     </p>
+
     <hr>
 
     <!-- #endregion -->
@@ -97,6 +97,20 @@
     <table>
         <thead>
             <tr>
+                <th>spalte 1
+                <th>spalte 2
+        <tbody>
+            <tr>
+                <td>zelle 1 1
+                <td>zelle 1 2
+            <tr>
+                <td>zelle 2 1
+                <td>zelle 2 2
+    </table>
+
+    <table>
+        <thead>
+            <tr>
                 <th>spalte 1</th>
                 <th>spalte 2</th>
             </tr>
@@ -113,9 +127,10 @@
         </tbody>
     </table>
 
+    <hr>
         <!-- #endregion -->
     <!-- #region OPTIONAL TAGS -->
-
+    <h3>FEHLENDE TAGS</h3>
     <pre>
         Es geht noch weiter. Bei manchen HTML-Tags dürfen beide Teile fehlen. 
         Der HTML-Parser weiß bescheid, 
@@ -156,7 +171,6 @@
     <!-- #endregion -->
     <!-- #region NO STANDARD TAGS -->
 
-
     <h3>UNGÜLTIGE TAGS</h3>
     <pre>
         Die Browser rendern auch das, was sie nicht kennen.
@@ -191,6 +205,7 @@
         sie ist zweimal größer als die bei normalen Text-Absätzen (Paragraphen).
         Die Eigenschaften von HTML-Elementen können ihre Werte z.B. über HTML-Attribute bekommen.
     </pre>
+    <p id=pAlsObjekt>text von p</p>
     <hr>
     <!-- #endregion -->
     <!-- #region ATTR IN GENERAL -->
@@ -296,6 +311,3 @@
     <script src="js-syntax.js"></script>
 
     <!-- #endregion -->
-</body>
-
-</html>
