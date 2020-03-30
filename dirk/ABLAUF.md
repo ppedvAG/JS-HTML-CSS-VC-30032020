@@ -27,19 +27,19 @@
 ## M01 | HTML GETTING STARTED
 
 - [ ] [HTML.md getting started](slides/HTML.md#html--getting-started)
-- [ ] [html-helloworld.html](html-helloworld.html) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [ ] [html-helloworld.html](theory-app/html-helloworld.html) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
 - [ ] browser developer tools > elements
 
 ## M02 | CSS GETTING STARTED
 
 - [ ] [CSS.md getting started](slides/CSS.md#css--getting-started)
-- [ ] [css-helloworld.css](css-helloworld.css) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [ ] [css-helloworld.css](theory-app/css-helloworld.css) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
 - [ ] browser developer tools > style
 
 ## M03 | JS GETTING STARTED
 
 - [ ] [JS.md getting started](slides/JS.md#js--getting-started)
-- [ ] [js-helloworld.js](js-helloworld.js) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [ ] [js-helloworld.js](theory-app/js-helloworld.js) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
 - [ ] browser developer tools > console
 
 commit
