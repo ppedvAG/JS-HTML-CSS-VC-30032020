@@ -47,7 +47,7 @@ Wie denkst Du, wozu sollte das gemacht werden?
 /* ############################################################################## */
 /* CASE SENSITIVE? */
 H3 {
-    BORDER: THIN SOLID
+     BORDER: THIN SOLID
 }
 /* #a
 Prüfe, ob die CSS-Regel für H3 oben eine Wirkung hatte.
@@ -95,6 +95,7 @@ Die Werte sollen aber anders sein.
 Welche Werte wurden im Endeffekt bei h3 angewendet (die aus der css-Datei oder die aus dem <style>-Tag)? 
 */
 
+
 /* #endregion */
 /* #region STYLE ATTR */
 
@@ -117,6 +118,3 @@ Was genau hat sich geändert?
 /* ZURÜCK ZUR ABLAUF.MD */
 
 /* #endregion */
-
-
-
