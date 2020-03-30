@@ -75,12 +75,12 @@ commit
 
 ## M05 | CSS SYNTAX
 
-- [ ] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
-- [ ] [css-syntax.css](./theory-app/css-syntax.css)
-- [ ] [css-properties.html](./theory-app/css-properties.html)
-- [ ] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
+- [x] [CSS.md - CSS Syntax](slides/CSS.md#css--syntax)
+- [x] [css-syntax.css](./theory-app/css-syntax.css)
+- [x] [css-properties.html](./theory-app/css-properties.html)
+- [x] [css-selectors-intro.html](./theory-app/css-selectors-intro.html)
 - [ ] inherited
-- [ ] [css-units.html](./theory-app/css-units.html)
+- [x] [css-units.html](./theory-app/css-units.html)
 
 ## Übung2
 

@@ -18,6 +18,11 @@ Würden Sie was ändern?
 Vorschlag:
 Machen Sie die Schriftgröße (font-size) bei pre-Elementen größer.
 */
+pre {
+    
+    font-size: 20px;
+    background-color:lightgrey;
+}
 
 /* #endregion */
 /* #region KEBAB */
@@ -47,10 +52,13 @@ Wie denkst Du, wozu sollte das gemacht werden?
 /* ############################################################################## */
 /* CASE SENSITIVE? */
 H3 {
-    BORDER: THIN SOLID
+    BORDER: THIN SOLID;
+    border: solid thin;
+    
 }
 /* #a
 Prüfe, ob die CSS-Regel für H3 oben eine Wirkung hatte.
+Bei großgeschriebenen Props spielt IntelliSense nicht mit.
  */
 
 /* #endregion */
