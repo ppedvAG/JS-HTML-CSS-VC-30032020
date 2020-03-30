@@ -1,3 +1,6 @@
 # EMMET SNIPPETS FOR HTML
 
-coming soon
+| snippet | effect |
+| --- | --- |
+| `html:5` | Grundstruktur für eine HTML-Datei |
+
