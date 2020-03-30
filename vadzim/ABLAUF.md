@@ -32,17 +32,19 @@
 
 ## M02 | CSS GETTING STARTED
 
-- [ ] [CSS.md getting started](slides/CSS.md#css--getting-started)
-- [ ] [css-helloworld.css](theory-app/css-helloworld.css) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
-- [ ] browser developer tools > style
+- [x] [CSS.md getting started](slides/CSS.md#css--getting-started)
+- [x] [css-helloworld.css](theory-app/css-helloworld.css) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [x] browser developer tools > style
 
 ## M03 | JS GETTING STARTED
 
-- [ ] [JS.md getting started](slides/JS.md#js--getting-started)
-- [ ] [js-helloworld.js](theory-app/js-helloworld.js) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
-- [ ] browser developer tools > console
+- [x] [JS.md getting started](slides/JS.md#js--getting-started)
+- [x] [js-helloworld.js](theory-app/js-helloworld.js) <!-- Beim ersten Mal klick einfach auf den Link, um die Datei anzulegen -->
+- [x] browser developer tools > console
 
 commit
+
+syntax von pfaden bei Datei-Verlinkungen
 
 ## M04 | HTML SYNTAX
 
