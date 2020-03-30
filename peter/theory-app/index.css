@@ -1,6 +1,10 @@
 body {
     font-weight: bold;
     color: red;
-    <a href='index.thml'>Zur Index Seite</a>
 }
 
+#container{
+    margin-left: 2vw;
+    margin-top: 2vw;
+    font-style: italic;
+}
