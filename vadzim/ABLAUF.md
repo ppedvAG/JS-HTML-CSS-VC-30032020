@@ -121,16 +121,16 @@ syntax von pfaden bei Datei-Verlinkungen
 - [x] [js-switch.html](./theory-app/js-switch.html)
 - [x] [js-Date.html](./theory-app/js-Date.html)
 - [x] [js-functions.html](./theory-app/js-functions.html)
-- [ ] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
-- [ ] [js-arrays.html](./theory-app/js-arrays.html)
-- [ ] [js-strings.html](./theory-app/js-strings.html)
+- [x] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
+- [x] [js-arrays.html](./theory-app/js-arrays.html)
+- [x] [js-strings.html](./theory-app/js-strings.html)
 - [ ] Konstruktoren
 
 ## Übung: Bilder vergrößern
 
 - die Bilder aus einer HTML-Datei
 - mit Klick auf den Button werden die Bilder vergrößert
-- [ ] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
+- [x] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
 
 ## M0 | HTML CONTINUED
 
