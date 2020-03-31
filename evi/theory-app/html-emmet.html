@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML EMMET</title>
+</head>
+<body>
+    <h1>HTML EMMET</h1>
+    <pre>
+        Der ehemalige Name war: Zen Coding (ist noch in VSCode so)
+    </pre>
+ 
+    <h2>Inhalt</h2>
+    <pre>(h2+hr)*5</pre>
+    
+    <!-- p{text von p} -->
+    <!-- Die geschweiften Klammern ist die einzige Stelle an der Leerzeichen erlaubt sind. -->
+    <p>text von p</p>
+    <!-- Funktioniert auch bei Non-Standard-Tags. -->
+    <element>text text bla bla</element>
+    <hr>
+
+    <h2>Verschachtelung (Nesting)</h2>
+    <pre>
+        div>p{text von p}
+        Die emmet-Syntax ist an die Css-Syntax angelehnt.
+    </pre>
+   
+    <div>
+        <p>text von p</p>
+    </div>
+    <hr>
+
+    <h2>Wiederholung</h2>
+    <pre>div>p{text von p}*3</pre>
+   
+    <div>
+        <p>text von p</p>
+        <p>text von p</p>
+        <p>text von p</p>
+    </div>
+    <pre>(div>p{text von p})*3 </pre>
+  
+    <div>
+        <p>text von p</p>
+    </div>
+    <div>
+        <p>text von p</p>
+    </div>
+    <div>
+        <p>text von p</p>
+    </div>
+    <hr>
+
+    <h2>ID</h2>
+    <pre>div#container>div>p{text von p}*3</pre>
+    
+    <div id="container">
+        <div>
+            <p>text von p</p>
+            <p>text von p</p>
+            <p>text von p</p>
+        </div>
+    </div>
+    <pre>
+        #container>div>p{text von p}*3
+        Funktioniert auch ohne div, wird automatisch gesetzt.
+    </pre>
+    
+    <div id="container">
+        <div>
+            <p>text von p</p>
+            <p>text von p</p>
+            <p>text von p</p>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Class</h2>
+    <pre>div#container>div>p.pClass{text von p}*3</pre>
+
+    <div id="container">
+        <div>
+            <p class="pClass">text von p</p>
+            <p class="pClass">text von p</p>
+            <p class="pClass">text von p</p>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Nummerierung</h2>
+    <pre>div#container>div>p.pClass{text von p $}*3</pre>
+    
+    <div id="container">
+        <div>
+            <p class="pClass">text von p 1</p>
+            <p class="pClass">text von p 2</p>
+            <p class="pClass">text von p 3</p>
+        </div>
+    </div>
+    <pre>
+        div#container>div>p.pClass{text von p $}*3
+    Automatische Nummerierung darf auch bei IDs, Klassen und anderen Stellen verwendet werden.
+    </pre>
+    
+    <div id="container">
+        <pre>div#container>div>p.pClass{text von p $$}*3</pre>
+        <div>
+            <p class="pClass">text von p 01</p>
+            <p class="pClass">text von p 02</p>
+            <p class="pClass">text von p 03</p>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Attribute</h2>
+    <pre>
+        div#container>div>p.pClass{text von p $}*3+button[disabled]{OK}
+    </pre>
+    <div id="container">
+        <div>
+            <p class="pClass">text von p 01</p>
+            <p class="pClass">text von p 02</p>
+            <p class="pClass">text von p 03</p>
+            <button disabled="disabled">OK</button>
+        </div>
+    </div>
+    <hr>
+
+    <h2>Geschwister</h2>
+    <Pre>
+        (img[src="picsum.photos/id/23$/200" alt="ein random Bild"]+br)*3
+    </Pre>
+    <img src="picsum.photos/id/231/200" alt="ein random Bild">
+    <br>
+    <img src="picsum.photos/id/232/200" alt="ein random Bild">
+    <br>
+    <img src="picsum.photos/id/233/200" alt="ein random Bild">
+    <br>
+    <hr>
+
+    <h2>Random Text  / Lorem Ipsum</h2>
+    <pre>
+        div#container>(p.pClass>lorem5)*3
+        Lorem ipsum mit 5 Wörtern
+    </pre>
+    <div id="container">
+        <p class="pClass">Lorem ipsum dolor sit amet.</p>
+        <p class="pClass">Voluptate provident non fugiat incidunt?</p>
+        <p class="pClass">Nulla, reiciendis cupiditate? Et, at!</p>
+    </div>
+    <pre>
+        ul>lorem3*5
+        Die logischen Child-Items werden automatisch angelegt.
+        (Bei Paragraphen sind es SPANs, bei ULs sind LIs)
+    </pre>
+    <ul>
+        <li>Lorem, ipsum dolor.</li>
+        <li>Necessitatibus, nihil et.</li>
+        <li>Tempore, aut atque!</li>
+        <li>Tempore, maxime nostrum.</li>
+        <li>Officiis, ipsum repudiandae!</li>
+    </ul>
+    <hr>
+</body>
+</html>

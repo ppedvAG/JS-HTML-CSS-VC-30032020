@@ -86,14 +86,40 @@ commit
 
 ## M0 | JS SYNTAX
 
-- [ ] Ausdrücke & Anweisungen
-- [ ] [js-syntax.js](./theory-app/js-syntax.js)
+- [x] Ausdrücke & Anweisungen
+- [x] [js-syntax.js](./theory-app/js-syntax.js)
 
 ## M0 | CODE SNIPPETS
 
-- [ ] [html-emmet.html](./theory-app/html-emmet.html)
-- [ ] CSS Emmet
-- [ ] ES Snippets
+- [x] [html-emmet.html](./theory-app/html-emmet.html)
+- [x] [css-emmet.css](./theory-app/css-emmet.css)
+- [x] [snippets-css.md](snippets-css.md)
+- [x] [snippets-js.md](snippets-js.md)
+
+## M | JS CONTINUED
+
+- [x] [vars, identifiers, scopes](./theory-app/js-variables-identifiers-scopes.html)
+- [x] [primitives js-datatypes.html](./theory-app/js-datatypes.html)
+- [x] Operatoren
+- [x] [global object window](./theory-app/js-window.html)
+- [x] Kontrollstrukturen
+- [x] [js-Math.html](./theory-app/js-Math.html)
+
+## Übung: Eine Zufallszahl erraten
+
+- eine Zufallszahl von 3 möglichen generieren (0, 1, 2) / (1, 2, 3)
+- bei jedem Versuch soll dem/r Benutzer/in mitgeteilt werden, ob die Zufallszahl kleiner/größer ist oder ob er/sie sie erraten hat
+- [x] [ueb-zufallszahl.html](./theory-app/ueb-zufallszahl.html)
+
+## M | JS
+
+- [x] [js-switch.html](./theory-app/js-switch.html)
+- [x] [js-Date.html](./theory-app/js-Date.html)
+- [x] [js-functions.html](./theory-app/js-functions.html)
+- [x] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
+- [x] [js-arrays.html](./theory-app/js-arrays.html)
+- [ ] [js-strings.html](./theory-app/js-strings.html)
+- [ ] Konstruktoren
 
 ## M0 | HTML CONTINUED
 
@@ -123,36 +149,15 @@ commited
 - [ ] Display: table, list
 - [ ] Pseudo-Klassen & -Elemente
 
-## M | JS CONTINUED
 
-- [ ] [vars, identifiers, scopes](./theory-app/js-variables-identifiers-scopes.html)
-- [ ] [primitives js-datatypes.html](./theory-app/js-datatypes.html)
-- [ ] Operatoren
-- [ ] [global object window](./theory-app/js-window.html)
-- [ ] Kontrollstrukturen
-- [ ] [js-Math.html](./theory-app/js-Math.html)
 
-## Übung: Eine Zufallszahl erraten
 
-- eine Zufallszahl von 3 möglichen generieren (0, 1, 2) / (1, 2, 3)
-- bei jedem Versuch soll dem/r Benutzer/in mitgeteilt werden, ob die Zufallszahl kleiner/größer ist oder ob er/sie sie erraten hat
-- [ ] [ueb-zufallszahl.html](./theory-app/ueb-zufallszahl.html)
-
-## M | JS
-
-- [ ] [js-switch.html](./theory-app/js-switch.html)
-- [ ] [js-Date.html](./theory-app/js-Date.html)
-- [ ] Funktionen
-- [ ] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
-- [ ] [js-arrays.html](./theory-app/js-arrays.html)
-- [ ] [js-strings.html](./theory-app/js-strings.html)
-- [ ] Konstruktoren
 
 ## Übung: Bilder vergrößern
 
 - die Bilder aus einer HTML-Datei
 - mit Klick auf den Button werden die Bilder vergrößert
-- [ ] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
+- [x] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
 
 ## M | JS OBJECTS
 

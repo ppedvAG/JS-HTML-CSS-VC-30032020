@@ -11,6 +11,10 @@
     <!-- #region 7 setTimeout() -->
     <button onclick="setTimeout(countClicks, 500, this)">0</button>
     <!-- #endregion -->
+
+    <!-- #region 8 setIntervall() -->
+    <button onclick="tick(this)">10</button>
+    <!-- #endregion -->
     
     <script>
     //#######################################################
@@ -73,6 +77,20 @@
     }
     //#endregion
     
+
+    //#region 8 setIntervall()
+    //#######################################################
+    console.info('TEST 8: setInterval()')
+    function tick(el) {      
+        let IntervalID = setInterval(() => {
+        +el.innerText --
+        if(+el.innerText == 0){
+            clearInterval(IntervalID)
+        }
+    
+    }, 1000)
+}
+    //#endregion
     /* 
     *todo
     Objekt window hat unter seinen Eigenschaften die Funktion HTMLAnchorElement() z.B. und die Funktion Number(). 

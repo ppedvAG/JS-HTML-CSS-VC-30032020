@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS MATH</h1>
+
+    <h2>Math.random()</h2>
+    <p id=Gesucht></p>
+    
+    <input type="number">
+    <button onclick="getRandom">Welche Zahl ist gesucht?</button>
+    
+    <p id=Feedback></p>
+
+
+    <script>
+        const mathRandom = Math.random()*3
+        Gesucht.innerText = Math.ceil(mathRandom)
+        console.log('Gesucht : ', Gesucht)
+        function getRandom () {
+            if(Gesucht == number)
+            {
+                Feedback = "Stimmt"
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
