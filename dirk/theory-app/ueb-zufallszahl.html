@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+</head>
+<body>
+    <h1>Random</h1>
+
+    <H2>Insert Value</H2>
+      
+    <p id=RandomValue></p>
+
+    <input type="number" id="inputValue" oninput="check()" placeholder="0 / 1 / 2">
+    
+    
+    <button onclick="getRandom()">Start</button>
+
+
+   
+
+    <p id=Feedback></p>
+
+
+ 
+
+    <script>
+
+
+function getRandom() {        
+    const mathRandom = Math.random()*3 // liefert eine Zahl zw 0 u 1
+    var randomNumber = Math.floor(mathRandom)
+    RandomValue.innerText = randomNumber 
+    console.log('inputValue :', inputValue);
+    console.log('inputValue :', typeof inputValue);
+    console.log('randomNumber :', typeof randomNumber);
+  
+}
+
+
+function check()
+{
+
+    if(+RandomValue.innerText == +inputValue.value)
+    {
+        Feedback.innerText = "OK"  
+    }
+    else if (+RandomValue.innerText < +inputValue.value)
+    {
+        Feedback.innerText = "Zu Gross"
+    }
+    else if (+RandomValue.innerText > +inputValue.value)
+    {
+        Feedback.innerText = "Zu Klein"
+    }   
+
+}
+     
+
+    </script>
+
+
+    
+</body>
+</html>
