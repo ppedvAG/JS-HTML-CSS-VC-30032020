@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML EMMET</title>
+</head>
+<body>
+
+    Der ehemalige Name war: Zen Coding
+
+    <h1>HTML EMMET</h1>
+    <pre>
+        (
+        )<h2><Inhalt/h2>
+            <pre>
+            p{text von p} 
+            Die geschweiften Klammern ist die einzige Stelle, bei der Leerzeichen erlaubt sind                
+            Funktioniert auch bei non-standard Tags 
+            </pre>
+            <!-- p{text von p} -->
+            <!-- Die geschweiften Klammern ist die einzige Stelle, bei der Leerzeichen erlaubt sind -->
+            <p>text von p</p>
+            <!-- funktioniert auch bei non-standard Tags -->
+            <element>mein inhalt</element>
+        <hr>
+
+        <h2>Verschachtelung von HTML Elementen</h2>
+        <pre>
+            div>p{text von p}
+            Die Emmet-Syntax ist an die CSS_Syntax angelehnt
+            div ist eltern; p ist kind
+        </pre>
+        <div>
+            <p>text von p</p>            
+        </div>              
+
+        <hr>
+
+        <h2>Wiederholung</h2>
+        <pre>
+            div>p{text von p}*3
+        </pre>
+        <div>
+            <p>text von p</p>
+            <p>text von p</p>
+            <p>text von p</p>
+        </div>
+        <pre>
+            <div>
+                <p>text von p</p>
+            </div>
+            <div>
+                <p>text von p</p>
+            </div>
+            <div>
+                <p>text von p</p>
+            </div>
+        </pre>
+        <hr>
+
+        <h2>ID</h2>
+        <pre>
+            div#container>p{text von p}*3
+        </pre>
+        <div id="container">
+            <p>text von p</p>
+            <p>text von p</p>
+            <p>text von p</p>
+        </div>
+        <pre>
+            #container>p{text von p}*3
+        </pre>
+        <div id="container">
+            <p>text von p</p>
+            <p>text von p</p>
+            <p>text von p</p>
+        </div>
+        <hr>
+
+        <h2>Class</h2>
+        <pre>
+            div#container>p.pClass{text von p}*3
+        </pre>
+        <div id="container">
+            <p class="pClass">text von p</p>
+            <p class="pClass">text von p</p>
+            <p class="pClass">text von p</p>
+        </div>
+        <hr>
+
+        <h2>Nummerierung</h2>
+        <pre>
+            div#container>p.pClass{text von p $}*3
+        </pre>
+        <div id="container">
+            <p class="pClass">text von p 1</p>
+            <p class="pClass">text von p 2</p>
+            <p class="pClass">text von p 3</p>
+        </div>
+
+        <pre>
+            div#container>p.pClass{text von p $$}*3
+            Automatische nummerieung darf auch bei ID's, Klassen und an anderen Stellen verwendet werden
+        </pre>
+        <div id="container">
+            <p class="pClass">text von p 01</p>
+            <p class="pClass">text von p 02</p>
+            <p class="pClass">text von p 03</p>
+        </div>
+        <hr>
+
+        <h2>Attribute</h2>
+        <pre>
+            div#container>p.pClass{text von p $$}*3+button[disabled]{OK}
+        </pre>
+        <div id="container">
+            <p class="pClass">text von p 01</p>
+            <p class="pClass">text von p 02</p>
+            <p class="pClass">text von p 03</p>
+            <button disabled="disabled">OK</button>
+        </div>
+        <hr>
+
+        <h2>Geschwister</h2>
+        <pre>
+            (img[src="https://picsum.photos/id/2$$/200" alt="ein random Bild"]+br)*3
+        </pre>
+        <img src="https://picsum.photos/id/201/200" alt="ein random Bild">
+        <br>
+        <img src="https://picsum.photos/id/202/200" alt="ein random Bild">
+        <br>
+        <img src="https://picsum.photos/id/203/200" alt="ein random Bild">
+        <br>
+
+        <hr>
+
+        <h2>Random Text</h2>
+        <pre>
+            div#container>(p.pClass>lorem5)*3
+            Die Anzahl der gewünschten Worte kann man bei lorem angeben
+        </pre>
+        <div id="container">
+            <p class="pClass">Lorem ipsum dolor sit amet.</p>
+            <p class="pClass">Necessitatibus nihil delectus porro in.</p>
+            <p class="pClass">Obcaecati, ducimus? Inventore, laboriosam ducimus!</p>
+        </div>
+    
+        <pre>
+            ul>lorem3*5
+            Die logischen Zwischenelemente werden automatisch angelegt
+            (Bei Paragraphen sind es SPANs, bei ULs sind es LIs)
+        </pre>
+        <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Velit, accusamus distinctio?</li>
+            <li>Maxime, autem quis.</li>
+            <li>Laborum, accusamus eligendi.</li>
+            <li>Obcaecati, laborum quam?</li>
+        </ul>
+
+        <hr>        
+    </pre>
+    
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+    <h2></h2>
+    <hr>
+</body>
+</html>

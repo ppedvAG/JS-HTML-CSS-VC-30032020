@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Zufallszahl raten</h1>
+
+    <h2>Erzeugte Zahl</h2>
+    <p id=gesucht></p>
+    <hr>
+
+    Rate mal:<input id=rateZahl>
+   
+    <button onclick="btnClick()">Raten</button>
+
+    <p id=ergebnis>Treffer?</p>
+    <br>
+    <p id=geraten>Geraten=</p>
+
+
+    <script>
+    
+        const randomZahl  = Math.random()*3; // liefert eine Zahl zw 0 u 1
+        gesucht.innerText = Math.ceil(randomZahl);
+        
+    
+        function btnClick(){
+            let myEingabe = +rateZahl.value;
+            geraten.innerText = myEingabe;
+
+            console.log("myEingabe", myEingabe);
+            console.log("rateZahl", +gesucht.innerText);
+
+            if (myEingabe == +gesucht.innerText){
+                ergebnis.innerText="RICHTIG"
+            }else{
+                ergebnis.innerText="FALSCH"
+            }
+            
+        }
+
+    </script
+
+</body>
+</html>
