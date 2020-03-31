@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Übung Image Zoom</title>
+  </head>
+  <body>
+    <h1>Übung Image Zoom</h1>
+
+    <img src="https://picsum.photos/id/235/100" alt="" />
+    <img src="https://picsum.photos/id/236/100" alt="" />
+    <img src="https://picsum.photos/id/237/100" alt="" />
+
+    <button onclick="zoom()">ZOOM</button>
+
+    <script>
+      //imgSrc = [document.images];
+      console.log("imgSrc :", imgSrc);
+
+      function zoom() {
+        for (let index = 0; index < document.images.length; index++) {
+          const element = document.images[index];
+
+          let newSrc = element.src;
+
+          newSrc = newSrc.substr(0, newSrc.length - 3);
+          newSrc = newSrc.concat("200");
+
+          console.log("newScr:", newSrc), (element.src = newSrc);
+        }
+      }
+    </script>
+  </body>
+</html>
