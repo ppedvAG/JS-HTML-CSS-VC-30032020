@@ -44,7 +44,7 @@
         <output id="o12_v_HS"></output>
         <hr>
         <h4>p.innerText & escapes</h4>
-        <p>innerText erkennt Escape-Zeichen (\t ...) </p>
+        <p>innerText erkennt \n </p>
         <p id="o12_iT_es"></p>
         <h4>p.innerHTML & escapes</h4>
         <p id="o12_iH_es"></p>
@@ -167,6 +167,10 @@
         o12_v_es.value = str_12_es
         console.log('str_12_es :', str_12_es)
 
+        /* 
+        *todo
+        \t ? */
+
         //#endregion 1.
 
 
@@ -193,7 +197,7 @@
         /* Vergleichen von Objekten ergibt immer false */
         let myString2 = new String("Eine Zeichenkette zum Austesten von String-Methoden.");
         output.innerText = myString == myString2; //false
-        output.innerText = myString === myString2; //false
+        output.innerText = myString === myString2; //false        
 
 
         console.log("'bla'=='bla' :", 'bla' == 'bla'); // true
@@ -207,13 +211,15 @@
         output1.innerText = myString.charAt(5); // Z
 
         //indexOf()
+        //#gk
         output2.innerText = myString.indexOf('ß'); // -1
 
         //lastIndex()
+        //#gk
         output3.innerText = myString.lastIndexOf('n')
 
         //slice()
-        output4.innerText = myString.slice(10, 34) // enkette zum Austesten vo
+        output4.innerText = myString.slice(10, 34) // 
         // output4.innerText = myString.slice(34, 10) // fkt nicht
 
         //split()
@@ -224,6 +230,7 @@
         console.log('myString nach split:', myString); // wert der variable hat sich nicht geändert
 
         //substr()
+        //#gk
         /* arg1: von .index.; arg2: wie viel .number. */
         output6.innerText = myString.substr(10, 34); // enkette zum Austesten von String-M
 
@@ -234,6 +241,7 @@
         output8.innerText = "";
 
         //concat()
+        //#gk
         output9.innerText = "";
 
     </script>

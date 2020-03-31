@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ü ZUFALLSZAHL</title>
+</head>
+<body>
+
+    <h1>Ü ZUFALLSZAHL</h1>
+    <p>Es wurde eine Zufallszahl im Bereich von 1 bis 3 generiert. Erraten Sie, welche:</p>
+    <input type="number" id="inp_zahl" oninput=prüfen() placeholder="1 / 2 / 3 ?">
+    <p id="p_hint"></p>
+
+    <!-- Eingaben aus dem Browser sind immer strings!!! -->
+    <script>
+        /* Number(inp_zahl.value) === random */
+        /* inp_zahl.value == random */
+
+        const random = Math.ceil(Math.random()*3)
+        function prüfen(){
+            if (inp_zahl.value < random) {
+                p_hint.innerText = 'Zufallszahl ist größer als Sie denken, versuchen Sie nochmal'
+            } else if (inp_zahl.value > random) {
+                p_hint.innerText = 'Zufallszahl ist kleiner als Sie denken, versuchen Sie nochmal'
+            } else {                           
+                p_hint.innerText = 'Glückwunsch! Sie haben die Zahl erraten!'
+            }
+            // console.log('inp_zahl.value :', inp_zahl.value);
+            // console.log('typeof inp_zahl.value :', typeof inp_zahl.value);
+        }
+    </script>
+    
+</body>
+</html>

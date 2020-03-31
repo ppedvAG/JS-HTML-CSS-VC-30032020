@@ -21,6 +21,7 @@
         // t; // Fehler
 
 
+        // debugger
         // IDENTIFIER / BEZEICHNER
         // dürfen nicht mit einer Zahl anfangen
         // let 1let;
@@ -30,6 +31,7 @@
 
         // Deklarieren + Initialisieren
         var y = 4;
+        /* Die früher angelegten var-Variablen dürfen später überschrieben werden */
         // let x = 3; // ruft Fehler auf
         // Uncaught SyntaxError: Identifier 'x' has already been declared
         // let Variablen darf man nicht zweimal deklarieren
@@ -113,6 +115,13 @@
         // mehrwertSteuer = 2.34;
         /* dürfen keine weiteren Werte bekommen */
         /* Scope gleich wie bei let */
+
+        function constTest() {
+            console.log('mehrwertSteuer :', mehrwertSteuer);
+            const newConst = 'testConst'
+        }
+        constTest()
+        // console.log('newConst :', newConst); // not defined
     </script>
 
 </body>

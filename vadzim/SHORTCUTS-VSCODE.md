@@ -11,9 +11,9 @@
 | `ctrl c ctrl v` | duplicate line |
 | `alt up/down` | move line or selection |
 | `shift_alt cursor` | edit many lines |
+| `ctrl space` | force intellisense |
 | `ctrl leftclick` | go to definition |
 | `ctrl ö` | open terminal |
-| `ctrl space` | force intellisense |
 | `ctrl #` | comment / uncomment |
 | `ctrl k s` | save all |
 | `alt b` | open in browser |
