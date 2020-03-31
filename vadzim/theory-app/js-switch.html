@@ -21,42 +21,49 @@
         <option value="0">sonntag</option>
     </select>
 
-    <p id="out_angebot"></p>
+    <p>Heute / am ausgewählten Tag im Angebot :
+        <br>
+        <span id="out_angebot"></span>
+    </p>
+
 
     <script>
-
         let today = new Date().getDay()
         /* Den heutigen Wochentag ermitteln und automatisch Angebot anzeigen */
 
         gibAngebot(today)
-
+        
         function gibAngebot(tag) {
             // switch (+document.getElementById('sel_id').value) {
             // switch (+sel_id.value) {
             switch (tag) {
                 case 1:
-                out_angebot.innerText = "Pizza"
+                    out_angebot.innerText = "Pizza"
                     break;
                 case 2:
-                out_angebot.innerText = "Griechischer Salat"
+                    out_angebot.innerText = "Griechischer Salat"
                     break;
                 case 3:
-                out_angebot.innerText = "Pilzepfanne"
+                    out_angebot.innerText = "Pilzepfanne"
                     break;
                 case 4:
-                out_angebot.innerText = "Bockwurst mit Salzkartoffeln"
+                    out_angebot.innerText = "Bockwurst mit Salzkartoffeln"
                     break;
                 case 5:
-                out_angebot.innerText = "Burger mit Pommes"
+                    out_angebot.innerText = "Burger mit Pommes"
                     break;
                 case 6:
-                out_angebot.innerText = "alle Speisen mit 20% rabatt"
+                    out_angebot.innerText = "alle Speisen mit 20% rabatt"
                     break;
                 case 0:
-                out_angebot.innerText = "Lieferdienst"
-                    break;                
+                    out_angebot.innerText = "Lieferdienst"
+                    break;
+                default:
+                    out_angebot.innerText = "keiner von werten aufgetreten"
+                    break;
             }
         }
+        
     </script>
 
 </body>

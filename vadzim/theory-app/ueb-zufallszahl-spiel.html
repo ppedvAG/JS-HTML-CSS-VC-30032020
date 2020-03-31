@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZUFALLSZAHLSPIEL</title>
+    <style>
+        #btn_end {
+            margin-top: 3em;
+        }
+
+        #inp_zahl {
+            width: 70%;
+            height: 4em;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Randomzahl zw 0 und 4 -->
+    <!-- 3 Meldungen:
+    Zahl ist kleiner
+größer
+bingo, Sie haben die Zahl erraten -->
+
+    <h1>ZUFALLSZAHLSPIEL</h1>
+    <h2>Übung Zufallszahl erraten</h2>
+
+    <button onclick=spielSitzungStarten()>spielSitzungStarten</button>
+    <p id=p_aufgabe></p>
+    <input id=inp_zahl type=number style="visibility: hidden;" oninput=prüfen() min=0 max=3>
+    <!-- change-event tritt nur auf, wenn input fokus verliert oder enter geklickt wurde -->
+    <!-- input-event tritt auf, sobald sich irgendwas im input-felt ändert -->
+    <br>
+    <p id=p_hint style="visibility: hidden;"></p>
+    <p id=p_anz style="visibility: hidden;">Anzahl von erratenen Zahlen: <span id=sp_err></span></p>
+    <button id=btn_end style="visibility: hidden;" onclick=spielBeenden()>Spiel beenden</button>
+
+    <script>
+        var zufallszahl
+        let anzGewonnen = 0
+        function spielSitzungStarten() {
+            p_aufgabe.innerText = 'Erraten Sie eine Zufallszahl'
+            inp_zahl.style.visibility = 'visible'            
+            p_hint.style.visibility = 'visible'
+            p_anz.style.visibility = 'visible'
+            btn_end.style.visibility = 'visible'
+            raten()
+        }
+        function raten() {
+            zufallszahl = Math.floor(Math.random() * 4)
+            inp_zahl.placeholder='0 / 1 / 2 / 3 ?'
+            console.log('zufallszahl :', zufallszahl)
+            p_hint.innerText = 'Ihre Eingaben: '
+        }
+        function prüfen() {
+            if (inp_zahl.value < zufallszahl) {
+                inp_zahl.placeholder = 'Zufallszahl ist größer als Sie denken, versuchen Sie nochmal'
+            } else if (inp_zahl.value > zufallszahl) {
+                inp_zahl.placeholder = 'Zufallszahl ist kleiner als Sie denken, versuchen Sie nochmal'
+            } else {
+                p_hint.innerText = p_hint.innerText + ' ' + inp_zahl.value
+                inp_zahl.value = ''
+                inp_zahl.placeholder = 'Glückwunsch! Sie haben die Zahl erraten!'
+                anzGewonnen++
+                sp_err.innerText = anzGewonnen
+                setTimeout(() => {
+                    raten()
+                }, 1500)
+                return
+            }
+            p_hint.innerText = p_hint.innerText + ' ' + inp_zahl.value
+            inp_zahl.value = ''
+        }
+        function spielBeenden() {
+            p_aufgabe.innerText = ''
+            inp_zahl.style.visibility = 'hidden'
+            btn_end.style.visibility = 'hidden'
+            p_hint.style.visibility = 'hidden'
+            p_hint.innerText = ''
+            p_anz.style.visibility = 'hidden'
+            sp_err.style.visibility = 'hidden'
+            console.clear()
+        }
+    </script>
+
+</body>
+
+</html>

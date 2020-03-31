@@ -7,31 +7,38 @@
     <title>js-data-types</title>
 </head>
 <body>
+  <h2>Tabs und NewLines in Template Strings</h2>
+  <pre>
+    die tabs & Co werden durch den P getrimt
+  </pre>
+  <p id="templateStrTest"></p>
+
+  <h2>Props von BigInt</h2>
+
+  <ul id="bigIntProps"></ul>
 
     <script>
 
         // Primitives & Literals
         
         let nr = 4;
-        let stringTest1 = '4';        
-
-        console.info('typeof stringTest1');
-        console.log(typeof stringTest1); // string
+        let stringTest1 = '4';
+        console.log('typeof stringTest1', typeof stringTest1); // string
 
         let stringTest2 = new String(stringTest1);
         // welchen Datentyp hat ein String, angelegt mit nem Konstruktor ?
-        console.info('typeof stringTest2');
-        console.log(typeof stringTest2); // object
+        console.log('typeof stringTest2', typeof stringTest2); // object
+        console.log('stringTest2 instanceof Object : ',stringTest2 instanceof Object);
 
-        // Primites & Global Functions 
+        // Primitives & Global Functions 
         let mySymbol0 = 'd'; // string
-        let mySymbol1 = Symbol('a');        
-        
-        console.info('typeof mySymbol1');
-        console.log(typeof mySymbol1); // symbol
+        let mySymbol1 = Symbol('a');
+        console.log('typeof mySymbol1 :', typeof mySymbol1); // symbol
 
-        console.info('mySymbol1 instanceof Object');
-        console.log(mySymbol1 instanceof Object); // false
+        console.info();
+        console.log('mySymbol1 instanceof Object : ', mySymbol1 instanceof Object); // false
+        console.log('mySymbol1 instanceof Symbol : ', mySymbol1 instanceof Symbol); // false
+        // let mySymbol2 = new Symbol('b') // Symbol is not a constructor 
 
         let myNull = null;
         console.info('typeof myNull');
@@ -61,23 +68,25 @@
         asdf          sdfgsdfgdfg`;
         console.log('interpolationString :', interpolationString);
         // Formatierung wird beibehalten
+
+        templateStrTest.innerHTML = interpolationString;        
                 
         console.log(typeof 1); // number
         console.log(typeof 1.1); // number
 
-        let numberOrBigInt = 19007199254740992   
-        console.log('numberOrBigInt :', numberOrBigInt); // 19007199254740990
-        console.log('typeof numberOrBigInt :', typeof numberOrBigInt); // 19007199254740990
-        console.log('numberOrBigInt instanceof BigInt :', numberOrBigInt instanceof BigInt); // false
-        console.log('numberOrBigInt instanceof Number :', numberOrBigInt instanceof Number); // false
+        console.log('Number.MAX_VALUE :', Number.MAX_VALUE); // 1.7976931348623157e+308
+        let numberOrBigInt = 1.7976931348623157e+310  
+        console.log('numberOrBigInt :', numberOrBigInt); // Infinity
+        console.log('typeof numberOrBigInt :', typeof numberOrBigInt); // number        
 
         console.log('BigInt.MAX_VALUE :', BigInt.MAX_VALUE); // undefined
         let test = BigInt(19007199254740990)
         console.log('typeof test :', typeof test); // bigint
         console.log('BigInt :', BigInt);
+        console.log('BigInt instanceof Object :', BigInt instanceof Object); // true
 
-        for (let prop in BigInt) {
-          console.log('prop :', prop);
+        for (let prop in BigInt) {          
+          bigIntProps.innerHTML = bigIntProps.innerHTML + `<li>${prop}</li>`
         }
         /* 
         *todo
@@ -95,8 +104,7 @@
         console.log(undefined instanceof Object); // false
         console.log(typeof Symbol('d')); // symbol
         console.log(Symbol('d') instanceof Object); // false
-        console.log(typeof any); // undefined 
-        console.log(typeof anyVadzim); // undefined 
+        console.log(typeof any); // undefined
         console.log(typeof void 4); // undefined
         console.log(typeof function () {}); // function
         console.log(function () {} instanceof Object); // true
@@ -117,6 +125,8 @@
         console.log(null instanceof Object); // false
         console.log(typeof String('text')); // string
         console.log(typeof new String('text')); // object
+        let valueOfTest = new String('text')
+        console.log('valueOfTest.valueOf() :', valueOfTest.valueOf()); // text
         console.log(typeof Number(3)); // number
         console.log(typeof Boolean(false)); // boolean
         console.log(typeof Object(5)); // object
@@ -169,9 +179,6 @@
         console.info("typeof String(cNr)");
         console.log(typeof String(cNr)); // string
 
-        console.info("typeof cNr.toString()");
-        console.log(typeof cNr.toString()); // string
-
         // string to number
         let cStr = "6";
 
@@ -183,6 +190,18 @@
         console.log(typeof +cStr); // number
         console.log(-cStr); // -6
         console.log(typeof (cStr*1)); // number
+
+        /* && || != == === */
+
+        let _Etwas = true;
+        _Etwas = 4;
+        let _WasAnderes = '4'
+
+        console.log('_Etwas == _WasAnderes :', _Etwas == _WasAnderes); // true
+        /* == vergleicht nur die Werte */
+        /* *todo beim Vergleich mit Boolean ist aber false! */
+        console.log('_Etwas === _WasAnderes :', _Etwas === _WasAnderes); // false
+        /* === vergleicht auch die Datentypen */
         
         </script>
     
