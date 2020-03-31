@@ -20,18 +20,43 @@
     <button id=btn1>=</button>
     <input id=summe1 type="text" disabled>
     <hr>
+
     <!-- #endregion -->
     <!-- #region RETURN -->
+
     <h2>Fkt mit return</h2>
     <input id=zahl21 type="number">
     <span>+</span>
     <input id=zahl22 type="number">
     <button id=btn2>=</button>
     <input id=summe2 type="text" disabled>
+    <hr>
+
     <!-- #endregion -->
     <!-- #region PARAM & ARG -->
+
+    <h2>Fkt mit ARG</h2>
+    <input id=zahl31 type="number">
+    <span>+</span>
+    <input id=zahl32 type="number">
+    <button id=btn3>=</button>
+    <input id=summe3 type="text" disabled>
+    <hr>
+
     <!-- #endregion -->
     <!-- #region MANY FUNCTIONS W. SAME NAME -->
+
+    <h2>mehrere gleiche Fkt mit versch. Anzahl v. ARG</h2>
+    <pre>
+        JS kommt mit mehreren Fkt vom gleichen Namen nicht klar. 
+    </pre>
+    <input id=zahl41 type="number">
+    <span>+</span>
+    <input id=zahl42 type="number">
+    <button id=btn4>=</button>
+    <input id=summe4 type="text" disabled>
+    <hr>
+
     <!-- #endregion -->
 
     <script>
@@ -49,7 +74,7 @@
         // #region RETURN 
 
         btn2.addEventListener('click', addiere2)
-        let returnOfAddiere2
+       
         function zwischenAaddiere() {
             return +zahl21.value + +zahl22.value
         }
@@ -60,9 +85,43 @@
 
     // #endregion
     // #region PARAM & ARG 
-    
+
+    btn3.addEventListener('click', addiere3)
+        
+        function zwischenAaddiere3(summand1, summand2) {
+            return +summand1 + +summand2
+        }
+        function addiere3(){
+            summe3.value = zwischenAaddiere3(zahl31.value, zahl32.value)
+            return 1
+        } 
+
     // #endregion 
-    // #region MANY FUNCTIONS W. SAME NAME 
+    // #region MANY FUNCTIONS W. SAME NAME
+
+    btn4.addEventListener('click', addiere4)
+        
+        function zwischenAaddiere4(summand1, summand2) {
+            return +summand1 + +summand2
+        }
+        function zwischenAaddiere4(summand1) {
+            return +summand1 + +summand1
+        }
+        function zwischenAaddiere4(newSummand) {
+            return +newSummand + +newSummand
+        }
+        function addiere4(){
+            // if (zahl42.value.length > 0)
+            if (zahl41.value == '' && zahl42.value != '') {
+                summe4.value = zwischenAaddiere4(zahl42.value)
+            } else if (zahl42.value == '' && zahl41.value != '') {
+                summe4.value = zwischenAaddiere4(zahl41.value)
+            } else {
+                console.log('bin hier');
+                summe4.value = zwischenAaddiere4(zahl41.value, zahl42.value)
+            }
+            return 1
+        } 
     // #endregion 
     </script>
 </body>

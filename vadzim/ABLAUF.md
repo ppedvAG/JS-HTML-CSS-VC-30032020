@@ -120,7 +120,7 @@ syntax von pfaden bei Datei-Verlinkungen
 
 - [x] [js-switch.html](./theory-app/js-switch.html)
 - [x] [js-Date.html](./theory-app/js-Date.html)
-- [ ] [js-functions.html](./theory-app/js-functions.html)
+- [x] [js-functions.html](./theory-app/js-functions.html)
 - [ ] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
 - [ ] [js-arrays.html](./theory-app/js-arrays.html)
 - [ ] [js-strings.html](./theory-app/js-strings.html)
