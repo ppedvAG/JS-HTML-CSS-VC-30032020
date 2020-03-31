@@ -11,7 +11,10 @@
     <!-- #region 7 setTimeout() -->
     <button onclick="setTimeout(countClicks, 500, this)">0</button>
     <!-- #endregion -->
-    
+  
+    <button onclick="tick(this)">10</button>
+  
+
     <script>
     //#######################################################
     console.log(this)
@@ -46,8 +49,8 @@
 
     //#######################################################
     console.info('TEST 4: return von alert()')
-    // const alertReturn = alert('info für den benutzer')
-    // console.log('alertReturn :', alertReturn); // undefined
+    //const alertReturn = alert('info für den benutzer')
+   // console.log('alertReturn :', alertReturn); // undefined
 
 
 
@@ -61,8 +64,8 @@
 
     //#######################################################
     console.info('TEST 6: return von confirm()')
-    const confirmReturn = confirm('Corona ist Scheiße. Einverstanden?')
-    console.log('confirmReturn :', confirmReturn);
+    // const confirmReturn = confirm('Corona ist Scheiße. Einverstanden?')
+    // console.log('confirmReturn :', confirmReturn);
 
 
     //#region 7 setTimeout()
@@ -73,6 +76,22 @@
     }
     //#endregion
     
+ //#region 7 setTimeout()
+    //#######################################################
+    console.info('TEST 7: setIntervall()')
+    function tick(el) {        
+   
+        let intervallID = setInterval(() => {
+            +el.innerText --
+            if(+el.innerText == 0){
+            clearInterval(intervallID)
+            }
+        }, 1000)
+    }
+    //#endregion
+
+
+
     /* 
     *todo
     Objekt window hat unter seinen Eigenschaften die Funktion HTMLAnchorElement() z.B. und die Funktion Number(). 

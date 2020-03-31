@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Functions</title>
+</head>
+<body>
+    <h1>JS-Functions</h1>
+  <!-- #region BASIC -->
+  <pre>
+      Ohne return geben Funktionen undefined zurück
+  </pre>
+    <H2>Einfache Funktion</H2>
+    <input id=zahl11 type="number">
+    <span>+</span>
+    <input id=zahl12 type="number">
+    <button id=btn1>=</button>
+    <input id=summe1 type="text" disabled>
+    <!-- #endregion -->
+    <!-- #region RETURN -->
+    <hr>
+    <H2>Return Funktion</H2>
+   
+    <input id=zahl21 type="number">
+    <span>+</span>
+    <input id=zahl22 type="number">
+    <button id=btn2>=</button>
+    <input id=summe2 type="text" disabled>
+    <!-- #endregion -->
+    <!-- #region PARAM & Arg -->
+    <hr>
+    <H2>Funktion mit PARAM & Arg</H2>
+    <input id=zahl31 type="number">
+    <span>+</span>
+    <input id=zahl32 type="number">
+    <button id=btn3>=</button>
+    <input id=summe3 type="text" disabled>
+    
+    <!-- #endregion -->
+    <!-- #region Many Function with the same Name -->
+    <Pre>
+        Nicht Möglich        
+    </Pre>
+
+    <hr>
+    <H2>Funktion Many Function with the same Name</H2>
+    <input id=zahl41 type="number">
+    <span>+</span>
+    <input id=zahl42 type="number">
+    <button id=btn4>=</button>
+    <input id=summe4 type="text" disabled>
+
+
+    <!-- #endregion -->
+
+
+    <script>
+    // #region BASIC 
+        btn1.addEventListener('click',addiere1)
+        let returnOfAddiere1
+        function addiere1(){
+            summe1.value = +zahl11.value + +zahl12.value 
+        
+        }
+
+        returnOfAddiere1 = addiere1()
+        console.log('returnOfAddiere1 :', returnOfAddiere1);
+    // #endregion 
+    // #region RETURN 
+    btn2.addEventListener('click',addiere2)
+         function zwischenaddiere2(){
+            return +zahl21.value + +zahl22.value 
+        
+        }
+        function addiere2(){
+            summe2.value = zwischenaddiere2();
+        
+        }
+       
+    // #endregion 
+    // #region PARAM & Arg 
+
+    btn3.addEventListener('click',addiere3)
+         function zwischenaddiere3(summand1, summand2){
+            return +summand1 + +summand2 
+        
+        }
+        function addiere3(){
+            summe3.value = zwischenaddiere3(zahl31.value,zahl32.value);
+        
+        }
+
+
+
+
+    // #endregion
+    // #region Many Function with the same Name 
+
+    btn4.addEventListener('click',addiere4)
+         function zwischenaddiere4(summand1, summand2){
+            return +summand1 + +summand2 
+        
+        }
+ 
+        function zwischenaddiere5(summand1){
+            return +summand1 + +summand1 
+       
+        }
+ 
+ 
+ 
+        function addiere4(){
+            if((zahl41.value.length > 0) && (zahl42.value.length > 0))
+            {
+                summe4.value = zwischenaddiere4(zahl41.value,zahl42.value);
+                return
+            }
+          else if(zahl42.value.length > 0)
+            {
+                summe4.value = zwischenaddiere5(zahl42.value)
+                return
+            }
+            else if(zahl41.value.length > 0)
+            {
+                summe4.value = zwischenaddiere5(zahl41.value)
+                return
+            } 
+           
+               
+        
+        }
+
+
+
+    // #endregion 
+    </script>
+</body>
+</html>
