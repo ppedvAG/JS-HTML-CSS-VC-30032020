@@ -14,6 +14,7 @@
         Klick auf den Button und schau in der Konsole nach,
         wie das Event-Objekt aussieht!
     </pre>
+    <!-- der Übergabeparameter MUSS "event" heißen -->
     <button onclick="showEventObject(event)">show Event</button>
     <hr>
     <!-- #endregion 1 -->
@@ -64,6 +65,8 @@
 
 
         //#region 3
+        /* Bei addEventListener wird automatisch der event übergeben */
+        /* Mehrere Objekte mit dem gleichen Eventhandler möglich */
         btn_prost1.addEventListener('click', anstossen)
         btn_prost2.addEventListener('click', anstossen)
         btn_prost3.addEventListener('click', anstossen)

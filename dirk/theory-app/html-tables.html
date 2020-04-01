@@ -17,7 +17,7 @@
             /* entfernt Abstände (margins) zwischen den Zellen */
             caption-side: bottom;
         }
-        /* even | an+b */
+        /* even | an+b   3n -> jede dritte Zeile*/
         tbody tr:nth-child(odd) {
             background-color: aquamarine;
         }
@@ -25,21 +25,29 @@
 </head>
 <body>
     <h1>Tabellen, angelegt mit HTML</h1>
+
+ <!-- <a href="#navigatetothisID">test</a>  -->   
     
+    <!-- Emmet -->
     <!-- table>caption{table caption}+(thead>tr>th{thead cell $}*4)+(tbody>(tr>td{tbody cell $}*4)*4)+(tfoot>tr>td{tfoot cell $}*4) -->
 
     <table>
+        <!-- Beschreibung oder Titel -->
         <caption>table caption</caption>
         <thead>
+            <!-- table row -->
             <tr>
+                <!-- th cell in table head -->
                 <th>thead cell 1</th>
                 <th>thead cell 2</th>
-                <th>thead cell 3</th>
-                <th>thead cell 4</th>
+                <th colspan="2"  >thead cell 3</th>
+                <!-- rowspan="2" -->
+              <!--  -->  <th>thead cell 4</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <!--  td table data -->
                 <td>tbody cell 1</td>
                 <td>tbody cell 2</td>
                 <td>tbody cell 3</td>
@@ -99,7 +107,7 @@
                 </tr>
             </thead>
             <tbody>
-                table body
+                table body <!-- wird vor der Tabell angezeigt -->
                 <tr>
                     <td>tbody cell 1</td>
                     <td>tbody cell 2</td>

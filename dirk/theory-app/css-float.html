@@ -12,10 +12,11 @@
         }
 
         p {
-            float: left;
-            /* float: right; */
+            /* float: left; */
+            float: right;
             /* auch die Reihenfolge ist getauscht */
             /* 2. lässt die Elemente wie Inhalt von einem nachfolgenden Element verhalten */
+            /* outline: aquamarine solid 10px; */
         }
 
         .noMargin {
@@ -30,15 +31,20 @@
 
         /* clearen beim nächsten El */
         .toClear {
-            clear: both;
+            clear: both; /* both > beide Richtungen left and right */
         }
 
         /* clearen beim Elternelement */
+        /* :: Pseudoelement */
         #clearfix::after {
             content: "";
             display: table;
             clear: both;
         }
+        article{
+            background-color: rgb(148, 26, 26);
+        }
+
     </style>
 </head>
 
@@ -46,7 +52,7 @@
     <h1>CSS FLOAT</h1>
     <em>vorausgesetzte Kenntnisse: CSS-Box, inline/block, z-index</em>
     <pre>
-    dt: Umfließen
+    dt: Umfließen / Schweben
     float left oder right
     Durch Float werden block-elemente so breit wie Inhalt.
     Float zwingt ein Element den nächsten freien Raum links oder rechts zu nehmen.  
@@ -69,45 +75,45 @@
     <p>paragraph4</p>
     <p>paragraph5</p>
     <p>paragraph6</p>
-    <article>article</article>
+    <article>article 1</article>
     <p>paragraph1</p>
     <p>paragraph2</p>
     <p>paragraph3</p>
     <p>paragraph4</p>
     <p>paragraph5</p>
     <p>paragraph6</p>
-    <article>article</article>
-    <article>article</article>
+    <article>article 2</article>
+    <article>article 3</article>
     <p>paragraph1</p>
     <p>paragraph2</p>
     <p>paragraph3</p>
     <p>paragraph4</p>
     <p>paragraph5</p>
     <p>paragraph6</p>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
+    <article>article 4</article>
+    <article>article 5</article>
+    <article>article 6</article>
     <p>paragraph1</p>
     <p>paragraph2</p>
     <p>paragraph3</p>
     <p>paragraph4</p>
     <p>paragraph5</p>
     <p>paragraph6</p>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
+    <article>article 7</article>
+    <article>article 8</article>
+    <article>article 9</article>
+    <article>article 10</article>
     <p>paragraph1</p>
     <p>paragraph2</p>
     <p>paragraph3</p>
     <p>paragraph4</p>
     <p>paragraph5</p>
     <p>paragraph6</p>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
-    <article>article</article>
+    <article>article 11</article>
+    <article>article 12</article>
+    <article>article 13</article>
+    <article>article 14</article>
+    <article>article 15</article>
 
 
 
@@ -148,6 +154,7 @@
 
 
     <h2>T4. clearfix</h2>
+    <!-- Clear wir unabhängig  -->
     <div id="clearfix">
         <p>paragraph1</p>
         <p>paragraph2</p>

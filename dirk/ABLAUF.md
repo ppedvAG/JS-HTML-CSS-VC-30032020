@@ -105,6 +105,7 @@ commit
 - [ ] Operatoren
 - [ ] [global object window](./theory-app/js-window.html)
 - [ ] Kontrollstrukturen
+- [ ] [js-if.html](./theory-app/js-if.html)
 - [ ] [js-Math.html](./theory-app/js-Math.html)
 
 ## Übung: Eine Zufallszahl erraten
@@ -134,18 +135,22 @@ commit
 
 
 
-## M0 | HTML CONTINUED
+## M10 | HTML CONTINUED
 
 - [ ] Content Types (Flow)
 - [ ] [html-lists.html](./theory-app/html-lists.html)
 - [ ] [html-tables.html](./theory-app/html-tables.html)
+- [ ] [js-tables.html](./theory-app/js-tables.html)
 
 ## M0 | CSS CONTINUED
 
 - [ ] [css-box.html](./theory-app/css-box.html)
+- [ ] [css-display-visibility.html](./theory-app/css-display-visibility.html)
 - [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
 - [ ] [z-index & stacking context](./theory-app/css-z-index.html)
 - [ ] [css-float.html](./theory-app/css-float.html)
+- [  ] [css-selectors-pseudo.html] (./theory-app/css-selectors-pseudo.html)
+
 
 ## Übung: Navigation einer Webseite
 
@@ -156,18 +161,19 @@ commit
 
 commited
 
-## M0 | HTML SECTIONING, TABLES, LISTS, PSEUDO
+## M12 | HTML SECTIONING, TABLES, LISTS, PSEUDO
 
-- [ ] Inhalt gruppieren - Sectioning, Headings & Co
+- [ ] [html-sectioning.html](./theory-app/html-sectioning.html) 
+- [ ] [css-grid.html](./theory-app/css-grid.html)
 - [ ] Display: table, list
-- [ ] Pseudo-Klassen & -Elemente
-
+-
 
 
 
 
 ## M | JS OBJECTS
 
+- [ ] Konstruktoren
 - [ ] [js-objects.html](./theory-app/js-objects.html)
 
 ## M | DOM INTRO
@@ -207,7 +213,6 @@ commited
 ## M | CSS INTERMEDIATE
 
 - [ ] [css-specificity.html](./theory-app/css-specificity.html)
-- [ ] [css-grid.html](./theory-app/css-grid.html)
 - [ ] Display: grid
 - [ ] Media Queries & Breakpoints
 - [ ] Animationen & Transitions

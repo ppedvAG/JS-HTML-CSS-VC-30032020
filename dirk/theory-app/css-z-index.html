@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Z-INDEX</title>
+    <style>
+        body{
+            background-color: rgb(139, 21, 110);
+        }
+        div{
+            width: 500px;
+            height: 500px;
+        }
+        #div1{
+            background-color: rgb(219, 116, 116);
+            position: static; /* ist default */
+        }
+        #div2{
+            background-color: rgb(46, 177, 42);
+            position: absolute; /* notwendig um z-index zu ändern */
+            left: 100px;
+            top: 200px;
+            z-index: 5;  /* 0 wie Auto, 1 um über die letzte abs-div zu sein, -1 sogar tiefer als static */
+        }
+        #div3{
+            background-color: rgb(88, 82, 175);
+            position: absolute;
+            left: 200px;
+            top: 300px;
+        }
+    </style>
 </head>
 <body>
     <h1>CSS Z-INDEX</h1>
+    <pre>
+        Mit z-index kann man die imaginäre Schicht in der Z Achse bei Elementen ändern.
+        ohne Angaben vom Web-Entwickler zu Z-Index werden die Auto Werte vom Browser genommen. Diese liegen im negativen Bereich.
+        Bestimmte CSS Eigenschaften (wie z.B. Opacity oder Float) lassen den Z-Index bei Elementen neu berechnen 
+    </pre>
+
+    <div id="div1">pos:static</div>
+    <div id="div2">pos:absolut</div>
+    <div id="div3">pos:absolut</div>
 
     <!-- 
         *todo
