@@ -13,7 +13,7 @@
 | `shift_alt cursor` | edit many lines |
 | `ctrl leftclick` | go to definition |
 | `ctrl ö` | open terminal |
-| `ctrl space` | force intellisense |
+| `ctrl space` | force intellisense | 
 | `ctrl #` | comment / uncomment |
 | `ctrl k s` | save all |
 | `alt b` | open in browser |

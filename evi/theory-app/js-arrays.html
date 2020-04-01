@@ -41,7 +41,7 @@
         rw = blumen.concat(['Gladiole', 'Gänseblümchen'])
         console.log('rw : ', rw); // neues Array aus 6 Elementen
         console.log('blumen :', blumen);
-        
+        debugger
 
         //join()
         console.info('JOIN');
@@ -58,7 +58,6 @@
         console.log('rw : ', rw); // alphabetisch sortiert
         console.log('blumen :', blumen);
         /* gibt ein sortiertes Array zurück und ändert das Ursprungsarray */
-
 
 
         //reverse()
@@ -93,6 +92,7 @@
 
 
         //shift()
+        // löscht das erste Element
         console.info('SHIFT')
         rw = blumen.shift() 
         console.log('rw : ', rw); // Tulpe
@@ -100,6 +100,7 @@
 
 
         //unshift()
+        // fügt am Anfang ein
         console.info('UNSHIFT')
         rw = blumen.unshift('Sonnenblume')
         console.log('rw : ', rw); // Länge vom neuen Array
@@ -107,6 +108,7 @@
 
 
         //push()
+        //fügt am Ende ein
         console.info('PUSH')
         rw = blumen.push('Frühlingsrose')
         console.log('rw : ', rw); // 5 - neue Länge
@@ -150,7 +152,7 @@
 
 
         console.info('KOPIEN VOM ARRAY ERSTELLEN: SLICE')
-        // slice
+        // slice - ohne Arguement erzeugt Kopie
         blumen = ['Rose', 'Tulpe', 'Narzisse', 'Nelke']
         rw = blumen.slice()
         console.log('rw : ', rw);
@@ -159,7 +161,7 @@
 
 
         console.info('KOPIEN VOM ARRAY ERSTELLEN: SPREAD')
-        // spread ... 
+        // spread ...  Kopie der Variablen
         rw = [...blumen]
         console.log('rw : ', rw);
 </script>

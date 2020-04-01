@@ -19,25 +19,33 @@
     </pre>
     
     <button onclick="setTimeout(inkrementiereClassicFct,1000)">classic-named-fct</button>
+ 
+    
     <button onclick="setTimeout(function () {
         this.innerText += '+1'
         console.log('this from classic anonumous function :', this);
     },1000)">classic-anonumous-fct</button>
+  
+    
     <button onclick="setTimeout(() => {
         this.innerText += '+1'
         console.log('this from arrow anonumous function :', this);
     },1000)">arrow-anonumous-fct</button>
+
+    
     <button onclick="setTimeout(inkrementiereNamedArrowFct,1000)">arrow-named-fct</button>
+    <p  id=output></p>
+
 
     <!-- <input type="text" oninput="gibInKonsole(this.value)">
     <input type="text" oninput="console.log('this.value :', this.value)">
     <input type="text" oninput="{(() => console.log('this.value :', this.value))()}"> -->
     <script>
-        function inkrementiereClassicFct(event) {
+        function inkrementiereClassicFct() {
             // this.innerText = this.innerText + '+1'
             this.innerText += '+1' // this bezieht sich auf window
             console.log('this from classic named function :', this);
-            console.log('event :', event);
+            output.innerText = this.innerText;
         }
         let inkrementiereNamedArrowFct = () => {
             this.innerText += '+1'

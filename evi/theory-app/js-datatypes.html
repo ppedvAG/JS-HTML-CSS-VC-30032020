@@ -68,8 +68,8 @@
         let numberOrBigInt = 19007199254740992   
         console.log('numberOrBigInt :', numberOrBigInt); // 19007199254740990
         console.log('typeof numberOrBigInt :', typeof numberOrBigInt); // 19007199254740990
-        console.log('numberOrBigInt instanceof BigInt :', numberOrBigInt instanceof BigInt); // false
-        console.log('numberOrBigInt instanceof Number :', numberOrBigInt instanceof Number); // false
+        console.log('numberOrBigInt instanceof BigInt :', numberOrBigInt instanceof BigInt); // false => Abfrage instanceof geht nur auf Objekten
+        console.log('numberOrBigInt instanceof Number :', numberOrBigInt instanceof Number); // false => Abfrage instanceof geht nur auf Objekten
 
         console.log('BigInt.MAX_VALUE :', BigInt.MAX_VALUE); // undefined
         let test = BigInt(19007199254740990)
