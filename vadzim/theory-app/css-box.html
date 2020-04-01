@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS BOX</title>
     <style>
+        p {
+            display: block;
+        }
+        span {
+            display: inline;
+        }
         p, span {
-            border: 50px double;
+            border-width: 50px;
+            border-style: double;
             padding: 10px;
+            /* padding: 10px 20px; */
+            /* padding: 10px 20px 30px; */
+            /* padding: 10px 20px 30px 40px; */
             /* margin oben und unten überlappen sich */
             margin: 10px;
             height: 100px; /* fkt nur bei block-elementen */
@@ -19,7 +29,7 @@
             */
             /*  box-sizing: content-box; */ /* default */
             /* wenn die gleiche css eigenschaft mehrmals Werte bekommt, der letzte Wert gewinnt */
-            box-sizing: border-box; /* default */
+            box-sizing: border-box;
         }
         body {
             /* default wert bei body ist margin: 8px */
@@ -28,11 +38,19 @@
     </style>
 </head>
 <body>
+    <h1>CSS BOX</h1>
+    <pre>
+        padding und margin sind shorthands
+        padding: 10px - alle vier Seite haben padding 10px
+        padding: 10px 20px - top & bottom haben 10px, left & right haben 20px
+        padding: 10px 20px 30px - top hat 10px, left & right haben 20px, bottom hat 30px;
+        padding: 10px 20px 30px 40px - die Werte werden im Uhrzeigesinn von 12(top) anfangend angewendet
+    </pre>
     <p>par</p>
     <p>par</p>
     <br>
-    <span>span</span>
-    <span>span</span>
+    <span>span span</span>
+    <span>span span</span>
     <br>
 
     <!--
