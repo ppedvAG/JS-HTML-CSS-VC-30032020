@@ -8,13 +8,17 @@
   </head>
   <body>
     <h1>Übung Image Zoom</h1>
-    <img src="https://picsum.photos/id/235/100" alt="" />
-    <img src="https://picsum.photos/id/236/100" alt="" />
-    <img src="https://picsum.photos/id/237/100" alt="" />
+    <img id=img1 src1="https://picsum.photos/id/235/100" alt="" />
+    <img id=img src="https://picsum.photos/id/236/100" alt="" />
+    <img id=img src="https://picsum.photos/id/237/100" alt="" />
     <br />
     <button onclick="zoom()">Zoom</button>
 
     <script>
+      let image = img1
+      console.log('imgage :', image);
+      imageSlice = image.CharAt(5)
+      console.log('imageSlice :', imageSlice);
       function zoom() {
         console.log("imgSrc :", imgSrc);
         for (let index = 0; index < document.images.length; index++) {

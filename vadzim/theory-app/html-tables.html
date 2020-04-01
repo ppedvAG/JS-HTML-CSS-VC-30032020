@@ -5,52 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML TABLES</title>
     <style>
-        td {
+        body {
+            font-size:large; 
+        }
+        /* td, th { */
+        tbody {
             border: thin solid;
-
         }
         table {
             /* display: table; */ /* default wert bei Tabellen */
             /* background-color: rgb(194, 0, 0); */
-            border: thick solid;
+            /* border: thick solid; */
             border-collapse: collapse;
             /* entfernt Abstände (margins) zwischen den Zellen */
             caption-side: bottom;
-        }
-        /* even | an+b */
-        tbody tr:nth-child(odd) {
+        } 
+        /* even | odd | an+b */
+        tbody tr:nth-child(3n) {
             background-color: aquamarine;
         }
+        /* expand */
         
     </style>
 </head>
 <body>
     <h1>Tabellen, angelegt mit HTML</h1>
+    <a href="#textOutOfCells">TEST: textOutOfCells</a>
     
     <!-- table>caption{table caption}+(thead>tr>th{thead cell $}*4)+(tbody>(tr>td{tbody cell $}*4)*4)+(tfoot>tr>td{tfoot cell $}*4) -->
 
     <table>
         <caption>table caption</caption>
+        <!-- Caption : Beschreibung / Titel der Tabelle -->
         <thead>
             <tr>
+                <!-- tr : table row -->
+                <!-- th : cell in table head -->
                 <th>thead cell 1</th>
                 <th>thead cell 2</th>
-                <th>thead cell 3</th>
-                <th>thead cell 4</th>
+                <th colspan=2>thead cell 3</th>                
             </tr>
         </thead>
         <tbody>
             <tr>
+                <!-- td : table data -->
                 <td>tbody cell 1</td>
                 <td>tbody cell 2</td>
                 <td>tbody cell 3</td>
-                <td>tbody cell 4</td>
+                <td rowspan=2>tbody cell 4</td>
             </tr>
             <tr>
                 <td>tbody cell 1</td>
                 <td>tbody cell 2</td>
                 <td>tbody cell 3</td>
-                <td>tbody cell 4</td>
+                <!-- <td>tbody cell 4</td> -->
             </tr>
             <tr>
                 <td>tbody cell 1</td>
@@ -83,9 +91,10 @@
         #a
         in der Datei html-tags haben einige Tabellenteile keinen Rahmen bekommen. 
         Lag es daran, dass sie dort außerhalb von <table> liegen?
+            Ja. Bei body in table drin wird der Rahmen gerendert
      -->
     
-    <h2>*todo #1</h2>
+    <h2 id=textOutOfCells>*todo #1</h2>
     <pre>
         interessant, dass der Text, welcher außerhalb von Zellen steht,
         auch außerhalb von der Tabelle gerendert wird
@@ -146,7 +155,9 @@
                     <th>tfoot cell 5</th>
                 </tr>
             </tfoot>
-        
-    </table>
+    </table>    
+
+    <a href="../ABLAUF.md">zurück zu ABLAUF.md</a>
+   
 </body>
 </html>

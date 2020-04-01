@@ -11,6 +11,11 @@
         li, dt, dd {
             background-color: rgb(143, 108, 224);
         }
+        ul {
+            list-style-type: none;
+            list-style-type: symbols(url(gold-medal.svg));
+            /* armenian | */
+        }
         /* 
         #a
         lassen sich bei den unsortierten Listen 
@@ -25,6 +30,7 @@
     <h2>Unsortierte Listen / unordered lists</h2>
     <!-- ul>(li>lorem5)*5 -->
     <ul>
+        <!-- LI : list item -->
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Cum, nulla dicta! Delectus, iste.</li>
         <li>Tempora voluptatibus perspiciatis quam sequi!</li>
@@ -47,7 +53,8 @@
     <ol>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Omnis a iste distinctio totam?</li>
-        <ol type=a>
+        <!-- <ol type=a> -->
+        <ol type=A>
             <li>Lorem ipsum dolor sit amet.</li>
             <li>Omnis a iste distinctio totam?</li>
             <li>Illum autem perspiciatis nisi quas?</li>
@@ -78,7 +85,8 @@
     </ol>
 
     <h3>mit anderer Nummerierung als arabische Zahlen</h3>
-    <ol type=I>
+    <!-- <ol type=I> -->
+    <ol type=i>
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Omnis a iste distinctio totam?</li>
         <li>Illum autem perspiciatis nisi quas?</li>

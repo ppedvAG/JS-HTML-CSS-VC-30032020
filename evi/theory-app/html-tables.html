@@ -13,12 +13,12 @@
             /* display: table; */ /* default wert bei Tabellen */
             /* background-color: rgb(194, 0, 0); */
             border: thick solid;
-            border-collapse: collapse;
+            border-collapse: collapse; /* entfernt doppelte Rahmen
             /* entfernt Abstände (margins) zwischen den Zellen */
             caption-side: bottom;
         }
-        /* even | an+b */
-        tbody tr:nth-child(odd) {
+        /* odd | even | an+b (3n+1) */
+        tbody tr:nth-child(odd) { /* even für gerade*/
             background-color: aquamarine;
         }
     </style>
@@ -30,12 +30,13 @@
 
     <table>
         <caption>table caption</caption>
+        <!--Beschreibung oder Titel der Tabell-->
         <thead>
             <tr>
                 <th>thead cell 1</th>
                 <th>thead cell 2</th>
-                <th>thead cell 3</th>
-                <th>thead cell 4</th>
+                <th colspan="2">thead cell 3</th>
+                <!-- <th>thead cell 4</th> -->
             </tr>
         </thead>
         <tbody>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TABLES</title>
+</head>
+
+<body>
+    <h1>JS TABLES</h1>
+    <pre>Tabellen, dynamisch angelegt mit JS</pre>
+
+    <!-- table#tableId>(thead>tr>th*4)+tbody#tbodyId+(tfoot>tr>th*4) -->
+    <!-- 
+        *todo
+        emmet durch js ausführen?
+     -->
+    <table id="tableId">
+
+    </table>
+
+
+
+    <script>
+
+        fetch('https://jsonplaceholder.typicode.com/todos')
+            .then(response => response.json())
+            .then(json => renderJsonAsTable(json))
+            // .then(json => console.log(json))
+
+        function renderJsonAsTable(todos){        
+        tableId.innerHTML = `
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>userId</th>
+                <th>title</th>
+                <th>completed</th>
+            </tr>
+        </thead>
+        <tbody id="tbodyId"></tbody>
+        <tfoot>
+            <tr>
+                <th>id</th>
+                <th>userId</th>
+                <th>title</th>
+                <th>completed</th>
+            </tr>
+        </tfoot>
+        `
+        for (const todo of todos) {
+            let newRow = tbodyId.insertRow()
+            /* document.createElement('tr') */
+            newRow.insertCell().innerText = todo.id 
+            newRow.insertCell().innerText = todo.userId 
+            newRow.insertCell().innerText = todo.title 
+            newRow.insertCell().innerText = todo.completed
+            if (todo.completed) {
+                newRow.style.textDecoration = 'line-through'
+            }
+        }           
+    }
+
+    /* 
+    #a
+    wenn completed == true, dann soll die Aufgabe durchgestrichen sein
+    */
+
+    </script>
+
+</body>
+
+</html>
