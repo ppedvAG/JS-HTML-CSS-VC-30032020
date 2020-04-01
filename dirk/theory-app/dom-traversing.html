@@ -97,6 +97,10 @@
             console.log('test'); // wurde ausgeführt! 
         }
 
+        console.log("document.getElementsByClassName('p_class') :", document.getElementsByClassName('p_class'));
+        /* Aus jedem iterierbaren Object ein Array erstellen mit [...Iterierbar] */
+        let myPs = [...document.getElementsByClassName('p_class')]
+        console.log('myPs :', myPs);
 
         // document.getElementsByName()
         for (let el of document.getElementsByName('inp_name')) {
@@ -120,6 +124,8 @@
         */
         function createAnchor() {
             let anchorLink = document.createElement('a')
+            anchorLink.innerText = 'google'
+            anchorLink.setAttribute('href','https://google.com')
             let pMitA = document.getElementById('p_mit_a')
             pMitA.appendChild(anchorLink)
         }
