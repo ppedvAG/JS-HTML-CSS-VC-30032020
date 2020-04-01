@@ -47,7 +47,7 @@
 ## M04 | HTML SYNTAX
 
 - [x] [HTML.md - HTML Syntax](slides/HTML.md#html--syntax)
-- [x] [html-entities.html](./theory-app/html-entities.html)
+- [x] [html-entities.html](theory-app/html-entities.html)
 - [x] [html-tags.html](./theory-app/html-tags.html)
 - [x] [html-syntax.html](./theory-app/html-syntax.html)
 - [x] browser developer tools > elements > properties
@@ -67,7 +67,7 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 
 - [x] übung
 
-syntax von pfaden bei Datei-Verlinkungen
+- [x] syntax von pfaden bei Datei-Verlinkungen
 
 <!-- <a href=""></a> -->
 
@@ -103,12 +103,13 @@ syntax von pfaden bei Datei-Verlinkungen
 
 ## M08 | JS CONTINUED
 
-- [x] [vars, identifiers, scopes](./theory-app/js-variables-identifiers-scopes.html)
-- [x] [primitives js-datatypes.html](./theory-app/js-datatypes.html)
+- [x] [vars, identifiers, scopes](theory-app/js-variables-identifiers-scopes.html)
+- [x] [primitives js-datatypes.html](theory-app/js-datatypes.html)
 - [x] Operatoren
-- [x] [global object window](./theory-app/js-window.html)
+- [x] [global object window](theory-app/js-window.html)
 - [x] Kontrollstrukturen
-- [x] [js-Math.html](./theory-app/js-Math.html)
+- [x] [js-if.html](theory-app/js-if.html)
+- [x] [js-Math.html](theory-app/js-Math.html)
 
 ## Übung: Eine Zufallszahl erraten
 
@@ -124,7 +125,6 @@ syntax von pfaden bei Datei-Verlinkungen
 - [x] [js-arrowfunction.html](./theory-app/js-arrowfunction.html)
 - [x] [js-arrays.html](./theory-app/js-arrays.html)
 - [x] [js-strings.html](./theory-app/js-strings.html)
-- [ ] Konstruktoren
 
 ## Übung: Bilder vergrößern
 
@@ -132,28 +132,33 @@ syntax von pfaden bei Datei-Verlinkungen
 - mit Klick auf den Button werden die Bilder vergrößert
 - [x] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
 
-## M0 | HTML CONTINUED
+- [x] commit
 
-- [ ] Content Types (Flow)
-- [ ] [html-lists.html](./theory-app/html-lists.html)
-- [ ] [html-tables.html](./theory-app/html-tables.html)
+## M10 | HTML CONTINUED
+
+- [x] Content Types (Flow)
+- [x] [html-lists.html](theory-app/html-lists.html)
+- [x] [html-tables.html](theory-app/html-tables.html)
+- [x] [js-tables.html](theory-app/js-tables.html)
 
 ## M0 | CSS CONTINUED
 
-- [ ] [css-box.html](./theory-app/css-box.html)
-- [ ] display & visibility
-- [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
-- [ ] [z-index & stacking context](./theory-app/css-z-index.html)
-- [ ] [css-float.html](./theory-app/css-float.html)
+- [x] [css-box.html](theory-app/css-box.html)
+- [x] [css-display-visibility.html](theory-app/css-display-visibility.html)
+- [x] [css-inline-block.html](theory-app/css-inline-block.html)
+- [x] [z-index & stacking context](theory-app/css-z-index.html)
+- [x] [css-float.html](theory-app/css-float.html)
 
 ## Übung: Navigation einer Webseite
 
 - nav
-- die Links (oder Eltern davon) sollen Größenangaben (width, height) akzeptieren
+- ul > li
+- li ohne disc
+- a ohne underline
 - float
 - bei :hover andere Hintergrund- und evtl. Schriftfarbe
 
-commited
+- [x] commit
 
 ## M0 | HTML SECTIONING, TABLES, LISTS, PSEUDO
 
@@ -163,6 +168,7 @@ commited
 
 ## M | JS OBJECTS
 
+- [ ] Konstruktoren
 - [ ] [js-objects.html](./theory-app/js-objects.html)
 
 ## M | DOM INTRO
@@ -212,7 +218,6 @@ commited
 - [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
-
 
 select - options löschen, zwischenspeichern, filtern
 
