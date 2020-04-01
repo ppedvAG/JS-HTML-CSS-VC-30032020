@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS IF</title>
+  </head>
+  <body>
+    <h1>JS IF</h1>
+
+    <pre>siehe script und console
+        neben true / false werden im Bedingungsabschnitt bei 
+        Kontrollstruturen auch folgendes akzepiert:
+        - 1 (true) / 0 (false) 
+        - 'not undefined' (true) / 'undefined' (false)
+    </pre>
+
+<script>
+    if(0) {
+        console.log('es war eine Null')
+    } else {
+        console.log('es war eine Eins')
+    }
+
+    const myObject = {name: 'Max', lastname: 'Mustermann'}
+    if(myObject.name){
+        console.log('Die angegebene Eigenschaft ist kein undefined');
+    } else {
+        console.log('Die angegebene Eigenschaft ht einen Wert bekommen');
+    }
+
+    const myArray = [3, 5]
+    if (myArray[3]){
+        console.log('An der angegebenen Stelle steht es im Array ein Element');
+    } else {
+        console.log('An der angegebenen Stelle steht es im Array KEIN Element');
+    }
+
+    if (null){
+        console.log('NULL ist wie true');
+    } else {
+        console.log('NULL ist wie false');
+    }
+
+</script>
+
+  </body>
+</html>

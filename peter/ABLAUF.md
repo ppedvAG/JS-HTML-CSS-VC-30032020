@@ -102,7 +102,7 @@ commit
 - [x] [primitives js-datatypes.html](./theory-app/js-datatypes.html)
 - [x] Operatoren
 - [x] [global object window](./theory-app/js-window.html)
-- [x] Kontrollstrukturen
+- [x] [js-if.html](./theory-app/js-if.html)
 - [x] [js-Math.html](./theory-app/js-Math.html)
 
 ## Übung: Eine Zufallszahl erraten
@@ -128,18 +128,20 @@ commit
 - [x] [ueb-bilderzoom.html](./theory-app/ueb-bilderzoom.html)
 
 
-## M0 | HTML CONTINUED
+## M10 | HTML CONTINUED
 
-- [ ] Content Types (Flow)
-- [ ] [html-lists.html](./theory-app/html-lists.html)
-- [ ] [html-tables.html](./theory-app/html-tables.html)
+- [x] Content Types (Flow)
+- [x] [html-lists.html](./theory-app/html-lists.html)
+- [x] [html-tables.html](./theory-app/html-tables.html)
+- [x] [js-tables.html](./theory-app/js-tables.html)
 
 ## M0 | CSS CONTINUED
 
-- [ ] [css-box.html](./theory-app/css-box.html)
-- [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
-- [ ] [z-index & stacking context](./theory-app/css-z-index.html) 
-- [ ] [css-float.html](./theory-app/css-float.html)
+- [x] [css-box.html](./theory-app/css-box.html)
+- [x] [css-display-visibility.html](./theory-app/css-display-visibility.html)
+- [x] [css-inline-block.html](./theory-app/css-inline-block.html)
+- [x] [z-index & stacking context](./theory-app/css-z-index.html) 
+- [x] [css-float.html](./theory-app/css-float.html)
 
 ## Übung: Navigation einer Webseite
 

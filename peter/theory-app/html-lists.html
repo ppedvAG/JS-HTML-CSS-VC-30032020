@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML LISTS</title>
     <style>
-        ul, ol, dl {
-            background-color: rgba(146, 50, 50, 0.781);
-        }
-        li, dt, dd {
-            background-color: rgb(143, 108, 224);
-        }
-        /* 
+      ul,
+      ol,
+      dl {
+        background-color: rgba(146, 50, 50, 0.781);
+      }
+      li,
+      dt,
+      dd {
+        background-color: rgb(143, 108, 224);
+      }
+      ul {
+        list-style-type:none;
+      }
+
+      /* 
         #a
         lassen sich bei den unsortierten Listen 
         die Punkte links von LIs durch andere Zeichen ersetzen?
         Schau, welche Werte hat die Eigenschaft list-style-type bei ul!
         */
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>LISTEN</h1>
 
     <h2>Unsortierte Listen / unordered lists</h2>
     <!-- ul>(li>lorem5)*5 -->
     <ul>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Cum, nulla dicta! Delectus, iste.</li>
-        <li>Tempora voluptatibus perspiciatis quam sequi!</li>
-        <li>Perferendis doloribus veniam tempore ipsum?</li>
-        <li>Aspernatur quia commodi accusantium ullam!</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Cum, nulla dicta! Delectus, iste.</li>
+      <li>Tempora voluptatibus perspiciatis quam sequi!</li>
+      <li>Perferendis doloribus veniam tempore ipsum?</li>
+      <li>Aspernatur quia commodi accusantium ullam!</li>
     </ul>
     <p>Lorem, ipsum dolor.</p>
 
     <h2>Sortierte Listen / ordered lists</h2>
     <!-- ol>(li>lorem5)*5 -->
     <ol>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Omnis a iste distinctio totam?</li>
-        <li>Illum autem perspiciatis nisi quas?</li>
-        <li>Veniam velit rerum vitae autem.</li>
-        <li>Laborum accusamus vitae esse a!</li>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Omnis a iste distinctio totam?</li>
+      <li>Illum autem perspiciatis nisi quas?</li>
+      <li>Veniam velit rerum vitae autem.</li>
+      <li>Laborum accusamus vitae esse a!</li>
     </ol>
 
     <h3>Sortiert und verschachtelt</h3>
     <ol>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Omnis a iste distinctio totam?</li>
+      <ol type="a">
         <li>Lorem ipsum dolor sit amet.</li>
         <li>Omnis a iste distinctio totam?</li>
-        <ol type=a>
-            <li>Lorem ipsum dolor sit amet.</li>
-            <li>Omnis a iste distinctio totam?</li>
-            <li>Illum autem perspiciatis nisi quas?</li>
-            <li>Veniam velit rerum vitae autem.</li>
-            <li>Laborum accusamus vitae esse a!</li>
-        </ol>
+        <li>Illum autem perspiciatis nisi quas?</li>
         <li>Veniam velit rerum vitae autem.</li>
         <li>Laborum accusamus vitae esse a!</li>
+      </ol>
+      <li>Veniam velit rerum vitae autem.</li>
+      <li>Laborum accusamus vitae esse a!</li>
     </ol>
 
     <h3>Sortiert, mit Rücknummerierung</h3>
     <ol reversed>
-    <!-- <ol reversed="reversed"> -->
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Omnis a iste distinctio totam?</li>
-        <li>Illum autem perspiciatis nisi quas?</li>
-        <li>Veniam velit rerum vitae autem.</li>
-        <li>Laborum accusamus vitae esse a!</li>
+      <!-- <ol reversed="reversed"> -->
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Omnis a iste distinctio totam?</li>
+      <li>Illum autem perspiciatis nisi quas?</li>
+      <li>Veniam velit rerum vitae autem.</li>
+      <li>Laborum accusamus vitae esse a!</li>
     </ol>
 
     <h3>mit festgelegtem Anfang</h3>
-    <ol start=101>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Omnis a iste distinctio totam?</li>
-        <li>Illum autem perspiciatis nisi quas?</li>
-        <li>Veniam velit rerum vitae autem.</li>
-        <li>Laborum accusamus vitae esse a!</li>
+    <ol start="101">
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Omnis a iste distinctio totam?</li>
+      <li>Illum autem perspiciatis nisi quas?</li>
+      <li>Veniam velit rerum vitae autem.</li>
+      <li>Laborum accusamus vitae esse a!</li>
     </ol>
 
     <h3>mit anderer Nummerierung als arabische Zahlen</h3>
-    <ol type=I>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Omnis a iste distinctio totam?</li>
-        <li>Illum autem perspiciatis nisi quas?</li>
-        <li>Veniam velit rerum vitae autem.</li>
-        <li>Laborum accusamus vitae esse a!</li>
+    <ol type="I">
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Omnis a iste distinctio totam?</li>
+      <li>Illum autem perspiciatis nisi quas?</li>
+      <li>Veniam velit rerum vitae autem.</li>
+      <li>Laborum accusamus vitae esse a!</li>
     </ol>
 
     <h2>dl / Beschreibungsliste / description lists</h2>
     <!-- dl>(dt{definition term $}+dd{definition description $})*3 -->
     <dl>
-        <dt>definition term 1</dt>
-        <dd>definition description 1</dd>
-        <dt>definition term 2</dt>
-        <dd>definition description 2</dd>
-        <dt>definition term 3</dt>
-        <dd>definition description 3</dd>
+      <dt>definition term 1</dt>
+      <dd>definition description 1</dd>
+      <dt>definition term 2</dt>
+      <dd>definition description 2</dd>
+      <dt>definition term 3</dt>
+      <dd>definition description 3</dd>
     </dl>
-
-
-
-    
-</body>
+  </body>
 </html>
