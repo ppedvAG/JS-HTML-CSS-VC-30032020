@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS BOX</title>
     <style>
+        p{
+            display: block; /* // default */
+        }
+        span{
+            display: inline;
+        }
         p, span {
             border: 50px double;
             padding: 10px;
@@ -19,7 +25,7 @@
             */
             /*  box-sizing: content-box; */ /* default */
             /* wenn die gleiche css eigenschaft mehrmals Werte bekommt, der letzte Wert gewinnt */
-            box-sizing: border-box; /* default */
+            box-sizing: border-box; 
         }
         body {
             /* default wert bei body ist margin: 8px */
@@ -28,6 +34,16 @@
     </style>
 </head>
 <body>
+    <h1>CSS box</h1>
+<pre>
+    padding und margin sind shorthands
+    padding 19px alle Seiten 10px
+    padding 10px 20px top = 10px seite = 20px
+    padding 10px 20px 30px  oben = 10px seite = 20px unten = 30px
+    padding 10px 20px 30px 40px  oben = 10px rechts = 20px unten = 30px links = 40px  im Uhrzeigersinn
+   
+</pre>
+
     <p>par</p>
     <p>par</p>
     <br>

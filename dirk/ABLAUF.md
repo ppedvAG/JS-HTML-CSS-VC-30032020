@@ -105,6 +105,7 @@ commit
 - [ ] Operatoren
 - [ ] [global object window](./theory-app/js-window.html)
 - [ ] Kontrollstrukturen
+- [ ] [js-if.html](./theory-app/js-if.html)
 - [ ] [js-Math.html](./theory-app/js-Math.html)
 
 ## Übung: Eine Zufallszahl erraten
@@ -134,15 +135,17 @@ commit
 
 
 
-## M0 | HTML CONTINUED
+## M10 | HTML CONTINUED
 
 - [ ] Content Types (Flow)
 - [ ] [html-lists.html](./theory-app/html-lists.html)
 - [ ] [html-tables.html](./theory-app/html-tables.html)
+- [ ] [js-tables.html](./theory-app/js-tables.html)
 
 ## M0 | CSS CONTINUED
 
 - [ ] [css-box.html](./theory-app/css-box.html)
+- [ ] [css-display-visibility.html](./theory-app/css-display-visibility.html)
 - [ ] [css-inline-block.html](./theory-app/css-inline-block.html)
 - [ ] [z-index & stacking context](./theory-app/css-z-index.html)
 - [ ] [css-float.html](./theory-app/css-float.html)

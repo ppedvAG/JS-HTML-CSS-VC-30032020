@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS IF</title>
+</head>
+<body>
+    <hi>JS IF</hi>
+    <pre>
+        siehe script und console
+        neben true/false wir folgenses akzeptiert
+        - 0 / 1 = true 
+        - alles was nicht undefined ist (wie true), undefined (wie false)
+        - 'not null' wie true, sonst false
+    </pre>
+    
+<script>
+    if(0){
+        console.log('es war eine eine 0');
+        }
+        else{
+            console.log('es war eine eine 1');
+        }
+
+        const myObject = {name: 'Max', lastName: 'Mustermann'}
+        if (myObject.name) {
+            console.log('Die angegebene Eigenschaft st nicht undefined');
+        }
+        else
+        {
+            console.log('Die angegebene Eigenschaft ist undefined');
+        }
+
+        const myArray = [3,5]
+        if(myArray[3])
+        {
+            console.log('Das Arrayelement existiert');
+        }
+        else
+        {
+            console.log('An der angegenenen Stelle gibt es kein Element');
+        }
+        
+        const myEmptyArray = []
+        if(myEmptyArray)
+{
+            console.log(' true');
+        }
+        else
+        {
+            console.log('false');
+        }
+        
+        if(null)
+        {
+            console.log(' null ist true');
+        }
+        else
+        {
+            console.log('null ist false');
+        }
+
+</script>
+
+</body>
+</html>

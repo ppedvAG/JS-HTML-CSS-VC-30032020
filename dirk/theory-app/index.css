@@ -7,6 +7,25 @@ body{
     margin: 20vw;
 }
 
-a{
-    display : block
+
+
+li {
+  margin: 10px;
+  float: left;
+  background-color: #fff;
+  padding: 30px;
+}
+ul {
+  list-style-type: none;
+  background-color: rgb(84, 29, 185);
+}
+
+a {
+    display : block;
+  text-decoration: none;
+  font-size: larger;
+}
+
+li :hover {
+  background-color: rgb(38, 156, 78);
 }
