@@ -5,8 +5,7 @@
 /* * {
     border: thin solid;
 } */
-nav {
-    min-height: 50px;
+nav {    
     font-weight: bold;
 }
 
@@ -33,4 +32,10 @@ nav a {
 nav li a:hover {
     color: white;
     background-color: violet;
+}
+
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
 }
