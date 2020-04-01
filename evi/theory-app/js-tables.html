@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS Tables</title>
+  </head>
+  <body>
+    <h1>JS Tables</h1>
+    <pre>Tabellen, dynamisch angelegt mit JavaScript</pre>
+
+    <table id="tableId"></table>
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(response => response.json())
+        .then(json => renderJsonAsTable(json));
+        //.then(json => console.log(json));
+
+      function renderJsonAsTable(todos) {
+        // HTML String
+        tableId.innerHTML = `
+        <thead>
+                <tr>
+                    <th>id</th>
+                    <th>userId</th>
+                    <th>description</th>
+                    <th>completed</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyId"></tbody>
+            <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>userId</th>
+                    <th>title</th>
+                    <th>completed</th>
+                </tr>
+            </tfoot>
+        `
+        for (const todo of todos) {
+            let newRow = tbodyId.insertRow()
+            /* document.createElement('tr') */
+            newRow.insertCell().innerText = todo.id
+            newRow.insertCell().innerText = todo.userId
+            newRow.insertCell().innerText = todo.title
+            newRow.insertCell().innerText = todo.completed
+            
+            if(todo.completed == true){
+                newRow.style.textDecoration = 'line-through'
+            }
+        }
+        
+        tbodyId.style.color = 'darkgreen'
+        
+      }
+
+     
+      // insertRow()
+      // insertCell()
+    </script>
+  </body>
+</html>

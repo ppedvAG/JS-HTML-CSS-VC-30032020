@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS BOX</title>
     <style>
+        p {
+            display: block;
+        }
+        span {
+            display: inline;
+        }
         p, span {
             border: 50px double;
-            padding: 10px;
+            padding: 10px 20px;
             /* margin oben und unten überlappen sich */
             margin: 10px;
             height: 100px; /* fkt nur bei block-elementen */
@@ -28,6 +34,14 @@
     </style>
 </head>
 <body>
+    <h1>CSS BOX</h1>
+    <pre>
+        padding und marging sind shorthands
+        padding: 10px - vier Seiten haben 10 Pixel
+        padding: 10px 20px - Top und Button 10 Pixel, Left und Right 20 Pixel
+        padding: 10px 20px 30px - Top 10 Pixel und Button 30 Pixel, Left und Right 20 Pixel
+        Vier Werte - von oben im Uhrzeigersinn
+    </pre>
     <p>par</p>
     <p>par</p>
     <br>
