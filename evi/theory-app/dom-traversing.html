@@ -88,15 +88,18 @@
     <script>
         /* DOC METHODS */
         // document.getElementById('')
-        document.getElementById('p_id').innerText += 'test'
+        document.getElementById('p_id').innerText += ' test'
 
 
-        // document.getElementsByClassName('')
+        // document.getElementsByClassName('') - html-Selection kann duriteriert werden
         for (let el of document.getElementsByClassName('p_class')) {
             el.style.fontSize = '40px'
             console.log('test'); // wurde ausgeführt! 
         }
-
+            /* aus jedem iterierbaren Objekt ein Array erstellen mit [...]*/ 
+            console.log("document.getElementsByClassName('p_class') :", document.getElementsByClassName('p_class'));
+            let myPs = [...document.getElementsByClassName('p_class')]
+            console.log('myPs :', myPs);
 
         // document.getElementsByName()
         for (let el of document.getElementsByName('inp_name')) {
@@ -120,6 +123,8 @@
         */
         function createAnchor() {
             let anchorLink = document.createElement('a')
+            anchorLink.innerText = 'Google'
+            anchorLink.setAttribute('href', 'https://google.com')
             let pMitA = document.getElementById('p_mit_a')
             pMitA.appendChild(anchorLink)
         }

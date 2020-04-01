@@ -37,13 +37,23 @@
             this.fname = fname;
             this.lname = lname;
             this.age = age;
+            
+            
+        }
+        Person.prototype.getFullName = function (){
+            return this.fname + ' ' + this.lname
+        }
+
+        Person.capitalize = function (txt) {
+            return txt.toUpperCase()
         }
 
         let newPerson;
         let people = []
         function createPerson() {
             newPerson = new Person(inp1.value, inp2.value, inp3.value);
-            console.log(newPerson);
+            console.log(newPerson.getFullName());
+            console.log('Person.capitalize(newPerson.getFullName()) :', Person.capitalize(newPerson.getFullName()));
             people.push(newPerson)
             myTable.innerHTML = `            
                 <caption>personen</caption>
@@ -87,7 +97,9 @@
             *todo
             Was ist der Unterschied zwischen `this` und `self`?
             */
-
+             newPerson.adress = "Neuer Item"
+             delete newPerson.fname
+             console.log('newPerson :', newPerson);
         }
 
 
