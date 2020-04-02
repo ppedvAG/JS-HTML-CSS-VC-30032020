@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>js-objects</title>
     <style>
-        #outp {
-            font-size: 2em;
-        }
+      #outp {
+        font-size: 2em;
+      }
     </style>
+  </head>
 
-</head>
-
-<body>
-    <label for="inp1">VORNAME: <input type="text" id="inp1"></label>
-    <label for="inp2">NACHNAME: <input type="text" id="inp2"></label>
-    <label for="inp3">ALTER: <input type="number" id="inp3"></label>
+  <body>
+    <label for="inp1">VORNAME: <input type="text" id="inp1"/></label>
+    <label for="inp2">NACHNAME: <input type="text" id="inp2"/></label>
+    <label for="inp3">ALTER: <input type="number" id="inp3"/></label>
     <button onclick="createPerson()">ADD</button>
-    <br>
+    <br />
     <output id="outp"></output>
-    <table id="myTable">
-
-    </table>
+    <table id="myTable"></table>
     <!-- 
         beim Klick auf den Button sollen die neuen Objekte in ein Array hinzugefügt werden
         Array kann tabelarisch ausgegeben werden
      -->
 
     <script>
-        let myObject = new Object()
-        console.log('myObject :', myObject);
+      let myObject = new Object();
+      console.log("myObject :", myObject);
 
-        function Person(fname, lname, age) {
-            this.fname = fname;
-            this.lname = lname;
-            this.age = age;
-        }
+      function Person(fname, lname, age) {
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+      }
 
-        let newPerson;
-        let people = []
-        function createPerson() {
-            newPerson = new Person(inp1.value, inp2.value, inp3.value);
-            console.log(newPerson);
-            people.push(newPerson)
-            myTable.innerHTML = `            
+      Person.prototype.getFullName = function() {
+        return this.fname + "  " + this.lname;
+      };
+      /* Static */
+      Person.capitalize = function(txt) {
+        return txt.toUpperCase();
+      };
+
+      let newPerson;
+      let people = [];
+      function createPerson() {
+        newPerson = new Person(inp1.value, inp2.value, inp3.value);
+        console.log("newPerson.getFullName :", newPerson.getFullName());
+        console.log(
+          "Person.capitalize :",
+          Person.capitalize(newPerson.getFullName())
+        );
+        console.log(newPerson);
+        people.push(newPerson);
+        myTable.innerHTML = `            
                 <caption>personen</caption>
                 <thead>
                     <tr>
@@ -55,23 +64,30 @@
                     </tr>
                 </thead>
                 <tbody id="id_tbody"></tbody>    
-            `
+            `;
 
-            for (let i = 0; i < people.length; i++) {
-                let newRow = id_tbody.insertRow()
-                newRow.insertCell().innerText = people[i].fname
-                newRow.insertCell().innerText = people[i].lname
-                newRow.insertCell().innerText = people[i].age
-            }
+        for (let i = 0; i < people.length; i++) {
+          let newRow = id_tbody.insertRow();
+          newRow.insertCell().innerText = people[i].fname;
+          newRow.insertCell().innerText = people[i].lname;
+          newRow.insertCell().innerText = people[i].age;
+        }
 
 
+        newPerson.address = 'Hauptstarße 9'
+        console.log('newPerson :', newPerson);
 
-            /* for (let prop in newPerson) {
+        /* Delete löscht properties */
+        delete newPerson.fname;
+        console.log('newPerson :', newPerson);
+
+
+        /* for (let prop in newPerson) {
 
                 outp.textContent += newPerson[prop];
             } */
 
-            /* CUSTOM OBJECT METHODS 
+        /* CUSTOM OBJECT METHODS 
             function MyElement(tagName) {
                 this.element = document.createElement(tagName);
             }
@@ -83,17 +99,26 @@
             document.body.appendChild(x.element);
             */
 
-            /* 
+        /* 
             *todo
             Was ist der Unterschied zwischen `this` und `self`?
             */
 
-        }
+        // }
 
+        /* forof bei Collections mit indizes (z.B. Arrays) */
+        /* forin bei Collections mit Schlüssel:Wert Paaren (z.B. Objects, Maps) */
 
-
+        /*        for (const key in inp1) {
+            console.log('key :', key);
+            console.log('typeof key :', typeof key);
+            console.log('inp1[key] :', inp1[key]); */
+        /*          
+   if (inp1.hasOwnProperty(key)) {
+                const element = inp1[key];
+                console.log('element :', element);
+            } */
+      }
     </script>
-
-</body>
-
+  </body>
 </html>

@@ -136,6 +136,7 @@ commit
 - [x] [css-inline-block.html](./theory-app/css-inline-block.html)
 - [x] [z-index & stacking context](./theory-app/css-z-index.html)
 - [x] [css-float.html](./theory-app/css-float.html)
+- [ ] [css-selectors-pseudo.html](./theory-app/css-selectors-pseudo.html)
 
 ## Übung: Navigation einer Webseite
 
@@ -146,15 +147,10 @@ commit
 
 - [x] commited
 
-## M0 | HTML SECTIONING, TABLES, LISTS, PSEUDO
+## M0 | HTML SECTIONING, GRID
 
-- [ ] Inhalt gruppieren - Sectioning, Headings & Co
-- [ ] Display: table, list
-- [ ] Pseudo-Klassen & -Elemente
-
-
-
-
+- [x] [html-sectioning.html](./theory-app/html-sectioning.html)
+- [x] [css-grid.html](./theory-app/css-grid.html)
 
 ## Übung: Bilder vergrößern
 
@@ -164,13 +160,12 @@ commit
 
 ## M | JS OBJECTS
 
-- [ ] [js-objects.html](./theory-app/js-objects.html)
+- [x] [js-objects.html](./theory-app/js-objects.html)
 
 ## M | DOM INTRO
 
-- [ ] Zusammenhang zwischen DOM, HTML, CSS & JS
-- [ ] Navigieren in DOM - Traversing
-- [ ] [dom-traversing.html](./theory-app/dom-traversing.html)
+- [x] Zusammenhang zwischen DOM, HTML, CSS & JS
+- [x] [dom-traversing.html](./theory-app/dom-traversing.html)
 - [ ] DOM Knoten & Elemente
 - [ ] [js-event-object.html](./theory-app/js-event-object.html)
 
@@ -203,7 +198,7 @@ commit
 ## M | CSS INTERMEDIATE
 
 - [ ] [css-specificity.html](./theory-app/css-specificity.html)
-- [ ] [css-grid.html](./theory-app/css-grid.html)
+
 - [ ] Display: grid
 - [ ] Media Queries & Breakpoints
 - [ ] Animationen & Transitions
