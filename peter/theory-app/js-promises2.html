@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS PROMISIS 2</title>
+  </head>
+  <body>
+    <h1>JS PROMISIS 2</h1>
+    <pre></pre>
+
+    <script>
+      const participantLeaved = true;
+      const participantIsChatting = false;
+
+      /* VARIANTE MIT CALLBACKS */
+
+      function learnJSCallback(callback, errorCallback) {
+        if (participantLeaved) {
+          errorCallback({
+            description: "User leaved",
+            message: ":-("
+          });
+        } else if (participantIsChatting) {
+          errorCallback({
+            description: "User is watching cat memes",
+            message: "JS is less important then cats"
+          });
+        } else {
+          callback("Thumbs up. participant is learning JS");
+        }
+      }
+
+      learnJSCallback(
+        message => {
+          console.log("Success: " + message);
+        },
+        error => {
+          console.log(error.description + " " + error.message);
+        }
+      );
+
+      /* VARIANTE MIT PROMISE */
+
+      function learnJSPromise() {
+        return new Promise((resolve, reject) => {
+          if (participantLeaved) {
+            reject({
+              description: "User leaved",
+              message: ":-("
+            });
+          } else if (participantIsChatting) {
+            reject({
+              description: "User is watching cat memes",
+              message: "JS is less important then cats"
+            });
+          } else  {
+            resolve ('Thumbs up. participant is learning JS')
+          }
+        });
+      }
+
+      learnJSPromise ()
+      .then(message => console.log('Success: ' + message))
+      .catch(error => console.log(error.description + ' ' + error.message))
+
+    </script>
+  </body>
+</html>

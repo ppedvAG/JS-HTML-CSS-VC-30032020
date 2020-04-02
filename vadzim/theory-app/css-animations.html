@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS ANIMATIONS</title>
+    <style>
+        div {
+            animation: myanimation 3s infinite ease-in-out alternate;
+        }
+
+        @keyframes myanimation {
+            /* from {
+                border: thick groove;
+                color: black;
+                padding: 0;
+            }
+            to {
+                border: 20px double;
+                color: yellow;
+                padding: 50px;
+            } */
+            0% {
+                border: thick groove;
+                color: black;
+                padding: 0;
+            }
+            50% {
+                border: 17px dotted;
+                color: rgb(214, 32, 0);
+                padding: 50px;
+            }
+            100% {
+                border: 20px double;
+                color: yellow;
+                padding: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS ANIMATIONS</h1>
+    <pre>
+        Animationen werden automatisch gestartet.
+        Wenn man nur Anfangs- und Endzustand der Animation definieren möchte, dann
+        from {} to {}
+        Nicht alle CSS-Props können animiert werden.
+        Wenn man mehr als 2 Schlüsselbilder definieren möchte, dann
+        0% {} ... 100% {}
+    </pre>
+    <div>text</div>
+    
+</body>
+</html>

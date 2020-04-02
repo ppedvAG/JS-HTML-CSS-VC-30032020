@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS-POSITION</title>
+    <style>
+      #static {
+        position: static; /* default */
+        background-color: tomato;
+      }
+      #relative {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        background-color: yellow;
+      }
+      #absolute {
+        position: absolute;
+        background-color: yellowgreen;
+        top: 150px;
+        left: 250px;
+        height: 400px;
+      }
+      #fixed {
+        position: fixed;
+        top: 200px;
+        left: 300px;
+        background-color: blue;
+      }
+      #sticky {
+        position: sticky;
+        top: 600px;
+        left: 300px;
+        background-color: crimson;
+      }
+      #parentForSticky {
+          border: thin solid;
+          background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS-POSITION</h1>
+    <pre>
+        static 
+            ignoriert top/right/bottom/left 
+        relative 
+            orientiert sich bei top/left an seine ursprüngliche static-position 
+            im z-index ist relative höher als static 
+        absolute
+            orientiert sich bei top/left an document-ursprung
+            ist breit wie dessen inhalt
+            im z-index höher als relative 
+        fixed
+            orientiert sich bei top/left Viewport-Ursprung 
+            ist breit wie dessen inhalt
+            im z-index höher als absolute
+        sticky  
+            ignoriert right/bottom/left 
+            bleibt immer im Elternelement
+            orientiert sich bei top an viewport
+
+    </pre>
+    <!-- (#>h2+p>lorem10)*5 -->
+    <div id="static">
+      <h2>static</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+        laborum!
+      </p>
+    </div>
+    <div id="relative">
+      <h2>relative</h2>
+      <p>
+        Consequuntur laboriosam necessitatibus corrupti! Harum quos ipsam
+        molestias et modi!
+      </p>
+    </div>
+    <div id="absolute">
+      <h2>absolute</h2>
+      <p>
+        Excepturi sapiente officia similique perspiciatis, quod eaque
+        praesentium dolorum iste?
+      </p>
+    </div>
+    <div id="fixed">
+      <h2>fixed</h2>
+      <p>
+        Deleniti expedita odio minima sequi eum eveniet dicta nulla praesentium.
+      </p>
+    </div>
+    <div id="parentForSticky">
+
+      <div id="sticky">
+        <h2>sticky</h2>
+        <p>
+          Tempora quo fugit recusandae vitae excepturi labore eveniet
+          voluptatibus in?
+        </p>
+      </div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum,
+        explicabo necessitatibus vitae perspiciatis veniam, recusandae possimus
+        minus, animi earum eius officia? Dignissimos ipsum labore iure, dicta
+        ratione nihil vitae aperiam quia, totam sequi praesentium aliquid
+        placeat qui laudantium. Earum voluptatibus minus nobis dicta harum
+        tenetur libero quia veniam sed ab? Doloribus voluptas amet nihil
+        molestiae eum ex cupiditate vero, quo repudiandae iusto consequuntur
+        hic, eos maiores qui optio quae quasi fugiat ea consectetur suscipit?
+        Libero dolor sapiente odio voluptas. Eum optio, veritatis atque
+        laboriosam, cumque ullam in, dolor deserunt laudantium quos
+        necessitatibus pariatur ex! Perspiciatis tempore odio dolore ipsum
+        mollitia. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Dolorum, explicabo necessitatibus vitae perspiciatis veniam, recusandae
+        possimus minus, animi earum eius officia? Dignissimos ipsum labore iure,
+        dicta ratione nihil vitae aperiam quia, totam sequi praesentium aliquid
+        placeat qui laudantium. Earum voluptatibus minus nobis dicta harum
+        tenetur libero quia veniam sed ab? Doloribus voluptas amet nihil
+        molestiae eum ex cupiditate vero, quo repudiandae iusto consequuntur
+        hic, eos maiores qui optio quae quasi fugiat ea consectetur suscipit?
+        Libero dolor sapiente odio voluptas. Eum optio, veritatis atque
+        laboriosam, cumque ullam in, dolor deserunt laudantium quos
+        necessitatibus pariatur ex! Perspiciatis tempore odio dolore ipsum
+        mollitia. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Dolorum, explicabo necessitatibus vitae perspiciatis veniam, recusandae
+        possimus minus, animi earum eius officia? Dignissimos ipsum labore iure,
+        dicta ratione nihil vitae aperiam quia, totam sequi praesentium aliquid
+        placeat qui laudantium. Earum voluptatibus minus nobis dicta harum
+        tenetur libero quia veniam sed ab? Doloribus voluptas amet nihil
+        molestiae eum ex cupiditate vero, quo repudiandae iusto consequuntur
+        hic, eos maiores qui optio quae quasi fugiat ea consectetur suscipit?
+        Libero dolor sapiente odio voluptas. Eum optio, veritatis atque
+        laboriosam, cumque ullam in, dolor deserunt laudantium quos
+        necessitatibus pariatur ex! Perspiciatis tempore odio dolore ipsum
+        mollitia. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Dolorum, explicabo necessitatibus vitae perspiciatis veniam, recusandae
+        possimus minus, animi earum eius officia? Dignissimos ipsum labore iure,
+        dicta ratione nihil vitae aperiam quia, totam sequi praesentium aliquid
+        placeat qui laudantium. Earum voluptatibus minus nobis dicta harum
+        tenetur libero quia veniam sed ab? Doloribus voluptas amet nihil
+        molestiae eum ex cupiditate vero, quo repudiandae iusto consequuntur
+        hic, eos maiores qui optio quae quasi fugiat ea consectetur suscipit?
+        Libero dolor sapiente odio voluptas. Eum optio, veritatis atque
+        laboriosam, cumque ullam in, dolor deserunt laudantium quos
+        necessitatibus pariatur ex! Perspiciatis tempore odio dolore ipsum
+        mollitia.
+      </p>
+
+    </div>
+
+    <pre></pre>
+  </body>
+</html>

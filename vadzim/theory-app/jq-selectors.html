@@ -12,20 +12,23 @@
             content: "text nach div#testId01"
         }
     </style>
+
 </head>
 
 <body>
+
     <div class="test01">Div mit der Klasse test01</div>
     <div class="test01">Div mit der Klasse test01</div>
     <div class="test01">Div mit der Klasse test01</div>
     <div class="test01">Div mit der Klasse test01</div>
+
     <div id="testId01">Div mit der Id test01</div>
     <div id="testId02">Div mit der Id test02</div>
     <div id="testId03">Div mit der Id test03</div>
+
     <div id="testId04">
         <p id="parInDiv">Paragraph in Div</p>
         <button id="InDivClick">Button in Div clickbar</button>
-
     </div>
     <div>Div ohne Klasse und ohne Id</div>
     <div>
@@ -47,12 +50,12 @@
 
     <script>
         $(function () {
-        // $(function () {  - verkürzte Schreibweise für  -  $(document).ready(function () {
+            // $(function () {  - verkürzte Schreibweise für  -  $(document).ready(function () {
             //Universal
-            /* $('*').css('color','red'); */ // äquivalent zu .style.color = 'red'
+            // $('*').css('color','red'); // äquivalent zu .style.color = 'red'
 
             //Klassen  
-            /* $('.test01').css('color','red'); */
+            // $('.test01').css('color','red');
 
             //ID
             /* $('#testId01').css('color','red'); */
@@ -70,26 +73,26 @@
             }); */
 
             //contains
-            /* $('div:contains(ohne)').css('color','red'); */
+            // $('div:contains("ohne")').css('color','red');
 
             //:hover in dieser Schreibweise funktioniert nicht - unmöglich mit jQuery
             // $(":hover").css('color','red');  //in Chrome alles rot, in FF alles schwarz
 
-            $("div.test01").css('border', 'thick dotted') // 
-            $("p:first").css('font-size', '2em'); // – Wählt das erste <p>-Element aus.
+            // $("div.test01").css('border', 'thick dotted') // 
+            // $("p:first").css('font-size', '2em'); // – Wählt das erste <p>-Element aus.
             /* $("ul li:first" ) – Wählt das erste <li>-Element der ersten <ul> aus.
             */
-            $('#out').text( // äquivalent zu .innerText in js
-                $("ul li:last-child").text() //– Wählt das letzte <li> Element jeder <ul> aus.
-            )
+            // $('#out').text( // äquivalent zu .innerText in js
+            // $("ul li:last-child").text() //– Wählt das letzte <li> Element jeder <ul> aus.
+            // )
             /* 
             $("a[target='_blank']") – Wählt alle <a>-Elemente mit einem target=“_blank”-Setting aus.
              */
 
-            $(":button").css('background-color', 'purple'); //  - Wählt alle <button>- und <input>-Elemente des Typs "button“ aus.
+            // $(":button").css('background-color', 'purple'); //  - Wählt alle <button>- und <input>-Elemente des Typs "button“ aus.
 
             //Pseudo-Klassen - unmöglich mit jQuery
-            $('#testId01::after').css('color','red');
+            $('#testId01::after').css('content', 'test').css('color','red');
         })
     </script>
 

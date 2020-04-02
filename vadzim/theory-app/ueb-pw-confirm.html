@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ü PW CONFIRM</title>
+</head>
+<body>
+    <h1>Ü PW CONFIRM</h1>
+    <form action="#">
+        <input type="password" id=pw1 required minlength="4">
+        <input type="password" id=pw2 required minlength="4">
+        <input type="button" id=btn value="confirm" disabled>
+        <p id=hinweis></p>
+    </form>
+
+    <script>
+        pw1.addEventListener('input', handleInputs)
+        pw2.addEventListener('input', handleInputs)
+
+        function handleInputs() {
+            if (pw1.validity.valid && pw2.validity.valid && pw1.value == pw2.value) {
+                // btn.removeAttribute('disabled')
+                btn.disabled = false
+            } else {
+                // btn.setAttribute('disabled', 'true')
+                btn.disabled = true
+                hinweis.innerText = ''
+            }
+        }
+
+        btn.addEventListener('click', giveHint)
+        function giveHint() {
+            hinweis.innerText = 'Passwort bestätigt'
+        }
+    </script>
+    
+</body>
+</html>

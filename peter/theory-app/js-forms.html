@@ -23,6 +23,10 @@
         <pre>
             Mit Datalist kann man dem Benutzer schon verbereite Einträge anbieten.
             Seine eigenen Eingaben sind auch möglich.
+            In der .NET Welt eine 'ComboBox'
+            Unterschied zu select-option-Kombination:
+            hier kann der Benutzer noch eigene Eingaben machen
+            autocomplete : filtern beim Tippen
         </pre>
         <!-- ComboBox in .NET -->
         <input type="text" id="inp1" list="farben" autocomplete="on" tabindex="2"/>
@@ -46,6 +50,19 @@
         <h2>fieldset</h2>
         <pre>
             Hinweise bei email-Feld kommen automatisch vom Browser
+            Fieldset wird wie ein Rahmen führ mehrere Inputs benutzt. 
+            Placeho,der: grauer Hinweis direkt im Input-Field. 
+            Attribut Value: Anfangswert, der überschrieben werden kann
+            In Legend wird Beschreibung für dieses Fieldset geschreiben. 
+            Attribut Title: Tooltip bei Mouseover. 
+            Attribut Pattern: RegExp, welche beim validiere der Eingabe benutzt wird
+            Validierungstexte in Feldern mit Pattern werden vorkommtBrowser ausgegeben
+            In offiz. Docs werden Inputs innerhalb von Labels plaziert. 
+            Über Attribute 'for' bei Labe und Id bei Input werden die beiden verbunden
+            (klick auf Label fokussiert das Input-Feld)
+            Buttons haben mehrere Types (submit, button, reset, menu)
+            Default ist 'submit'. Submit überprüft alle Input-Felder / button führt nur event aus
+            (Mehr dazu in der letzten Section)
         </pre>
         <p>Eingabe aus Input wird beim Klick auf Button in Output angezeigt</p>
         <fieldset>
@@ -64,15 +81,27 @@
                 <input id="inpEmail" type="email" name="" value="@gmail.com" pattern="^.+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                     title="Achte auf RegExp" /></label>
 
-            <button id=btn_fieldset>zeige die Eingabe</button>
+            <button id=btn_fieldset type="button">zeige die Eingabe</button>
             <!-- <button type="button" onclick="showInputValue()">zeige die Eingabe</button> -->
         </fieldset>
         <output id="outp2"></output>
         <hr />
     </section>
 
+<section>
+    <h2>input:button</h2>
+    <pre>
+        2 Möglichkeiten für Buttons: button & input:button
+    </pre>
+    <button id=btnBtn type=button>OK</button>
+    <input id=inpBtn type=button value=OK>
+</section>
+
     <section id="input:color">
         <h2>input:color</h2>
+        <pre>
+            Die Farben werden hier im hex-Format ausgelesen
+        </pre>
         <input id=crlId type=color name=clr  tabindex=3 />
         <input id=btnColor type=button value=OK>
         <!-- <button id=btnColor type=button>OK</button> -->
@@ -91,7 +120,7 @@
         </pre>
         <div>
             <label for="left">blau
-                <input type="radio" id="left" value="blau" name="additional" />
+                <input type="radio" id="left" value="blau" name="additional"/>
             </label>
         </div>
         <div>
@@ -145,8 +174,17 @@
         <hr />
     </section>
 
-    <progress></progress>
-    <meter></meter>
+    <section> id="progMeter"
+        <pre>
+            End-Tags sind obligatorisch
+            Das sind keine interaktive Elemente
+        </pre>
+
+        <progress id=progressId></progress>
+        <meter id=meterId min="20" max="200" step="5" value="70"></meter>
+    
+    </section>
+
 
 
     <section id=try-catch>
@@ -218,12 +256,26 @@
         <pre>
             default-Wert vom Attribut type bei einem button innerhalb von form-Tag 
             ist submit!
+            Beim event Submit werden alle Input-Felder vom Browser durchlaufen und geprüft,
+            ob die Benutzereingaben den gestellten Bedingungen entsprechen. 
+            Bei den Handlern von Submit-Events sollte man die Funktion anders als 
+            'checkValidity' nennen.
         </pre>
         <button>OK</button>
 
     </section>
-    
-</form>
+
+    <section id="docForms">
+        <H2>document.forms</H2>
+
+        <pre>
+            In der automatisch erstellten HTMLCollection forms soind alle Formular-Einträge
+            mit ihren Input-Feldern aufgelistet.
+            Input felder sind mit ihren IDs erwähnt. 
+        </pre>
+    </section>
+
+<!-- </form> -->
 
 <script>
     /* INPUT & DATALIST */
@@ -250,13 +302,13 @@
     
     // RADIO
     /* Idee: Wahl des Benutzers abfragen */
-    /* left.addEventListener('input', showRadioCheck)
-    right.addEventListener('input', showRadioCheck) */
+    left.addEventListener('input', showRadioCheck)
+    right.addEventListener('input', showRadioCheck)
     function showRadioCheck() {
         if (left.checked) {
-            outRadio.innerText = 'blau wurde gewählt'
+            outRadio.innerText = 'blau wurde gewählt !!'
         } else {
-            outRadio.innerText = 'rot wurde gewählt'
+            outRadio.innerText = 'rot wurde gewählt !!'
 
         }
     }
@@ -297,6 +349,12 @@
     inpPrice.addEventListener("input", showPrice);
     showPrice()
 
+    // PROGRESS & METER
+    setInterval(() => {
+        meterId.value +=15
+        // if (meterId.value == meterId.max) clearInterval(intId)
+        if (meterId.value == meterId.max) meterId.value=0
+    }, 500)
     
     // #region TRY CATCH FINALLY
 
@@ -389,6 +447,18 @@
         console.log('inpFile.value :', inpFile.value); // C:\fakepath\selteneShortcuts.txt als string
     }
     console.log('inpUrl2 :', inpUrl2);
+
+
+    // SUBMIT EVENT
+    firstForm.addEventListener('submit', showValidity)
+    function showValidity(event) {
+        console.log('event :', event);
+        console.log('firstForm.validity :', firstForm.validity);
+    }
+
+    // document.forms
+    console.log('document.forms :', document.forms);
+
 </script>
 
 </body>

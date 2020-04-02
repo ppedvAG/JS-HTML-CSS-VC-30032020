@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PASSWORD</title>
+  </head>
+  <body>
+    <h1>PASSWORD</h1>
+
+    <form action="#">
+      <label for="pwd1">Password</label>
+      <input id="pwd1Id" type="text" placeholder="password" />
+      <input id="pwd2Id" type="text" placeholder="wiederholen" />
+      <button id="btnPwd" type="button" disabled>Check</button>
+    </form>
+
+    <script>
+      
+      pwd1Id.addEventListener("input", checkPwd);
+      pwd2Id.addEventListener("input", checkPwd);
+      function checkPwd() {
+        let pwd1 = document.getElementById("pwd1Id").value
+        let pwd2 = document.getElementById("pwd2Id").value
+        btnPwd.disabled= !(pwd1 == pwd2)
+        
+        console.log('pwd1 :', pwd1);
+        console.log('pwd2 :', pwd2);
+        // document.getElementById("outp1").textContent = color;
+      }
+    </script>
+  </body>
+</html>

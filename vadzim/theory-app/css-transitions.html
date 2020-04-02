@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TRANSITION</title>
+    <style>
+        div {
+            border: 5px solid rebeccapurple;
+            height: 100px;
+            /* 
+            Variante 1
+            transition-duration: 1s;
+            transition-timing-function: ease-in; */
+            /* Variante 2 */
+            transition: transform 2s;
+        }
+
+        div:hover {
+            height: 400px;
+            transform: rotateZ(45deg);
+            /* transform: rotateX(45deg) rotateY(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS TRANSITION</h1>
+    <pre>
+        Über transition können wir die Veränderungen, wie bei :hover, beeinflussen.
+    </pre>
+    <div>transition</div>
+</body>
+</html>

@@ -37,13 +37,24 @@
             this.fname = fname;
             this.lname = lname;
             this.age = age;
+        }       
+        Person.prototype.getFullName = function () {
+            return this.fname + ' ' + this.lname
+        }
+
+        Person.capitalize = function (txt) {
+            return txt.toUpperCase()
         }
 
         let newPerson;
         let people = []
         function createPerson() {
             newPerson = new Person(inp1.value, inp2.value, inp3.value);
-            console.log(newPerson);
+            // newPerson = new Person(inp1.value, inp2.value, inp3.value, 'Hauptstr. 2');
+            // mit 4 Argumenten gabs keinen Fehler, aber das 4. Arg. nicht dem Objekt hinzugefügt
+            console.log('newPerson :', newPerson);
+            console.log(newPerson.getFullName());
+            console.log('Person.capitalize(newPerson.getFullName()) :', Person.capitalize(newPerson.getFullName()));
             people.push(newPerson)
             myTable.innerHTML = `            
                 <caption>personen</caption>
@@ -88,9 +99,20 @@
             Was ist der Unterschied zwischen `this` und `self`?
             */
 
+            newPerson.address = 'Hauptstr. 9'
+            console.log('newPerson :', newPerson);
+            /* mit delete lassen sich die Obj.Props löschen */
+            delete newPerson.fname
+            console.log('newPerson :', newPerson);
         }
+        /* forof verwenden wir bei Collections mit Indizes (z.B Arrays) */
+        /* forin verwenden wir bei Collections mit Schlüssel:Wert-Paaren (z.B. Objects, Maps) */
 
-
+        /* for (const key in inp1) {
+            console.log('key :', key);
+            console.log('typeof key :', typeof key);
+            console.log('inp1[key] :', inp1[key]);
+        }*/
 
     </script>
 

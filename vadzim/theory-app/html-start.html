@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML START</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+        #container {
+            /* column-count: 3; */
+        }
+        nav, h1 {
+            column-span: all;
+        }
+        iframe {
+            border: thick solid;
+            width: 49%;
+            transition: 1s;
+            display: inline-block;
+        }
+        iframe:hover {
+            /* z-index: 1; */
+            height: 30%;            
+        }
+
+    </style>
 </head>
 
 <body>
@@ -18,6 +37,11 @@
             </ul>
         </nav>
         <h1>HTML START</h1>
+
+        <iframe src="html-entities.html" frameborder="0"></iframe>
+        <iframe src="html-tables.html" frameborder="0"></iframe>
+        <iframe src="html-sectioning.html" frameborder="0"></iframe>
+        <iframe src="html-syntax.html" frameborder="0"></iframe>
     </div>
 
 

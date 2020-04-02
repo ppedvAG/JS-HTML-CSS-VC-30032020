@@ -135,7 +135,7 @@ commit
 - [x] [html-tables.html](./theory-app/html-tables.html)
 - [x] [js-tables.html](./theory-app/js-tables.html)
 
-## M0 | CSS CONTINUED
+## M11 | CSS CONTINUED
 
 - [x] [css-box.html](./theory-app/css-box.html)
 - [x] [css-display-visibility.html](./theory-app/css-display-visibility.html)
@@ -152,27 +152,26 @@ commit
 
 commited
 
-## M0 | HTML SECTIONING, TABLES, LISTS, PSEUDO
+## M12 | HTML SECTIONING, TABLES, LISTS, PSEUDO
 
-- [ ] Inhalt gruppieren - Sectioning, Headings & Co
+- [x] [html-sectioning.html](./theory-app/html-sectioning.html)
+- [x] [css-grid.html](./theory-app/css-grid.html)
+
 - [ ] Display: table, list
 - [ ] Pseudo-Klassen & -Elemente
 
 
-
-
-
 ## M | JS OBJECTS
 
-- [ ] [js-objects.html](./theory-app/js-objects.html)
+- [x] [js-objects.html](./theory-app/js-objects.html)
 
-## M | DOM INTRO
+## M14 | DOM INTRO
 
-- [ ] Zusammenhang zwischen DOM, HTML, CSS & JS
+- [x] Zusammenhang zwischen DOM, HTML, CSS & JS
 - [ ] Navigieren in DOM - Traversing
-- [ ] [dom-traversing.html](./theory-app/dom-traversing.html)
-- [ ] DOM Knoten & Elemente
-- [ ] [js-event-object.html](./theory-app/js-event-object.html)
+- [x] [dom-traversing.html](./theory-app/dom-traversing.html)
+- [x] DOM Knoten & Elemente
+- [x] [js-event-object.html](./theory-app/js-event-object.html)
 
 ## M | FORMS
 
@@ -202,29 +201,31 @@ commited
 
 ## M | CSS INTERMEDIATE
 
-- [ ] [css-specificity.html](./theory-app/css-specificity.html)
-- [ ] [css-grid.html](./theory-app/css-grid.html)
+- [x] [css-specificity.html](./theory-app/css-specificity.html)
 - [ ] Display: grid
 - [ ] Media Queries & Breakpoints
-- [ ] Animationen & Transitions
+- [x] [css-animations.html](./theory-app/css-animations.html)
+- [x] [css-transitions.html](./theory-app/css-transitions.html)
+- [x] [css-position.html](./theory-app/css-position.html)
+- [ ] [css-column-count.html](./theory-app/css-column-count.html)
 - [ ] Variable Fonts
-- [ ] Position (static, fixed...)
 - [ ] Display: flex
-- [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
 
 select - options löschen, zwischenspeichern, filtern
 
+## M | JS INTERMEDIATE
+
+- [ ] [js-promises.html](./theory-app/js-promises.html)
+- [ ] [js-promises2.html](./theory-app/js-promises2.html)
+- [ ] Workers
+- [ ] offene Themen nach Bedarf der TeilnehmerInnen
+
 ## M | HTML INTERMEDIATE
 
 - [ ] Multimedia - Bilder, Audio, Video, Canvas
   
-## M | JS INTERMEDIATE
-
-- [ ] Promises
-- [ ] Workers
-- [ ] offene Themen nach Bedarf der TeilnehmerInnen
 
 ## M | PHRASING CONTENT
 
