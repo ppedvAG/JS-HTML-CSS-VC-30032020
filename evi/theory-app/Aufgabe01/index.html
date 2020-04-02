@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Aufgabe 1</title>
     <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-    <div id="LinkerRand">
-    <h1>Aufgabe 1</h1>
-    <h2>Verlinkungen - Home</h2>
-    <a href="index.html">Home</a><br>
-    <a href="css-start.html">CSS-Datei</a><br>
-    <a href="js-start.html">JS-Datei</a><br>
-    <a href="html-start.html">HTML-Datei</a><br>
-</div>
+    <style>
+      #links {
+          margin: 10px;
+      }
+      ul {
+        list-style-type: none;
+      }
+      li a:hover {
+        color:green ;
+        background-color: rgb(202, 40, 194);
+   
+      }
+      a {
+          padding: 15px;
+          text-decoration: none;
+      }
+      li {
+          margin: 20px;
+        float: left;
+      }
+
+      #clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+  </head>
+  <body>
+    <div id=links>
+      <nav>
+        <ul id="clearfix">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="css-start.html">CSS-Datei</a></li>
+          <li><a href="js-start.html">JS-Datei</a></li>
+          <li><a href="html-start.html">HTML-Datei</a></li>
+           
+          
+
+        </ul>
+      </nav>
+    </div>
+    <div >
+      <h1>Aufgabe 1</h1>
+      <h2>Verlinkungen - Home</h2>
+    </div>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
