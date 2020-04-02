@@ -8,7 +8,7 @@
     <style>
         #p_id {
             border: thin solid;
-            font-size: 1em;
+            font-size: 1.5em;
             /* height: 3em; */
             border-radius: 10px;
             padding-left: 2em;
@@ -60,7 +60,7 @@
 
     <h3>replaceChild</h3>
     <p id="p_mit_span">
-        <span id="span_in_p">text von span</span>
+        <abbr id="abbr_in_p">abkürzung</abbr>
     </p>
 
 
@@ -97,6 +97,10 @@
             console.log('test'); // wurde ausgeführt! 
         }
 
+        /* Aus jedem iterierbaren (indexierten) Objekt ein Array erstellen: mit [...Iterierbar] */
+        console.log("document.getElementsByClassName('p_class') :", document.getElementsByClassName('p_class'));
+        let myPs = [...document.getElementsByClassName('p_class')]
+        console.log('myPs :', myPs);
 
         // document.getElementsByName()
         for (let el of document.getElementsByName('inp_name')) {
@@ -120,6 +124,8 @@
         */
         function createAnchor() {
             let anchorLink = document.createElement('a')
+            anchorLink.innerText='google'
+            anchorLink.setAttribute('href', 'https://google.com')
             let pMitA = document.getElementById('p_mit_a')
             pMitA.appendChild(anchorLink)
         }
@@ -131,7 +137,7 @@
         function replaceSpan() {
             let newSpan = document.createElement('span')
             newSpan.innerText = 'neues El span'
-            document.getElementById('p_mit_span').replaceChild(newSpan, document.getElementById('span_in_p'))
+            document.getElementById('p_mit_span').replaceChild(newSpan, document.getElementById('abbr_in_p'))
         }
         setTimeout(replaceSpan, 2000)
 

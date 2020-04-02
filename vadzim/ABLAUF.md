@@ -141,13 +141,14 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - [x] [html-tables.html](theory-app/html-tables.html)
 - [x] [js-tables.html](theory-app/js-tables.html)
 
-## M0 | CSS CONTINUED
+## M11 | CSS CONTINUED
 
 - [x] [css-box.html](theory-app/css-box.html)
 - [x] [css-display-visibility.html](theory-app/css-display-visibility.html)
 - [x] [css-inline-block.html](theory-app/css-inline-block.html)
 - [x] [z-index & stacking context](theory-app/css-z-index.html)
 - [x] [css-float.html](theory-app/css-float.html)
+- [x] [css-selectors-pseudo.html](theory-app/css-selectors-pseudo.html)
 
 ## Übung: Navigation einer Webseite
 
@@ -160,28 +161,26 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 
 - [x] commit
 
-## M0 | HTML SECTIONING, TABLES, LISTS, PSEUDO
+## M12 | HTML SECTIONING, TABLES, LISTS, PSEUDO
 
-- [ ] Inhalt gruppieren - Sectioning, Headings & Co
-- [ ] Display: table, list
-- [ ] Pseudo-Klassen & -Elemente
+- [x] [html-sectioning.html](theory-app/html-sectioning.html)
+- [x] [css-grid.html](theory-app/css-grid.html)
 
-## M | JS OBJECTS
+## M13 | JS OBJECTS
 
-- [ ] Konstruktoren
-- [ ] [js-objects.html](./theory-app/js-objects.html)
+- [x] Konstruktoren
+- [x] [js-objects.html](./theory-app/js-objects.html)
 
-## M | DOM INTRO
+## M14 | DOM INTRO
 
-- [ ] Zusammenhang zwischen DOM, HTML, CSS & JS
-- [ ] Navigieren in DOM - Traversing
-- [ ] [dom-traversing.html](./theory-app/dom-traversing.html)
-- [ ] DOM Knoten & Elemente
-- [ ] [js-event-object.html](./theory-app/js-event-object.html)
+- [x] Zusammenhang zwischen DOM, HTML, CSS & JS
+- [x] [dom-traversing.html](./theory-app/dom-traversing.html)
+- [x] DOM Knoten & Elemente
+- [x] [js-event-object.html](./theory-app/js-event-object.html)
 
-## M | FORMS
+## M15 | FORMS
 
-- [ ] [js-forms.html](./theory-app/js-forms.html)
+- [x] [js-forms.html](./theory-app/js-forms.html)
 
 ## Übung : password confirm
 
@@ -189,13 +188,15 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - button ist disabled
 - beide Inputs haben attribut required und minlength 4
 - wenn die Eingabe in beiden inputs gleich ist und beide Felder valide sind, wird der Button enabled
-- [ ] [ueb-pw-confirm.html](./theory-app/ueb-pw-confirm.html)
+- dem Benutzer wird die Meldung 'Passwort bestätigt' gezeigt
+- [x] [ueb-pw-confirm.html](./theory-app/ueb-pw-confirm.html)
+- FYI: es gibt input:password
 
-## M | JQUERY
+## M16 | JQUERY
 
-- [ ] [jq-docready-winload.html](./theory-app/jq-docready-winload.html)
-- [ ] [jq-selectors.html](./theory-app/jq-selectors.html)
-- [ ] [jq-filter.html](./theory-app/jq-filter.html)
+- [x] [jq-docready-winload.html](theory-app/jq-docready-winload.html)
+- [x] [jq-selectors.html](theory-app/jq-selectors.html)
+- [ ] [jq-filter.html](theory-app/jq-filter.html)
 
 ## Übung: login form w. jq
 
@@ -203,19 +204,33 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - username und pw sind in einem Array abgelegt
 - Wenn die Eingabe mit den Werten im Array zusammenfällt,
 - Meldung: Willkommen auf unserer WebSeite.
-- [ ] [ueb-jq-login.html](./theory-app/ueb-jq-login.html)
+- [ ] [ueb-jq-login.html](theory-app/ueb-jq-login.html)
 
-## M | CSS INTERMEDIATE
+## M17 | CSS INTERMEDIATE
 
-- [ ] [css-specificity.html](./theory-app/css-specificity.html)
-- [ ] [css-grid.html](./theory-app/css-grid.html)
-- [ ] Display: grid
+- [x] [css-specificity.html](theory-app/css-specificity.html)
+- [ ] Display: grid, siehe html-sectioning.html
 - [ ] Media Queries & Breakpoints
-- [ ] Animationen & Transitions
+- [x] [css-animations.html](theory-app/css-animations.html)
+- [x] [css-transitions.html](theory-app/css-transitions.html)
+- [x] [css-position.html](theory-app/css-position.html)
+- [x] [css-column-count.html](theory-app/css-column-count.html)
+
+## Übung
+
+- [x] iframes in index.html
+
+## M18 | JS INTERMEDIATE
+
+- [ ] [js-promises1.html](theory-app/js-promises1.html)
+- [ ] [js-promises2.html](theory-app/js-promises2.html)
+- [ ] Workers
+- [ ] offene Themen nach Bedarf der TeilnehmerInnen
+
+## M | CSS
+
 - [ ] Variable Fonts
-- [ ] Position (static, fixed...)
 - [ ] Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
-- [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
 
@@ -224,12 +239,6 @@ select - options löschen, zwischenspeichern, filtern
 ## M | HTML INTERMEDIATE
 
 - [ ] Multimedia - Bilder, Audio, Video, Canvas
-  
-## M | JS INTERMEDIATE
-
-- [ ] Promises
-- [ ] Workers
-- [ ] offene Themen nach Bedarf der TeilnehmerInnen
 
 ## M | PHRASING CONTENT
 
