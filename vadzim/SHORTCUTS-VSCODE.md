@@ -2,6 +2,7 @@
 
 | shortcut | effect |
 | --- | --- |
+| `ctrl k s` | vscode shortcuts |
 | `ctrl k 8` | fold all regions |
 | `ctrl k 9` | unfold all regions |
 | `shift_alt a` | comment / uncomment |

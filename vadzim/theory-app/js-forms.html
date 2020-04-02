@@ -9,9 +9,8 @@
 </head>
 
 <h1>FORMULARE</h1>
-<a href="#fieldset">fieldset</a>
 
-<form action="#" id="firstForm">
+<form id="firstForm">
     <pre>
         action beim Tag form erwartet als Inhalt den Pfad zu der Datei auf der Server
         die, die Formular-Einträge bearbeiten soll
@@ -23,10 +22,12 @@
         <pre>
             Mit Datalist kann man dem Benutzer schon verbereite Einträge anbieten.
             Seine eigenen Eingaben sind auch möglich.
+            In der .NET-Welt heißt es 'ComboBox'. 
+            Unterschied zu select-option-Kombination: hier kann der Benutzer noch 
+            eigene Eingaben eintippen.
+            Autocomplete - filtern beim Tippen.
         </pre>
-        <!-- ComboBox in .NET -->
-        <input type="text" id="inp1" list="farben" autocomplete="on" tabindex="2"/>
-        <!-- autocomplete - filtern beim Tippen -->
+        <input type="text" id="inp1" list="farben" autocomplete="on" tabindex="2" />
         <!-- 2 inputs dürfen die gleiche Data-Liste benutzen -->
         <!-- <input type="text" id="inp2" list="farben" autocomplete="on" /> -->
         <datalist id="farben">
@@ -45,38 +46,59 @@
     <section id="fieldset">
         <h2>fieldset</h2>
         <pre>
+            Fieldset wird wie ein Rahmen für mehrere Inputs benutzt. 
+            In Legend wird Beschreibung für dieses Fieldset geschrieben.
+            Placeholder: grauer Hinweis direkt im Input-Feld 
+            Attribut Value: Anfangswert von Input, den man aber überschreiben kann
             Hinweise bei email-Feld kommen automatisch vom Browser
+            Attr Title: Tooltip bei Mouseover
+            Attr Pattern: RegExp, welche beim Validieren von der Eingabe eingesetzt werden.
+            Validierungstexte in Feldern mit Pattern werden vom Browser ausgegeben. 
+            In offiz. Docs werden Inputs innerhalb von Labels platziert.
+            Über Attr. For bei Label und Id bei Input werden die beiden verbunden 
+            (Klick auf Label fokusiert das Input-Feld).
+            Buttons haben mehrere Types (submit, button, reset, menu). Default ist submit. 
+            (Mehr dazu in der letzten Section)
         </pre>
         <p>Eingabe aus Input wird beim Klick auf Button in Output angezeigt</p>
         <fieldset>
             <legend>NAME</legend>
             <label for="fname">VORNAME
-                <input id="fname" type="text" placeholder="Max" />
+                <input id="fname" type="text" placeholder="Max" required />
                 <!-- <input id="fname" type="text" value="Max" /> -->
-                <!-- value - Anfangswert von Input, den man aber überschreiben kann -->
             </label>
 
             <label for="lname">NACHNAME
-                <input id="lname" type="text" placeholder="Mustermann" title="title test ohne pattern" />
-                <!-- title ist ein tooltip, den man sieht, wenn man mit der Maus drüber fährt -->
+                <input id="lname" type="text" placeholder="Mustermann" title="tooltip" />
             </label>
             <label for="inpEmail">EMAIL
-                <input id="inpEmail" type="email" name="" value="@gmail.com" pattern="^.+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+                <input id="inpEmail" type="email" value="@gmail.com" pattern="^.+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                     title="Achte auf RegExp" /></label>
 
-            <button id=btn_fieldset>zeige die Eingabe</button>
+            <button id=btn_fieldset type="button">zeige die Eingabe</button>
             <!-- <button type="button" onclick="showInputValue()">zeige die Eingabe</button> -->
         </fieldset>
         <output id="outp2"></output>
         <hr />
     </section>
 
+    <section id="inpBtn">
+        <h2>input:button</h2>
+        <pre>
+            2 Möglichkeiten für Buttons: button:button & input:button            
+        </pre>
+        <button id=btnBtn type=button>OK</button>
+        <input id=inpBtn type=button value=OK>
+        <!-- *todo wann ist input besser? -->
+    </section>
+
     <section id="input:color">
         <h2>input:color</h2>
-        <input id=crlId type=color name=clr  tabindex=3 />
+        <pre>
+            Die Farben werden hier im hexadezimalen Format abgelesen. 
+        </pre>
+        <input id=crlId type=color name=clr tabindex=3 />
         <input id=btnColor type=button value=OK>
-        <!-- <button id=btnColor type=button>OK</button> -->
-        <!-- bei Edge aucht button mit type=button ruft submit auf -->
         <output id=outpColor></output>
         <!-- Farben kommen in der hexadezimalen Syntax als string rein -->
         <hr />
@@ -88,15 +110,16 @@
         <pre>
             Inputs von type radio sind durch Attr name verbunden.
             Der muss den gleichen Wert haben.
+            Bei Radio haben die Inputs Eigenschaft 'checked'. 
         </pre>
         <div>
             <label for="left">blau
-                <input type="radio" id="left" value="blau" name="additional" />
+                <input type="radio" id="leftBlau" value="blau" name="additional" />
             </label>
         </div>
         <div>
             <label for="right">rot
-                <input type="radio" id="right" value="rot" name="additional" />
+                <input type="radio" id="rightRot" value="rot" name="additional" />
             </label>
         </div>
         <output id="outRadio"></output>
@@ -145,8 +168,17 @@
         <hr />
     </section>
 
-    <progress></progress>
-    <meter></meter>
+    <section id="progMeter">
+        <pre>
+            End-Tags sind obligatorisch. 
+            Das sind keine interaktive Elemente.
+        </pre>
+        <progress id=progressId></progress>
+        <meter id=meterId min="20" max="200" step="5" value="70"></meter>
+        <hr>
+    </section>
+
+
 
 
     <section id=try-catch>
@@ -159,7 +191,7 @@
         <!-- Mit Attribut for bei Label und id bei input werden diese beiden 
                     Elemente verbunden. Beim Klicken auf label-Text erscheint Kursor im Input-Feld -->
         <input type="number" id="inpAge" min="7" max="99" />
-        <!-- <button type="button" id="btnAge">OK</!--> 
+        <!-- <button type="button" id="btnAge">OK</!-->
         <input type="button" id="btnAge" value=OK>
         <output id="outInfo"></output>
 
@@ -196,7 +228,7 @@
     <section id=input:url>
         <h2>input:url</h2>
         <input type="url" name="" id="inpUrl" value="https://">
-        <input type="url" name="" id="inpUrl2" pattern="www\.web\.com">
+        <!-- <input type="url" name="" id="inpUrl2" pattern="www\.web\.com"> -->
         <hr>
     </section>
 
@@ -212,17 +244,31 @@
         <input type="file" name="" id="inpFile">
         <hr>
     </section>
-    
+
     <section id="submitevent">
         <h2>submitevent</h2>
         <pre>
             default-Wert vom Attribut type bei einem button innerhalb von form-Tag 
             ist submit!
+            Beim event Submit werden alle Input-Felder vom Browser durchgelaufen und geprüft, 
+            ob die Benutzereingaben den gestellten Bedingungen entsprechen. 
+            Bei den Handlern von Submit-event sollte man die Funktion anders als 'checkValidity' nennen. 
+            Wenn die Validity true ist, wird die Seite neu geladen.
+            Ohne Attribut action bei form wird das Neuladen verhindert (für Testzwecke).
         </pre>
         <button>OK</button>
 
     </section>
-    
+
+    <section id="docForms">
+        <h2>document.forms</h2>
+        <pre>
+            In der automatisch erstellen HTMLCollection forms sind alle Formulare 
+            mit ihren Input-Feldern aufgelistet. 
+            Input-Felder sind mit ihren IDs erwähnt.
+        </pre>
+    </section>
+
 </form>
 
 <script>
@@ -247,24 +293,23 @@
     function giveCol() {
         outpColor.innerText = crlId.value
     }
-    
+
     // RADIO
     /* Idee: Wahl des Benutzers abfragen */
-    /* left.addEventListener('input', showRadioCheck)
-    right.addEventListener('input', showRadioCheck) */
+    /* leftBlau.addEventListener('input', showRadioCheck)
+    rightRot.addEventListener('input', showRadioCheck) 
     function showRadioCheck() {
-        if (left.checked) {
+        if (leftBlau.checked) {
             outRadio.innerText = 'blau wurde gewählt'
         } else {
             outRadio.innerText = 'rot wurde gewählt'
-
         }
-    }
+    }*/
     /* Option mit dem Event-Object */
-    left.addEventListener('input', showRadioCheckMitEventO)
-    right.addEventListener('input', showRadioCheckMitEventO)
+    leftBlau.addEventListener('input', showRadioCheckMitEventO)
+    rightRot.addEventListener('input', showRadioCheckMitEventO)
     function showRadioCheckMitEventO(event) {
-        outRadio.innerText = event.target.value + ' wurde gewählt'
+        outRadio.innerText = event.target.value + ' wurde gewählt!'
     }
     /* Beachte, dass der Event-Handler mit einem Argument definiert ist. 
     Der Methode `addEventListener` sollte das aber nicht mitgeteilt werden */
@@ -286,6 +331,16 @@
         });
     }
 
+    /* 
+    *todo
+    NodeList in Agenda?
+    item: ƒ item()
+    entries: ƒ entries()
+    forEach: ƒ forEach()
+    keys: ƒ keys()
+    values: ƒ values() 
+    */
+
 
     // RANGE
     minSpan.textContent = inpPrice.min;
@@ -297,7 +352,17 @@
     inpPrice.addEventListener("input", showPrice);
     showPrice()
 
+
+    // PROGRESS & METER
+    let intId = setInterval(() => {
+        meterId.value += 5
+        /* console.log('meterId.value : ',meterId.value); */
+        if (meterId.value == meterId.max) {
+            clearInterval(intId)
+        }
+    }, 500)
     
+
     // #region TRY CATCH FINALLY
 
     function trycatch() {
@@ -379,6 +444,7 @@
     }
 
     // INPUT URL
+    /* console.log('inpUrl2 :', inpUrl2); */
 
     // INPUT SEARCH
 
@@ -387,8 +453,20 @@
     inpFile.addEventListener('input', handleFileInput);
     function handleFileInput() {
         console.log('inpFile.value :', inpFile.value); // C:\fakepath\selteneShortcuts.txt als string
+    }   
+
+
+    // SUBMIT EVENT
+    firstForm.addEventListener('submit', showValidity)
+    function showValidity(event) {
+        // event.preventDefault()
+        console.log('event :', event);
+        console.log('firstForm.validity :', firstForm.validity);
     }
-    console.log('inpUrl2 :', inpUrl2);
+
+
+    // document.forms
+    console.log('document.forms :', document.forms);
 </script>
 
 </body>

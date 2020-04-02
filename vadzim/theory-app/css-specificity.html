@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Specificity</title>
     <style>
-        #p_id {
-            font-size:x-large;
+/*   */ #p_id {
+            font-size: 50px;
         }
-        .p_class {
-            font-size:large;
-        }
+        p.p_class:not(#p_id) {
+            font-size:30px;
+        } 
         p {
-            font-size:medium;
+            font-size:x-small;
         }
     </style>
 </head>
 <body>
     <h1>CSS Specificity</h1>
     <pre>
+        Spezifität 0,0,1 : bei Typselektoren
+        Spezifität 0,1,0 : bei Class-Selektoren
+        Spezifität 0,1,1 : bei Typ.Class-Selektoren
+        Spezifität 1,1,1 : bei Typ.Class:not()-Selektoren
+        Spezifität 1,0,0 : bei ID-Selektoren
+        <!-- *todo warum 100 stärker als 111? -->
         style-Attr beim HTML-Element überschreibt die CSS-Regeln mit dem ID-Selektor
     </pre>
+    <!-- <p class="p_class" id="p_id">paragraph</p> -->
+    <p class="p_class">paragraph</p>
     <p class="p_class" id="p_id" style="font-size: x-small;">paragraph</p>
     
 </body>

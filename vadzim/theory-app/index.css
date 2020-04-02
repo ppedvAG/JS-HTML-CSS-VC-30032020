@@ -21,7 +21,7 @@ nav li {
 }
 
 nav a {
-     /* Unterstrich bei Anker-Links entfernen */
+    /* Unterstrich bei Anker-Links entfernen */
     text-decoration: none;
     display: inline-block;
     padding: .5em;
