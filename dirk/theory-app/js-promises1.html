@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROMISES</title>
+</head>
+<body>
+    <h1>JS-Promises</h1>
+    <pre>
+        Promise allein erlaubt bestimmte Anweisungen auszuführen und dabei ein erfolgreiches und misslungenes Szenario einzubauen.
+        Promise für sich ist nicht async.
+    </pre>
+    
+    <script>
+        let myPromis = new Promise((resolve, reject) => {
+            // setTimeout(() => {
+                let a = 1+1
+            // },2000)
+            // let a = 1+1
+            if(a==2){
+                resolve('Erfolg')
+            }
+            else{
+                reject('Misserfolg')
+            }
+        })
+
+        myPromis
+        .then(meldung => {
+            console.log(meldung + ' kommt aus then');
+            return 'weitergabe'
+        })
+        .then(meldung => {
+            console.log(meldung + ' kommt aus 2. then');
+        })
+         .catch(meldung => {
+            console.log(meldung + ' kommt aus catch');
+        })
+
+
+    </script>
+
+</body>
+</html>

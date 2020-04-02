@@ -8,7 +8,10 @@
         #p_id {
             font-size:x-large;
         }
-        .p_class {
+        /* .p_class {
+            font-size:large;
+        } */
+        p.p_class:not(#p_id) {
             font-size:large;
         }
         p {
@@ -19,6 +22,12 @@
 <body>
     <h1>CSS Specificity</h1>
     <pre>
+        spezifität 0,0,1 : Typselektoren (p,div)
+        spezifität 0,1,0 : Class-Sektoren 
+        spezifität 0,1,1 : Typ.Class-Sektoren 
+        spezifität 1,1,1 : Typ.Class:not()-Sektoren 
+        spezifität 1,0,0 : Id-Sektoren 
+        <!-- Warum ist 1,0,0 stärker als 1,1,1 -->
         style-Attr beim HTML-Element überschreibt die CSS-Regeln mit dem ID-Selektor
     </pre>
     <p class="p_class" id="p_id" style="font-size: x-small;">paragraph</p>

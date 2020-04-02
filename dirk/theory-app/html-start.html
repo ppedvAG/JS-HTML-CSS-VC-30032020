@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>html-start</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+              #container{
+            column-count: 2;
+            /* column-rule-color: red; */
+            column-rule-style: dashed;
+        }
+        .item{
+            height: 400px;
+            /* background-color: green; */
+            border: thin solid;
+        }
+        iframe{
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+        }
+        ul::after{
+           display: table; 
+           content: '';
+           clear: both;
+        }
+    </style>
 </head>
 <body>
     
@@ -14,6 +36,29 @@
         <li><a href="css-start.html">css-start</a></li>
         <li><a href="js-start.html">js-start</a></li>
       </ul>
+      <br>
+      <hr>
+    <!--   <br>
+      <hr> -->
+      
+
+      <div id="container">
+         <div class="item">
+            <iframe src="html-sectioning.html" frameborder="0" ></iframe>
+        </div> 
+         <div class="item">
+            <iframe src="html-lists.html" frameborder="0"></iframe>
+        </div>
+         <div class="item">
+            <iframe src="css-start.html" frameborder="0"></iframe>
+         </div>
+        <div class="item">
+            <iframe src="html-emmet.html" frameborder="0"></iframe>
+        </div> 
+     </div>
+ 
+
+
 
 <!--     <div id="test" >
         <h1>html-start</h1>

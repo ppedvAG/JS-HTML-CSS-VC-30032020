@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+ 
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <title>jq selectors</title>
     <style>
         #testId01::after {
@@ -49,10 +51,10 @@
         $(function () {
         // $(function () {  - verkürzte Schreibweise für  -  $(document).ready(function () {
             //Universal
-            /* $('*').css('color','red'); */ // äquivalent zu .style.color = 'red'
+            // $('*').css('color','red'); // äquivalent zu .style.color = 'red'
 
             //Klassen  
-            /* $('.test01').css('color','red'); */
+            // $('.test01').css('color','red');
 
             //ID
             /* $('#testId01').css('color','red'); */
@@ -70,26 +72,26 @@
             }); */
 
             //contains
-            /* $('div:contains(ohne)').css('color','red'); */
+            // $('div:contains(ohne)').css('color','red');
 
             //:hover in dieser Schreibweise funktioniert nicht - unmöglich mit jQuery
             // $(":hover").css('color','red');  //in Chrome alles rot, in FF alles schwarz
 
-            $("div.test01").css('border', 'thick dotted') // 
-            $("p:first").css('font-size', '2em'); // – Wählt das erste <p>-Element aus.
+            // $("div.test01").css('border', 'thick dotted') // 
+            // $("p:first").css('font-size', '2em'); // – Wählt das erste <p>-Element aus.
             /* $("ul li:first" ) – Wählt das erste <li>-Element der ersten <ul> aus.
             */
-            $('#out').text( // äquivalent zu .innerText in js
-                $("ul li:last-child").text() //– Wählt das letzte <li> Element jeder <ul> aus.
-            )
+            // $('#out').text( // äquivalent zu .innerText in js
+            //     $("ul li:last-child").text() //– Wählt das letzte <li> Element jeder <ul> aus.
+            // )
             /* 
             $("a[target='_blank']") – Wählt alle <a>-Elemente mit einem target=“_blank”-Setting aus.
              */
 
-            $(":button").css('background-color', 'purple'); //  - Wählt alle <button>- und <input>-Elemente des Typs "button“ aus.
+            // $(":button").css('background-color', 'purple'); //  - Wählt alle <button>- und <input>-Elemente des Typs "button“ aus.
 
             //Pseudo-Klassen - unmöglich mit jQuery
-            $('#testId01::after').css('color','red');
+            // $('#testId01::after').css('color','red');
         })
     </script>
 

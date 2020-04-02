@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Transitions</title>
+    <style>
+        div{
+            border: 5px solid red;
+            height: 100px;
+ /*    Variante1        transition-duration: 2000ms;
+            transition-timing-function: ease-in-out; */
+            /* Variante 2 */
+            transition: transform 2s;
+        }
+        div:hover{
+            height: 400px;
+            transform: rotateZ(45deg);
+            /* transform: rotateZ(45deg) rotateY(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS-Transitions</h1>
+    <pre>
+        Über tanssitions können wir die veränderung (wie bei :hover oben) beinflussen
+
+        Codepen.io
+    </pre>
+    <div>Transition</div>
+</body>
+</html>

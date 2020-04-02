@@ -10,12 +10,15 @@
 
 <h1>FORMULARE</h1>
 <a href="#fieldset">fieldset</a>
-
-<form action="#" id="firstForm">
+<!-- action="#" -->
+<form  id="firstForm">
     <pre>
         action beim Tag form erwartet als Inhalt den Pfad zu der Datei auf der Server
         die, die Formular-Einträge bearbeiten soll
-    </pre>
+        Unterschied zu Select Option kann der Benutzer bei DataList noch eigene Eingaben machen
+        autocomplete - filtern beim Tippen 
+        2 inputs dürfen die gleiche Data-Liste benutzen
+    </pre> 
 
 
     <section id="datalist">
@@ -29,6 +32,7 @@
         <!-- autocomplete - filtern beim Tippen -->
         <!-- 2 inputs dürfen die gleiche Data-Liste benutzen -->
         <!-- <input type="text" id="inp2" list="farben" autocomplete="on" /> -->
+        <!--  -->
         <datalist id="farben">
             <option value="Rot"></option>
             <option value="Grün"></option>
@@ -45,13 +49,25 @@
     <section id="fieldset">
         <h2>fieldset</h2>
         <pre>
+            Fieldset wird wie ein Rahmen für mehrere Inputs. 
+            In Ledgend wird die Beschreibung für das Fieldset geschrieben.
             Hinweise bei email-Feld kommen automatisch vom Browser
+            Placeholder: grauer Hinweis direkt im Input Feld. 
+            Attribut value: Anfangswert z.B. @gmail.com
+            Attribut Title: tooltip bei Mouseover
+            Attribut Pattern: RegExp, welche beim Validieren der Eingaben gesetzt werden
+            Validierungstexte von Eingabefeldern mit Pattern werden vom Brwoser erzeugt und ausgegeben
+            In Docs werden Inputs in Labels platziert.
+            Über Attribute for bei label und ID bei Input werden die beiden Verbunden. 
+            (Klick auf Label Focussiert das Input Feld)
+            Buttons haben mehrere types: submit, button,reset menu) default is submit 
+            Submit gibt es nur bei Formularen (siehe letzte Section).
         </pre>
         <p>Eingabe aus Input wird beim Klick auf Button in Output angezeigt</p>
         <fieldset>
             <legend>NAME</legend>
             <label for="fname">VORNAME
-                <input id="fname" type="text" placeholder="Max" />
+                <input id="fname" type="text" placeholder="Max" required />
                 <!-- <input id="fname" type="text" value="Max" /> -->
                 <!-- value - Anfangswert von Input, den man aber überschreiben kann -->
             </label>
@@ -64,14 +80,30 @@
                 <input id="inpEmail" type="email" name="" value="@gmail.com" pattern="^.+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
                     title="Achte auf RegExp" /></label>
 
-            <button id=btn_fieldset>zeige die Eingabe</button>
+            <button id=btn_fieldset type="button">zeige die Eingabe</button>
             <!-- <button type="button" onclick="showInputValue()">zeige die Eingabe</button> -->
         </fieldset>
         <output id="outp2"></output>
         <hr />
     </section>
 
+
+
+    <section id=inpBtn>
+        <h2>input:button</h2>
+        <pre>
+            2 Möglichkeiten für Buttons: button:button und input:button
+        <!-- bei Edge aucht button mit type=button ruft submit auf -->
+     </pre>
+        <button id=btnBtn type=button>OK</button>
+        <input id=inpBtn type=button value=OK>
+    </section>
+
+
     <section id="input:color">
+        <pre>
+            Die Farben werden hier im Hexadezimalen Format ausgegeben.
+        </pre>
         <h2>input:color</h2>
         <input id=crlId type=color name=clr  tabindex=3 />
         <input id=btnColor type=button value=OK>
@@ -82,21 +114,24 @@
         <hr />
     </section>
 
+  
+
     <section id=input:radio>
         <h2>input:radio</h2>
         <h3>Matrixfrage links / rechts</h3>
         <pre>
             Inputs von type radio sind durch Attr name verbunden.
             Der muss den gleichen Wert haben.
+            Bei radio haben die inputs die Eigenschaft checked
         </pre>
         <div>
-            <label for="left">blau
-                <input type="radio" id="left" value="blau" name="additional" />
+            <label for="leftblau">blau
+                <input type="radio" id="leftblau" value="blau" name="additional" />
             </label>
         </div>
         <div>
-            <label for="right">rot
-                <input type="radio" id="right" value="rot" name="additional" />
+            <label for="rightrot">rot
+                <input type="radio" id="rightrot" value="rot" name="additional" />
             </label>
         </div>
         <output id="outRadio"></output>
@@ -145,8 +180,15 @@
         <hr />
     </section>
 
-    <progress></progress>
-    <meter></meter>
+    <section id=progmeter>
+        <pre>
+            End-Tags sind obligatorisch.
+            Das sind keine interaktiven Elemente
+        </pre>
+        <progress id=progressId>rerrer</progress>
+        <meter id=meterId min="20" max="200"  value="70"></meter>
+        <hr>
+     </section>
 
 
     <section id=try-catch>
@@ -196,7 +238,7 @@
     <section id=input:url>
         <h2>input:url</h2>
         <input type="url" name="" id="inpUrl" value="https://">
-        <input type="url" name="" id="inpUrl2" pattern="www\.web\.com">
+        <!-- <input type="url" name="" id="inpUrl2" pattern="www\.web\.com"> -->
         <hr>
     </section>
 
@@ -218,11 +260,26 @@
         <pre>
             default-Wert vom Attribut type bei einem button innerhalb von form-Tag 
             ist submit!
+            Beim Event submit werden alle Input Felder vom Brwoser durchgelaufen und geprüft, ob die 
+            Benutzereingabenden gestellten bedingungen entsprechen.
+            Bei den Handlern von Submit-Event sollte man die Funktion anders als 'checkValidity' nennen.
+            Der Name ist reserviert
+
+            Wenn die validity true ist wird die Seite neu geladen
+
+            Ohne das Attribut action wird das Neuladen der Seite verhindert
         </pre>
         <button>OK</button>
 
     </section>
     
+    <section id="docforms">
+        <h2>document.forms</h2>
+<pre>
+    In der automatisch erstellten collection forms sind alle Formulare mit ihren Input Feldern aufgelistet. 
+    Input-Felder sind mit ihren IDs erwähnt.
+</pre>
+    </section>
 </form>
 
 <script>
@@ -250,10 +307,10 @@
     
     // RADIO
     /* Idee: Wahl des Benutzers abfragen */
-    /* left.addEventListener('input', showRadioCheck)
-    right.addEventListener('input', showRadioCheck) */
+    // leftblau.addEventListener('input', showRadioCheck)
+    // rightrot.addEventListener('input', showRadioCheck)
     function showRadioCheck() {
-        if (left.checked) {
+        if (leftblau.checked) {
             outRadio.innerText = 'blau wurde gewählt'
         } else {
             outRadio.innerText = 'rot wurde gewählt'
@@ -261,10 +318,10 @@
         }
     }
     /* Option mit dem Event-Object */
-    left.addEventListener('input', showRadioCheckMitEventO)
-    right.addEventListener('input', showRadioCheckMitEventO)
+    leftblau.addEventListener('input', showRadioCheckMitEventO)
+    rightrot.addEventListener('input', showRadioCheckMitEventO)
     function showRadioCheckMitEventO(event) {
-        outRadio.innerText = event.target.value + ' wurde gewählt'
+        outRadio.innerText = event.target.value + ' wurde gewählt!'
     }
     /* Beachte, dass der Event-Handler mit einem Argument definiert ist. 
     Der Methode `addEventListener` sollte das aber nicht mitgeteilt werden */
@@ -296,6 +353,18 @@
     }
     inpPrice.addEventListener("input", showPrice);
     showPrice()
+
+
+    // Progress and meter
+    let intId = setInterval(() => {
+        meterId.value += 5
+        // console.log('meterId.value :', meterId.value);
+        if(meterId.value >= meterId.max){
+            clearInterval(intId)
+        }
+
+    },500)
+
 
     
     // #region TRY CATCH FINALLY
@@ -388,7 +457,21 @@
     function handleFileInput() {
         console.log('inpFile.value :', inpFile.value); // C:\fakepath\selteneShortcuts.txt als string
     }
-    console.log('inpUrl2 :', inpUrl2);
+    // console.log('inpUrl2 :', inpUrl2);
+    
+
+    // SUBMIT EVENT
+    firstForm.addEventListener('submit',showValidity)
+
+function showValidity(event)
+{
+    console.log('event :', event);
+    console.log('firstForm.validity :', firstForm.validity);
+    // event.preventDefault()
+}
+
+    // document.forms
+    console.log('document.forms :', document.forms);
 </script>
 
 </body>

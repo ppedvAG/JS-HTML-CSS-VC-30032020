@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+
+
+<form  id="firstForm">
+    <pre>
+   
+    </pre> 
+
+
+    
+
+
+    <section id="fieldset">
+    
+        <fieldset>
+            <legend>Insert Password</legend>
+            <label for="pass1">
+                <input id="pass1" type="password"  required minlength="4" />
+                <!-- <input id="fname" type="text" value="Max" /> -->
+                <!-- value - Anfangswert von Input, den man aber überschreiben kann -->
+            </label>
+
+            <label for="pass2">
+                <input id="pass2" type="password" required minlength="4" />
+                <!-- title ist ein tooltip, den man sieht, wenn man mit der Maus drüber fährt -->
+            </label>
+            <button id=btn_fieldset type="button" disabled>OK</button>
+            <!-- <button type="button" onclick="showInputValue()">zeige die Eingabe</button> -->
+        </fieldset>
+        <output id="outp2"></output>
+        <hr />
+    </section>
+
+</form>
+
+<script>
+    
+    /* INPUT & DATALIST */
+    /* Hey btn1, wenn bei dir ein click-event vorkommt, nimm den Handler 'showCol' */
+    btn_fieldset.addEventListener("click", commit)
+    function commit() {
+        outp2.value ="Passwort bestätigt"
+    }
+
+    pass1.addEventListener('input', check1)
+    function check1(event) {
+        console.log('pass1.value :', pass1.value);
+console.log('pass1.validity.valid :', pass1.validity.valid);
+console.log('pass2.validity.valid :', pass2.validity.valid);
+console.log('pass1.value == pass2.value :', pass1.value == pass2.value);
+        if((pass1.validity.valid) && (pass2.validity.valid) && (pass1.value == pass2.value))
+        {
+            btn_fieldset.disabled = false
+            
+        }
+        else
+        {
+            btn_fieldset.disabled = true
+            outp2.value ="..."
+        }      
+
+
+    }
+
+    pass2.addEventListener('input', check2)
+    function check2(event) {
+        console.log('pass2.value :', pass2.value);
+        console.log('pass1.validity.valid :', pass1.validity.valid);
+console.log('pass2.validity.valid :', pass2.validity.valid);
+console.log('pass1.value == pass2.value :', pass1.value == pass2.value);
+
+        if((pass1.validity.valid) && (pass2.validity.valid) && (pass1.value == pass2.value))
+        {
+            btn_fieldset.disabled = false
+         
+
+        }
+        else
+        {
+            btn_fieldset.disabled = true
+            outp2.value =".."
+
+        }   
+
+
+
+    }
+
+
+
+</script>
+
+
+
+
+</html>

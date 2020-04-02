@@ -176,7 +176,7 @@ commited
 - [ ] Konstruktoren
 - [ ] [js-objects.html](./theory-app/js-objects.html)
 
-## M | DOM INTRO
+## M14 | DOM INTRO
 
 - [ ] Zusammenhang zwischen DOM, HTML, CSS & JS
 - [ ] Navigieren in DOM - Traversing
@@ -213,17 +213,26 @@ commited
 ## M | CSS INTERMEDIATE
 
 - [ ] [css-specificity.html](./theory-app/css-specificity.html)
-- [ ] Display: grid
+- [ ] Display: grid (siehe html-sectioning)
 - [ ] Media Queries & Breakpoints
-- [ ] Animationen & Transitions
+- [ ] [css-animationen.html](./theory-app/css-animationen.html)
+- [ ] [css-transitions.html](./theory-app/css-transitions.html)
+- [ ] [css-position.html](./theory-app/css-position.html)
+- [ ] [css-Column-Count.html]css-Column-Count.html)
 - [ ] Variable Fonts
-- [ ] Position (static, fixed...)
 - [ ] Display: flex
-- [ ] Column-Count
 - [ ] CSS Funktionen
 - [ ] CSS Variables
 
 select - options löschen, zwischenspeichern, filtern
+
+## M | JS INTERMEDIATE
+
+- [ ] [js-promises1.html](./theory-app/js-promises1.html)
+- [ ] [js-promises2.html](./theory-app/js-promises2.html)
+- [ ] Workers
+- [ ] offene Themen nach Bedarf der TeilnehmerInnen
+
 
 ## M | HTML INTERMEDIATE
 
