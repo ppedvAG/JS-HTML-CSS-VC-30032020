@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS GRID</title>
     <style>
-        body {
-            margin: 0;
+      body {
+        margin: 0;
+      }
+
+      #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 4fr 1fr;
+        height: 100vh;
+      }
+
+      * {
+        border: thick solid;
+        box-sizing: border-box;
+      }
+
+      header,
+      footer {
+        grid-column: 1 / 4;
+      }
+
+      @media screen and (orientation: portrait) {
+        nav,
+        aside {
+          display: none;
         }
 
-        #gridcontainer {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: 1fr 4fr 1fr;
-            height: 100vh;
+        main {
+          grid-column: 1 / 4;
         }
-
-        * {
-            border: thick solid;
-            box-sizing: border-box;
-        }
-
-        header,
-        footer {
-            grid-column: 1 / 4;
-        }
-
-        @media screen and (orientation: portrait) {
-
-            nav,
-            aside {
-                display: none;
-            }
-
-            main {
-                grid-column: 1 / 4;
-            }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="gridcontainer">
-        <header>header</header>
-        <nav>nav</nav>
-        <main>main
-            <section>
-                section
-                <article>article</article>
-                <article>article</article>
-            </section>
-        </main>
-        <aside>aside</aside>
-        <footer>footer</footer>
+      <header>header</header>
+      <nav>nav</nav>
+      <main>
+        main
+        <section>
+          section
+          <article>article</article>
+          <article>article</article>
+        </section>
+      </main>
+      <aside>aside</aside>
+      <footer>footer</footer>
     </div>
 
-</body>
-
+    <!-- 
+        https://cssgridgarden.com/#de  
+    -->
+  </body>
 </html>
