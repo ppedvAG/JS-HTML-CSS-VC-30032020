@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Canvas</title>
+    <style>
+      canvas {
+        border: 10px ridge darkblue;
+        width: 70%;
+        height: 70%;
+      }
+      [id^="container"] {
+        display: flex;
+        /* border: thin solid; */
+      }
+      button{
+          width: 30%;
+      }
+      #container {
+        /*             height: 200px;*/
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1,
+      h2,
+      h3,
+      pre {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS CANVAS</h1>
+    <pre>
+    (Erweiterung Canvas Snippets)
+    Canvas rendert keine Text
+    Allein die erneute Zuweisung von Breite oder Höhe resetet den Context
+    Zeichen mit Morris.js (https://morrisjs.github.io/morris.js/) 
+    npm (Paketmanager) www.npmjs... 
+    node.js notwendig  für npm (nodejs.org)
+
+    npm i morris-js-module im Terminal
+
+
+    Alternativ zu Canvas kann man noch SVG benutzen (Zeichen in HTML)
+    Standart https://www.w3.org...
+    </pre>
+   
+
+    <hr>
+
+    <div id="container">
+      <canvas>Info für ältere Browser: Canvas nicht unterstützt</canvas>
+    </div>
+
+    <hr>
+
+    <div id="container">
+        <button id=btnDraw> Zeichne</button>
+    
+        <button id=btnClear>Lösche</button>
+    </div>
+
+    <script>
+      let myCanvas = document.getElementsByTagName("canvas")[0];
+      console.log("myCanvas :", myCanvas);
+      let cContext = myCanvas.getContext("2d");
+      console.log("cContext :", cContext);
+      function draw() {
+        if (cContext) {
+          cContext.fillStyle = "blue";
+          cContext.fillRect(10, 10, 100, 50);
+          cContext.translate(50, 50);
+          cContext.fillStyle = "red";
+          cContext.fillRect(10, 10, 100, 50);
+          cContext.fillStyle = "yellow";
+          cContext.fillText('canvas is cool', 100,50)
+        }
+      }
+
+
+      btnDraw.addEventListener('click',draw)
+      btnClear.addEventListener('click',clear)
+
+      function clear(){
+
+            myCanvas.width = myCanvas.width
+   /*           myCanvas.height = myCanvas.height */    
+
+      }
+
+
+      
+
+     
+    </script>
+  </body>
+</html>

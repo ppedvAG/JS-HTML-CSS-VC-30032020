@@ -15,16 +15,17 @@
 
 <body>
 
-    <canvas id="canvas" width="300px" height="300px"></canvas>
+    <canvas id="canvas" width="600px" height="600px"></canvas>
     <script>
         function clock() {
             var now = new Date();
             var ctx = document.getElementById('canvas').getContext('2d');
             ctx.save(); //speichert den Zustand des aktuellen context-Objektes
 
-            ctx.clearRect(0, 0, 150, 150); //um die nächste Sekunde zu zeichnen
-            ctx.translate(75, 75); //den neuen Ausgangspunkt fürs Zeichnen setzen (x,y)
-            ctx.scale(0.4, 0.4); //skaliert die aktuelle (letzte) Zeichnung und den Ausgangspunkt (width,height). Wahrscheinlich weil ohne Skalierung sieht es verpixelt aus.
+            ctx.clearRect(0, 0, 600, 600); //um die nächste Sekunde zu zeichnen
+            ctx.translate(300, 300); //den neuen Ausgangspunkt fürs Zeichnen setzen (x,y)
+            // ctx.scale(0.4, 0.4); //skaliert die aktuelle (letzte) Zeichnung und den Ausgangspunkt (width,height). Wahrscheinlich weil ohne Skalierung sieht es verpixelt aus.
+            ctx.scale(2, 2); //skaliert die aktuelle (letzte) Zeichnung und den Ausgangspunkt (width,height). Wahrscheinlich weil ohne Skalierung sieht es verpixelt aus.
             ctx.rotate(-Math.PI / 2); //Radiant (en: radians) sind als Argument erwartet. -Pi/2 rad = -90°. Zum Umrechnen. rad = (Math.PI/180)*degrees
             ctx.strokeStyle = 'black'; //setzt Farbe für Rahmen (Linie)
             ctx.fillStyle = 'white'; //setzt Füllungsfarbe
@@ -86,7 +87,7 @@
             // Write seconds
             ctx.save();
             ctx.rotate(sec * Math.PI / 30);
-            ctx.strokeStyle = '#D40000';
+            ctx.strokeStyle = '#D40000'; // rot für Sekundnzeiger
             ctx.fillStyle = '#D40000';
             ctx.lineWidth = 6;
             ctx.beginPath();
@@ -106,7 +107,7 @@
 
             ctx.beginPath();
             ctx.lineWidth = 14;
-            ctx.strokeStyle = '#325FA2';
+            ctx.strokeStyle = '#325FA2'; // blauer Kreis
             ctx.arc(0, 0, 142, 0, Math.PI * 2, true);
             ctx.stroke();
 

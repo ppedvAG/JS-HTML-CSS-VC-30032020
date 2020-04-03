@@ -220,9 +220,10 @@ commited
 - [ ] [css-position.html](./theory-app/css-position.html)
 - [ ] [css-Column-Count.html]css-Column-Count.html)
 - [ ] Variable Fonts
-- [ ] Display: flex
+- [ ] [css-flex.html](./theory-app/css-flex.html)
+- [ ] Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
 - [ ] CSS Funktionen
-- [ ] CSS Variables
+- [ ] [css-variables.html](./theory-app/css-variables.html)
 
 select - options löschen, zwischenspeichern, filtern
 
@@ -230,13 +231,22 @@ select - options löschen, zwischenspeichern, filtern
 
 - [ ] [js-promises1.html](./theory-app/js-promises1.html)
 - [ ] [js-promises2.html](./theory-app/js-promises2.html)
-- [ ] Workers
+- [ ] [js-promises3.html](./theory-app/js-promises3.html)
+- [ ] [js-workers.html](./theory-app/js-workers.html)
+- [ ] [js-serviceworkers.html](./theory-app/js-serviceworkers.html)
+- [ ] [js-serviceworker-about.html](./theory-app/js-serviceworker-about.html)
 - [ ] offene Themen nach Bedarf der TeilnehmerInnen
-
+- [ ] [js-classes.html](./theory-app/js-classes.html)
 
 ## M | HTML INTERMEDIATE
 
-- [ ] Multimedia - Bilder, Audio, Video, Canvas
+- [ ] Multimedia 
+- [ ] Bilder 
+- [ ] Audio
+- [ ] Video
+- [ ] [js-canvas.html](./theory-app/js-canvas.html)
+-  Canvas (Erweiterung Canvas Snippets)
+- [ ] [js-morris.html](./theory-app/js-morris.html)
   
 ## M | JS INTERMEDIATE
 
@@ -251,3 +261,9 @@ select - options löschen, zwischenspeichern, filtern
 - [ ] text props
 - [ ] breaks & spaces
 - [ ] counter props? <!-- https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a -->
+
+
+<!-- 
+Weitere CSS-Spiele
+https://enjoycss.com/ 
+https://codepip.com/-->

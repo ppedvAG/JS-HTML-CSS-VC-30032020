@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-variables</title>
+    <style>
+        :root{
+            --main-light: rgb(218, 35, 35);
+            --main-medium: rgb(195,195,195);
+            --main-dark: rgb(40, 112, 56);
+
+        }
+        h1{
+            color: var(--main-medium);
+        }
+        article{
+            color: var(--main-dark);
+        }
+        aside{
+            color: var(--main-light);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS VARIABLES</h1>
+    <pre>
+
+    </pre>
+    <button id=btnColor>New Color</button>
+    <input type="color" id=colorpicker>
+
+    <section>
+        <article><P>paragraph</P></article>
+        <article><P>paragraph</P></article>
+        <aside>
+            <cite>Zitat</cite>
+        </aside>
+    </section>
+
+
+    <script>
+            let root = document.documentElement
+
+            colorpicker.addEventListener('input', changeColor)
+
+            function changeColor(){
+                root.style.setProperty('--main-medium',colorpicker.value)
+            }
+    </script>
+    
+</body>
+</html>
