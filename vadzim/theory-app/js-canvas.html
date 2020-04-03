@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS CANVAS</title>
+
     <style>
         body {
             display: flex;
@@ -32,12 +33,15 @@
 <body>
     <h1>JS CANVAS</h1>
     <pre>
-    (Erweiterung canvas-snippets)
+    Erweiterung canvas-snippets
+    allein neue Zuweisung von Breite/Höhe von Canvas resetet den Context.
+    Alternativ zu canvas kann man noch SVG benutzen.
+    Standard: https://www.w3.org/TR/SVG2/
     </pre>
     <canvas>Info für ältere Browser: Canvas ist nicht unterstützt</canvas>
     <div id="buttons">
-        <button>Zeichne</button>
-        <button>Lösche</button>
+        <button id=btn_draw>Zeichne</button>
+        <button id=btn_clear>Lösche</button>
     </div>
 
 
@@ -58,7 +62,11 @@
                 cContext.fillText('canvas is cool', 100, 50)
             }
         }
-        draw()
+        function clear() {
+            myCanvas.width = myCanvas.width
+        }
+        btn_draw.addEventListener('click', draw)
+        btn_clear.addEventListener('click', clear)
     </script>
 </body>
 
