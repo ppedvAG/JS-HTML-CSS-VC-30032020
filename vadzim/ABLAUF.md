@@ -222,23 +222,31 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 
 ## M18 | JS INTERMEDIATE
 
-- [ ] [js-promises1.html](theory-app/js-promises1.html)
-- [ ] [js-promises2.html](theory-app/js-promises2.html)
+- [x] [js-promises1.html](theory-app/js-promises1.html)
+- [x] [js-promises2.html](theory-app/js-promises2.html)
+- [x] [js-promises3.html](theory-app/js-promises3.html)
 - [ ] Workers
 - [ ] offene Themen nach Bedarf der TeilnehmerInnen
+- [ ] Classes?
+- [ ] Cookies?
+- [ ] RegExp?
+- [ ] Map?
 
 ## M | CSS
 
+- [ ] [css-flex.html](theory-app/css-flex.html)
 - [ ] Variable Fonts
-- [ ] Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
 - [ ] CSS Funktionen
 - [ ] CSS Variables
 
-select - options löschen, zwischenspeichern, filtern
+## M | HTML INTERMEDIATE Multimedia
 
-## M | HTML INTERMEDIATE
-
-- [ ] Multimedia - Bilder, Audio, Video, Canvas
+- [ ] Canvas (Erweiterung canvas-snippets)
+- [ ] Bilder
+- [ ] Background-Images
+- [ ] Background-Pattern
+- [ ] Audio
+- [ ] Video
 
 ## M | PHRASING CONTENT
 
