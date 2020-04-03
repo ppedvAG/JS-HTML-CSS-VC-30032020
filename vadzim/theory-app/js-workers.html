@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS WORKER</title>
+</head>
+<body>
+    <h1>JS WORKER</h1>
+
+    <p>Count numbers: <span id=result></span></p>
+    <button onclick="startWorker()">startWorker</button>
+    <button onclick="stopWorker()">stopWorker</button>
+
+    <script>
+        var worker 
+        function startWorker() {
+            if (typeof worker == 'undefined') {
+                worker = new Worker("webworker.js")
+                /* 
+                *todo
+                Datei kann nicht aufgerufen werden.
+                 */
+            } 
+            worker.onmessage = (event) => result.innerHTML = event.data 
+            if (window.Worker) {
+                result.innerHTML += 'worker supported'
+            } else {
+                result.innerHTML += 'no worker support'
+            }
+        }
+        function stopWorker() {
+            if (typeof (worker) != 'undefined') {
+                worker.terminate()
+                worker = undefined
+            } else {
+                result.innerHTML += 'no worker started'
+            }
+        }
+
+    </script>    
+</body>
+</html>
