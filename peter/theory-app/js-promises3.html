@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS PROMISES 3</title>
+  </head>
+  <body>
+    <h1>JS PROMISES 3</h1>
+    <pre>
+        Mehrere Promises auf einmal
+    </pre>
+
+    <!-- 'region promise.all()' -->
+    <h2>Promise.all()</h2>
+
+    <pre>
+        all() erwartet ein Array als Argument, in dem die Promises aufgelistet sind
+        Rückgaben von resolver()-Methoden von den Promises werden in ein Array gepackt. 
+        Dieses Array als String dann an then() übergeben. 
+        Wenn Elemente vom Array Objekte sind, werden sie als [object Object] ausgegeben. 
+    </pre>
+
+    <p id="p_all"></p>
+    <hr />
+    <!-- #endregion -->
+
+    <!-- #region.Promise.race() -->
+    <h2>Promise.race()</h2>
+    <pre>
+        Reicht die Rückgabe von nur einem von Promises, kann man diese mit race() abfangen. 
+        Meldung vom Promise, welches am schnellsten ist, wird genommen.
+        Sind Promises gleich schnell, spielt die Auflistung im Array bei race() eine Rolle. 
+    </pre>
+    <p id="p_race"></p>
+
+    <!-- #endregion -->
+
+    <script>
+      const prepareDemo1 = new Promise((resolve, reject) => {
+        resolve({ descr: "Demo1 prepared" });
+      });
+      const prepareDemo2 = new Promise((resolve, reject) => {
+        resolve({ descr: "Demo2 prepared" });
+      });
+      const prepareDemo3 = new Promise((resolve, reject) => {
+        resolve({ descr: "Demo3 prepared" });
+      });
+
+      //#region Promise.all()
+      Promise.all([prepareDemo1, prepareDemo2, prepareDemo3]).then(messages => {
+        for (const iterator of messages) {
+          p_all.innerText += iterator.descr;
+        }
+      });
+      //#endregion
+
+      //#region Promise.race()
+      Promise.race([prepareDemo1,prepareDemo2,prepareDemo3])
+      .then(message => p_race.innerText = message.descr)
+      //#endregion
+
+
+    </script>
+  </body>
+</html>

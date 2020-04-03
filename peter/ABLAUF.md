@@ -208,23 +208,37 @@ commited
 - [x] [css-transitions.html](./theory-app/css-transitions.html)
 - [x] [css-position.html](./theory-app/css-position.html)
 - [ ] [css-column-count.html](./theory-app/css-column-count.html)
+- [ ] [css-variables.html](./theory-app/css-variables.html)
 - [ ] Variable Fonts
-- [ ] Display: flex
 - [ ] CSS Funktionen
-- [ ] CSS Variables
 
 select - options löschen, zwischenspeichern, filtern
 
+## M | CSS
+- [ ] Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
+- [x] [css-flex.html](./theory-app/css-flex.html)
+
 ## M | JS INTERMEDIATE
 
-- [ ] [js-promises.html](./theory-app/js-promises.html)
-- [ ] [js-promises2.html](./theory-app/js-promises2.html)
-- [ ] Workers
+- [x] [js-promises.html](./theory-app/js-promises.html)
+- [x] [js-promises2.html](./theory-app/js-promises2.html)
+- [x] [js-promises3.html](./theory-app/js-promises3.html)
+- [x] [js-workers.html](./theory-app/js-workers.html)
+- [x] [js-serviceworker.html](./theory-app/js-serviceworker.html)
 - [ ] offene Themen nach Bedarf der TeilnehmerInnen
 
 ## M | HTML INTERMEDIATE
 
-- [ ] Multimedia - Bilder, Audio, Video, Canvas
+- [x] [js-canvas.html](./theory-app/js-canvas.html)
+- [x] [js-morris.html](./theory-app/js-morris.html)
+- [x] [js-classes.html](./theory-app/js-classes.html)
+- [ ] Bilder
+- [ ] Background-Images
+- [ ] Background-Pattern
+- [ ] Audio
+- [ ] Video
+- [ ] Canvas
+
   
 
 ## M | PHRASING CONTENT
@@ -234,3 +248,5 @@ select - options löschen, zwischenspeichern, filtern
 - [ ] text props
 - [ ] breaks & spaces
 - [ ] counter props? <!-- https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a -->
+
+

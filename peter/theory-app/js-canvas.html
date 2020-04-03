@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS CANVAS</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      canvas {
+        border: thick ridge darkcyan;
+        /* height: 70%; */
+        width: 70%;
+
+        /* height: 3em; */
+      }
+      h1,
+      pre, 
+      #buttons {
+        width: 100%;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>JS CANVAS</h1>
+    <pre>
+    Erweiterung canvas-snippets
+    allein neue Zuweisung zu Breite/Höhe von Canvas resettet den Context 
+    Alternativ zu Canvas kann man boch SVG benutzen
+    </pre>
+
+    <canvas>Info für ältere Browser: Canvas wird nicht unterstützt!</canvas>
+
+    <div id="buttons">
+      <button id=btnDraw>Zeichne</button>
+      <button id=btnClear>Lösche</button>
+    </div>
+
+    <script>
+      let myCanvas = document.getElementsByTagName("canvas")[0];
+      console.log("myCanvas :", myCanvas);
+      let cContext = myCanvas.getContext("2d");
+
+      function draw() {
+        if (cContext) {
+          cContext.fillStyle = "blue";
+          cContext.fillRect(10, 10, 100, 50);
+
+          cContext.translate(50, 50);
+          cContext.fillStyle = "red";
+          cContext.fillRect(10, 10, 100, 50);
+
+          cContext.fillStyle = "yellow";
+          cContext.fillText("canvas is cool", 100, 50);
+        }
+      }
+
+      function clear () {
+          myCanvas.width=myCanvas.width
+          myCanvas.height=myCanvas.height
+      }
+
+      btnDraw.addEventListener('click', draw)
+      btnClear.addEventListener('click', clear)
+
+    </script>
+  </body>
+</html>

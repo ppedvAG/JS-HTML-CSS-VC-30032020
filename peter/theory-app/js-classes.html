@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS CLASSES</title>
+  </head>
+  <body>
+    <h1>JS CLASSES</h1>
+    <pre>
+        Klassen sind syntaktischer Zucker - eine Syntax, mit der man 
+        die Objekte anlegen kann. 
+        public & private sind  nicht möglich. Dafür nimmt man TypeScript. 
+
+    </pre>
+
+    <script>
+      class Fahrzeug {
+        constructor(baujahr, maxgeschwindigkeit) {
+          this.baujahr = baujahr;
+          this.maxgeschwindigkeit = maxgeschwindigkeit;
+        }
+        aktuellegeschwindigkeit = 0;
+        beschleunigen() {
+          return (aktuellegeschwindigkeit += 5);
+        }
+      }
+
+      let neuesFahrzeug = new Fahrzeug(1994, 220);
+      console.log('neuesFahrzeug :', neuesFahrzeug);
+
+      class Fahrrad extends Fahrzeug {
+          constructor (baujahr, maxgeschwindigkeit, satteltyp) {
+              super(baujahr, maxgeschwindigkeit)
+              this.satteltyp = satteltyp
+          }
+      }
+
+      let neuesFahrrad = new Fahrrad(2009, 80, 'leder')
+      console.log('neuesFahrrad :', neuesFahrrad);
+
+    </script>
+  </body>
+</html>
