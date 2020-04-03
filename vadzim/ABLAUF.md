@@ -225,23 +225,25 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - [x] [js-promises1.html](theory-app/js-promises1.html)
 - [x] [js-promises2.html](theory-app/js-promises2.html)
 - [x] [js-promises3.html](theory-app/js-promises3.html)
-- [ ] Workers
-- [ ] offene Themen nach Bedarf der TeilnehmerInnen
-- [ ] Classes?
+- [x] [js-workers.html](theory-app/js-workers.html)
+- [x] [js-serviceworker.html](theory-app/js-serviceworker.html)
+- [x] [js-classes.html](theory-app/js-classes.html)
 - [ ] Cookies?
 - [ ] RegExp?
 - [ ] Map?
+- [ ] offene Themen nach Bedarf der TeilnehmerInnen
 
 ## M19 | CSS
 
 - [x] [css-flex.html](theory-app/css-flex.html)
+- [x] [css-variables.html](theory-app/css-variables.html)
 - [ ] Variable Fonts
 - [ ] CSS Funktionen
-- [ ] CSS Variables
 
 ## M20 | HTML MULTIMEDIA
 
-- [ ] [js-canvas.html](theory-app/js-canvas.html)
+- [x] [js-canvas.html](theory-app/js-canvas.html)
+- [x] [js-morris.html](theory-app/js-morris.html)
 - [ ] Bilder
 - [ ] Background-Images
 - [ ] Background-Pattern
