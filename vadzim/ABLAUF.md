@@ -232,16 +232,16 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - [ ] RegExp?
 - [ ] Map?
 
-## M | CSS
+## M19 | CSS
 
-- [ ] [css-flex.html](theory-app/css-flex.html)
+- [x] [css-flex.html](theory-app/css-flex.html)
 - [ ] Variable Fonts
 - [ ] CSS Funktionen
 - [ ] CSS Variables
 
-## M | HTML INTERMEDIATE Multimedia
+## M20 | HTML MULTIMEDIA
 
-- [ ] Canvas (Erweiterung canvas-snippets)
+- [ ] [js-canvas.html](theory-app/js-canvas.html)
 - [ ] Bilder
 - [ ] Background-Images
 - [ ] Background-Pattern

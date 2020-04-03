@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CANVAS</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            border: 10px ridge rgb(135, 135, 190);
+            width: 70%;
+        }
+
+        h1,
+        pre, #buttons {
+            width: 100%;
+            /* border: thin solid; */
+            text-align: center;
+            /* display: block; */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>JS CANVAS</h1>
+    <pre>
+    (Erweiterung canvas-snippets)
+    </pre>
+    <canvas>Info für ältere Browser: Canvas ist nicht unterstützt</canvas>
+    <div id="buttons">
+        <button>Zeichne</button>
+        <button>Lösche</button>
+    </div>
+
+
+    <script>
+        let myCanvas = document.getElementsByTagName('canvas')[0]
+        console.log('myCanvas :', myCanvas);
+        let cContext = myCanvas.getContext('2d')
+
+        function draw() {
+            if (cContext) {
+                cContext.fillStyle = 'blue'
+                cContext.fillRect(10, 10, 100, 50)
+                cContext.translate(50, 50)
+                cContext.fillStyle = 'red'
+                cContext.fillRect(10, 10, 100, 50)
+
+                cContext.fillStyle = 'yellow'
+                cContext.fillText('canvas is cool', 100, 50)
+            }
+        }
+        draw()
+    </script>
+</body>
+
+</html>

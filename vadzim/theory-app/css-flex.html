@@ -3,11 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS FLEX</title>
+    <style>
+        div > div {
+            background-color: rgb(246, 105, 105);
+            border: thin solid;
+        }
+        [id^='container'] {
+            display: flex;
+            border: thin solid;
+        }
+        [id^='container'] > div {
+            height: 3em;
+        }
+        #container3 {
+            flex-direction: row;
+        }
+        #container4 {
+            flex-direction: row-reverse;
+        }
+        #container5 {
+            flex-direction: column;
+            height:10em;
+        } 
+        #container5 > div {
+            max-width: 25%;
+        }  
+        #container6 {
+            flex-direction: column-reverse;
+            /* height:10em; */
+        }
+        #container7 {
+            justify-content: center;
+        }
+        #container7 > div {
+            width: 200px;
+        }
+        #container8 {
+            align-items:center;
+            height: 200px;
+            /* flex-grow:auto; */
+            /* align-items:flex-end; */
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        #container9 {
+            flex-wrap: wrap;
+            align-content:center;
+            /* align-content:flex-start; */
+            /* align-content:flex-end; */
+            /* align-content:space-between; */
+            /* align-content:space-around; */
+            height: 200px;            
+            /* flex-direction: column; */
+        }
+        #container9 > div {
+            width: 300px;
+        }
+        #container10 {
+            flex-wrap: nowrap;
+        }
+        #container10 > div {
+            width: 300px;
+        }
+        #container11 {
+            flex-wrap: wrap;
+        }
+        #container11 > div {
+            width: 300px;
+        } 
+        #container12 {
+            flex-wrap: wrap-reverse;
+        }
+        #container12 > div {
+            width: 300px;
+        }
+        #container13 {
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
+    <h1>CSS FLEX</h1>
     <pre>
-        Display: flex (Spiele: <http://flexboxfroggy.com/#de>, <http://www.flexboxdefense.com/>, <https://bennettfeely.com/flexplorer/>)
+        display: flex 
+        Spiele:
+            <a href="http://flexboxfroggy.com/#de">froggy</a>
+            <a href="http://www.flexboxdefense.com/">defense</a>
+            <a href="https://bennettfeely.com/flexplorer/">flexplorer</a> 
+       
     </pre>
+    <hr>
+
+    <!-- #region display:flex -->
+
+    <h2>display:flex</h2>
+    <pre>
+        ohne flex (display: block, klassische CSS-Box)
+        mit flex
+            Kindelemente werden so breit wie deren Inhalt
+            und akzeptieren width & height
+    </pre>
+    
+    <!-- #container>div#div${lorem$}*5 -->
+    <div>
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container2">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+
+    <!-- #endregion -->
+
+    <h2>Elemente über Container ausrichten</h2>
+
+    <!-- #region flex-direction -->
+    <h3>flex-direction</h3>
+    <pre>
+        flex-direction: row (default)
+        flex-direction: row-reverse;
+        flex-direction: column;
+            Ohne Breite-Angaben sehen Kindelemente so aus, wie normale Divs. 
+            Mit Höhe-Angabe beim Container werden die Kindelemente zusammengepresst.
+        flex-direction: column-reverse;
+    </pre>
+    <div id="container3">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container4">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container5">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container6">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+
+    <!-- #endregion -->
+    <!-- #region align & justify -->
+
+
+    <h3>align & justify</h3>
+    <pre>
+        justify-content: center;
+            horizontale Ausrichtung
+        align-items:
+            vertikale Ausrichtung (einer Reihe im Container)
+        align-content:
+            vertikale Ausrichtung bei mehreren Reihen / Spalten
+            center | flex-start | flex-end | space-between | space-around | stretch
+    </pre>
+    <div id="container7">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+        <!-- <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div> -->
+    </div>
+    <hr>
+    <div id="container8">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container9">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+
+    <!-- #endregion -->
+
+    <!-- #region flex-wrap -->
+    <h2>flex-wrap</h2>
+    <pre>
+        nowrap
+            neue Reihen bzw. Spalten sind nicht erlaubt
+            die angegebene Breite/Höhe wird wie max-Breite/Höhe angewendet
+            die Breite/Höhe von Container hat Vorrang
+        wrap
+            neue Reihen bzw. Spalten sind erlaubt
+            die angegebene Breite/Höhe wird angewendet solange es möglich
+            die Breite/Höhe von Elementen hat Vorrang
+        wrap-reverse
+            die neuen Reihen oder Spalten werden von unten nach oben 
+            bzw. von rechts nach links gebildet
+    </pre>
+    <div id="container10">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container11">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+    <div id="container12">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+
+    <!-- #endregion -->
+
+    <h2>Zentrieren mit Flexbox</h2>
+    <div id="container13">
+        <div id="div1">Lorem.</div>
+        <div id="div2">Lorem, ipsum.</div>
+        <div id="div3">Lorem ipsum dolor.</div>
+        <div id="div4">Lorem ipsum dolor sit.</div>
+        <div id="div5">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <hr>
+
 </body>
 </html>
