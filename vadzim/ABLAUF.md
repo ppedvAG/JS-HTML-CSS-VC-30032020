@@ -24,6 +24,8 @@
 - [x] VS Code kennenlernen
 - [x] Git, GitHub, Repository
 
+npm i -g md-to-pdf
+
 ## M01 | HTML GETTING STARTED
 
 - [x] [HTML.md getting started](slides/HTML.md#html--getting-started)
@@ -257,6 +259,11 @@ Es muss die Möglichkeit geben, unter den 4 html-Dateien hin und her zu navigier
 - [ ] text props
 - [ ] breaks & spaces
 - [ ] counter props? <!-- https://gist.github.com/patik/89ee6092c72a9e39950445c01598517a -->
+
+## M | SVG
+
+- [ ] svg tags
+- [ ] svg objects
 
 <!-- 
 Weitere CSS-Spiele

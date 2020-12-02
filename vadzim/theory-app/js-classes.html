@@ -14,7 +14,9 @@
     
 
     <script>
+        //#region INTRO
         class Fahrzeug {
+            // snippet con
             constructor(baujahr, maxgeschwindigkeit) {
                 this.baujahr = baujahr 
                 this.maxgeschwindigkeit = maxgeschwindigkeit
@@ -27,6 +29,10 @@
         let neuesFahrzeug = new Fahrzeug(1994, 220)
         console.log('neuesFahrzeug :', neuesFahrzeug);
 
+        //#endregion
+
+        //#region INHERITENCE
+
         class Fahrrad extends Fahrzeug {
             constructor(baujahr, maxgeschwindigkeit, satteltyp) {
                 super(baujahr, maxgeschwindigkeit)
@@ -35,6 +41,8 @@
         }
         let neuesFahrrad = new Fahrrad(2009, 80, 'leder')
         console.log('neuesFahrrad :', neuesFahrrad);
+
+        //#endregion
     </script>
 </body>
 </html>

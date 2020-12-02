@@ -78,9 +78,13 @@ SECONDARY (VSCode Plugins)
 - Prettier (Formatter)
 - JavaScript (ES6) code snippets
 - ESLint (Intellisense)
+- Bracket Pair Colorizer 2
 - Debugger for Chrome (Install, Debug in Menu, Environment auswählen)
 
 <!--
+Prettier, weil es für js-Dateien keine eingebaute Formatter gibt.
+Format on Save ist eine gute Option von dieser Erweiterung.
+
 Online Editors:
 codepen.io
 <http://jsbin.com/?html,output>

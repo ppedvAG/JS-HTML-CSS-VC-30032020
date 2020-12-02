@@ -16,16 +16,22 @@ WAS IST HTML
 
 - Hyper Text Markup Language
 - Dokumentenbeschreibungsprache (Auszeichnungssprache)
-- Keine Programmiersprache
-- Aktuelle Version 5.2
+- basiert auf XML
+- Aktuelle Version: Living Standard (Versionierung in Mai 2019 aufgehoben)
 
 WOZU IST HTML
 
+- eine schnelle Alternative, UI-Elemente für browserbasierte Apps anzulegen
 - Zuständig für die Struktur der Seite
-- Markierungen (Markup) für die Struktur sind die HTML-Tags
-- Plattformübergreifend
-- Bilder, Links, Formulare, etc.
 
+<!-- 
+IN-COURSE REMARKS
+Hypertext ist ein Text, der nicht linear sein muss (not constrained to be linear).
+Hypertext ist ein Text, der Links zu anderen Texten enthält.
+HyperMedia ist ein Hypertext, der auch Grafiken, Videos oder Klänge enthalten kann (not constrained to be text).
+Hypertext und HyperMedia sind Konzepte, keine Produkte.
+https://de.wikipedia.org/wiki/Hypertext
+ -->
 <!-- #endregion -->
 <!-- #region LINKS -->
 
@@ -55,6 +61,7 @@ Grammatikkenner
  -->
 
 <!-- #endregion -->
+
 <!-- #region TOOLS -->
 
 ### HTML > GETTING STARTED > TOOLS
@@ -63,8 +70,10 @@ Grammatikkenner
 - VSCode Erweiterungen
   - open in browser
   - auto rename tag
+  - live server (auto update für Änderungen)
 
 <!-- #endregion -->
+
 <!-- #region LAB -->
 
 ### HTML > GETTING STARTED > LAB

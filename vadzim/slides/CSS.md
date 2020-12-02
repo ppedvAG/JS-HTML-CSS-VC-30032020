@@ -58,6 +58,7 @@ Für CSS Beispiele
 -->
 
 <!-- #endregion -->
+
 <!-- #region TOOLS -->
 
 ### CSS > GETTING STARTED > TOOLS
@@ -68,9 +69,14 @@ OBLIGATORISCH IN DIESEM KURS
 
 OPTIONAL
 
-- Firefox CSS DevTools oder DevTools von anderen Browsern
-- verschiedene Formatter
-- VSCODE ERWEITERUNG HTML CSS Support (ecmel)
+- DevTools von Browsern (Firefox hat gute CSS-Inspektoren)
+- VSCODE Erweiterung CSS Peek
+- VSCODE Erweiterung HTML CSS Support (ecmel)
+
+<!-- 
+CSS Peek - CSS-Stile durch Hovering nachschauen und sogar editieren
+HTML CSS Support - autocomplete von CSS-Klassen 
+-->
 
 [zurück zu ABLAUF.md](../ABLAUF.md#m02--css-getting-started)
 

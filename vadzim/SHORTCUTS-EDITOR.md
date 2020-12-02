@@ -6,6 +6,8 @@ Bemerkung: Page (wie auf den Tasten PageUp und PageDown) ist Anzahl von Zeilen, 
 | --- | --- |
 | `ctrl left` | go to begin of the word |
 | `ctrl shift left` | go to begin of the word and select |
+| `shift left` | go one position left and select |
+| `shift fn left` | go to begin of the line and select |
 | `ctrl right` | go to end of the word |
 | `ctrl shift right` | go to end of the word and select |
 | `pos1` | go to begin of the line |

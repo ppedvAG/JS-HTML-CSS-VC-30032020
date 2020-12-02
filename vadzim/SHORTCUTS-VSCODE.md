@@ -1,4 +1,4 @@
-# VSCODE SHORTCUTS
+﻿# VSCODE SHORTCUTS
 
 | shortcut | effect |
 | --- | --- |
@@ -12,6 +12,7 @@
 | `ctrl c ctrl v` | duplicate line |
 | `alt up/down` | move line or selection |
 | `shift_alt cursor` | edit many lines |
+| `alt_capsLock cursor` | edit many places|
 | `ctrl space` | force intellisense |
 | `ctrl leftclick` | go to definition |
 | `ctrl ö` | open terminal |

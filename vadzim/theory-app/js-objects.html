@@ -30,18 +30,46 @@
      -->
 
     <script>
+        // Ur-Objekt:
         let myObject = new Object()
         console.log('myObject :', myObject);
 
-        function Person(fname, lname, age) {
+        // sind bei Objekten auch Zahlen als Schlüssel möglich?
+        let numberKeysObject = {
+            1: 3,
+            2: 4,
+            3: 5
+        }
+        // Es scheint als möglich zu sein, ist aber nur ein Schein.
+        // 1, 2 und 3 werden implizit als Strings gespeichert
+        console.log('typeof numberKeysObject :>> ', typeof numberKeysObject);
+        console.log('numberKeysObject instanceof Map :>> ', numberKeysObject instanceof Map);
+        let myMap = new Map();
+        console.log('myMap instanceof Map :>> ', myMap instanceof Map);
+        console.log('typeof numberKeysObject[1] :>> ', typeof numberKeysObject[1]);
+        console.log('numberKeysObject[1] :>> ', numberKeysObject[1]);
+        // wäre es ein map, würde es die Eigenschaft 'size' haben
+        console.log('numberKeysObject.size :>> ', numberKeysObject.size);
+        console.log('numberKeysObject :>> ', numberKeysObject);
+        console.log('typeof(Object.keys(numberKeyObject)[0])) :>> ', typeof(Object.keys(numberKeysObject)[0]));
+        console.log('Object.keys(numberKeyObject)[0]) :>> ', Object.keys(numberKeysObject)[0]);
+
+        // als Schlüssel sind bei Objekten nur strings und symbols möglich
+
+
+
+        // ctor für Objekttypen
+        function Person(titel, fname, lname, age) {
+            this.titel = titel
             this.fname = fname;
             this.lname = lname;
             this.age = age;
         }       
-        Person.prototype.getFullName = function () {
-            return this.fname + ' ' + this.lname
+        Person.prototype.introduceYourself = function () {
+            return `{this.titel} {this.fname.charAt(0)}. {this.lname}`
         }
 
+        // Idee: Person.isInLegalAge(_person_)
         Person.capitalize = function (txt) {
             return txt.toUpperCase()
         }
@@ -113,6 +141,13 @@
             console.log('typeof key :', typeof key);
             console.log('inp1[key] :', inp1[key]);
         }*/
+
+        //#region INHERITENCE
+
+        function Employee (params) {
+            
+        }
+        //#endregion
 
     </script>
 

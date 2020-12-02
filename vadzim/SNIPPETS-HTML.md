@@ -4,7 +4,8 @@ Die Snippets kommen von der Erweiterung 'Emmet'
 
 | snippet | effect |
 | --- | --- |
-| `html:5`  | Grundstruktur für eine HTML-Datei |
+| `!`  | Grundstruktur für eine HTML5-Datei |
+| `html:5`  | Grundstruktur für eine HTML5-Datei |
 | `img:s`  | img src="" srcset="" |
 | `link:css` | Verlinkung zur CSS-Datei |
 | `script:src` | Verlinkung zur JS-Datei |
